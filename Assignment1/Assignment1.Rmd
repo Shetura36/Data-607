@@ -1,0 +1,152 @@
+---
+title: "Data 607 Assignment 1"
+author: "Sherranette Tinapunan"
+date: "February 3, 2018"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Task
+Your task is to study the dataset and the associated description of the data (i.e. "data dictionary"). You may need to look around a bit, but it's there! You should take the data, and create a data frame with a subset of the columns in the dataset. You should include the column that indicates edible or poisonous and three or four other columns. You should also add meaningful column names and replace the abbreviations used in the data-for example, in the appropriate column, "e" might become "edible."
+
+
+### Mushroom data set
+- Source: https://archive.ics.uci.edu/ml/datasets/Mushroom
+- No. of observations 8124
+- No. of attributes 22
+- Data source file does not have column lables
+- First column is classification of whether mushroom is edible or poisonous
+
+### Attributes
+Attribute Information: (classes: edible=e, poisonous=p)
+
+     1. cap-shape:                bell=b,conical=c,convex=x,flat=f,
+                                  knobbed=k,sunken=s
+     2. cap-surface:              fibrous=f,grooves=g,scaly=y,smooth=s
+     3. cap-color:                brown=n,buff=b,cinnamon=c,gray=g,green=r,
+                                  pink=p,purple=u,red=e,white=w,yellow=y
+     4. bruises?:                 bruises=t,no=f
+     5. odor:                     almond=a,anise=l,creosote=c,fishy=y,foul=f,
+                                  musty=m,none=n,pungent=p,spicy=s
+     6. gill-attachment:          attached=a,descending=d,free=f,notched=n
+     7. gill-spacing:             close=c,crowded=w,distant=d
+     8. gill-size:                broad=b,narrow=n
+     9. gill-color:               black=k,brown=n,buff=b,chocolate=h,gray=g,
+                                  green=r,orange=o,pink=p,purple=u,red=e,
+                                  white=w,yellow=y
+    10. stalk-shape:              enlarging=e,tapering=t
+    11. stalk-root:               bulbous=b,club=c,cup=u,equal=e,
+                                  rhizomorphs=z,rooted=r,missing=?
+    12. stalk-surface-above-ring: fibrous=f,scaly=y,silky=k,smooth=s
+    13. stalk-surface-below-ring: fibrous=f,scaly=y,silky=k,smooth=s
+    14. stalk-color-above-ring:   brown=n,buff=b,cinnamon=c,gray=g,orange=o,
+                                  pink=p,red=e,white=w,yellow=y
+    15. stalk-color-below-ring:   brown=n,buff=b,cinnamon=c,gray=g,orange=o,
+                                  pink=p,red=e,white=w,yellow=y
+    16. veil-type:                partial=p,universal=u
+    17. veil-color:               brown=n,orange=o,white=w,yellow=y
+    18. ring-number:              none=n,one=o,two=t
+    19. ring-type:                cobwebby=c,evanescent=e,flaring=f,large=l,
+                                  none=n,pendant=p,sheathing=s,zone=z
+    20. spore-print-color:        black=k,brown=n,buff=b,chocolate=h,green=r,
+                                  orange=o,purple=u,white=w,yellow=y
+    21. population:               abundant=a,clustered=c,numerous=n,
+                                  scattered=s,several=v,solitary=y
+    22. habitat:                  grasses=g,leaves=l,meadows=m,paths=p,
+                                  urban=u,waste=w,woods=d
+
+### Selected attributes
+
+- odor --> attribute no. 5 --> column no. 6
+- spore_print_color --> attribute no. 20 --> column no. 21
+- population --> attribute no. 21 --> column no. 22
+- habitat --> attribute no. 22 --> column no. 23
+
+
+
+### Load data from from CSV file
+-  CSV file does not have column names. 
+```{r}
+getwd()
+data <- read.csv("./Assignment1_files/agaricus-lepiota.csv", header=FALSE)
+```
+
+### Summary of data
+```{r}
+summary(data)
+head(data)
+```
+
+### Create subset with only selected columns
+- class:              column 1
+- odor:               column 6
+- spore-print-color:  column 21
+- population:         column 22
+- habitat:            column 23
+
+
+```{r}
+mushroom_data <- data[, c(1,6,21,22,23)]
+head(mushroom_data)
+```
+
+### Rename selected columns
+```{r}
+colnames(mushroom_data)
+colnames(mushroom_data) <- c('class', 'odor', 'spore_print_color', 'population', 'habitat')
+colnames(mushroom_data)
+head(mushroom_data)
+```
+
+### Summary and structure of mushroom subset
+```{r}
+summary(mushroom_data, maxsum=20)
+str(mushroom_data)
+```
+
+### Dictionary of abbreviations for selected attributes
+
+* class: 
+    + e=edible, p=poisonous
+    
+* odor: 
+    + almond=a, anise=l, creosote=c, fishy=y, foul=f, musty=m, none=n, pungent=p, spicy=s
+    
+* spore-print-color: 
+    + black=k, brown=n, buff=b, chocolate=h, green=r, orange=o, purple=u, white=w, yellow=y
+    
+* population: 
+    + abundant=a, clustered=c, numerous=n, scattered=s, several=v, solitary=y
+    
+* habitat:
+    + grasses=g, leaves=l, meadows=m, paths=p, urban=u, waste=w, woods=d
+  
+
+### Replace abbreviations with full description
+```{r}
+
+levels(mushroom_data$class) <- list(edible="e", poisonous="p")
+
+levels(mushroom_data$odor) <- list(almond="a", anise="l", creosote="c", fishy="y", foul="f", musty="m",                                       none="n", pungent="p", spicy="s")
+
+levels(mushroom_data$spore_print_color) <- list(black="k", brown="n", buff="b", chocolate="h", green="r",   
+                                                orange="o", purple="u", white="w", yellow="y")
+
+levels(mushroom_data$population) <- list(abundant="a", clustered="c", numerous="n", scattered="s", 
+                                         several="v", solitary="y")
+
+levels(mushroom_data$habitat) <- list(grasses="g", leaves="l", meadows="m", paths="p", urban="u", waste="w", 
+                                      woods="d")
+
+summary(mushroom_data, maxsum=20)
+
+head(mushroom_data, 50)
+
+```
+
+
