@@ -648,7 +648,7 @@ names(all_data) <- c("Player ID", "Player Name", "State", "Total Points", "Pre-r
 filePath <- "C:/Users/stina/Documents/CUNY SPS Data Science/Spring 2018 Classes/DATA 607 - Data Acquisition and Management/Project 1/project1-output.csv"
 
 #write to file
-write.table(all_data, file = filePath, col.names = TRUE, row.names = FALSE, sep = ",")
+#write.table(all_data, file = filePath, col.names = TRUE, row.names = FALSE, sep = ",")
 ```
 ------------------------------------------------
 ------------------------------------------------
