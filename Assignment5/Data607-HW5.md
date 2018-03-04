@@ -17,7 +17,6 @@ output:
 library(dplyr)
 library(tidyr)
 library(knitr)
-library(xtable)
 ```
 
 ### Step 1: Read airlines CSV file, and assign names to columns with no names.
