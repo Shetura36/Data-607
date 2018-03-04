@@ -37,18 +37,18 @@ names(airlines)[1] <- "Airlines"
 names(airlines)[2] <- "Arrival.Status"
 
 #display data
-kable(airlines)
+kable(airlines, format="markdown")
 ```
 
 
 
-Airlines   Arrival.Status    Los.Angeles   Phoenix   San.Diego   San.Francisco   Seattle
----------  ---------------  ------------  --------  ----------  --------------  --------
-ALASKA     on time                   497       221         212             503      1841
-NA         delayed                    62        12          20             102       305
-NA         NA                         NA        NA          NA              NA        NA
-AM WEST    on time                   694      4840         383             320       201
-NA         delayed                   117       415          65             129        61
+|Airlines |Arrival.Status | Los.Angeles| Phoenix| San.Diego| San.Francisco| Seattle|
+|:--------|:--------------|-----------:|-------:|---------:|-------------:|-------:|
+|ALASKA   |on time        |         497|     221|       212|           503|    1841|
+|NA       |delayed        |          62|      12|        20|           102|     305|
+|NA       |NA             |          NA|      NA|        NA|            NA|      NA|
+|AM WEST  |on time        |         694|    4840|       383|           320|     201|
+|NA       |delayed        |         117|     415|        65|           129|      61|
 
 ### Step 2: Remove blank rows.
 > 
@@ -60,17 +60,17 @@ airlines <- airlines[!apply(is.na(airlines[1:7]),1,all), ]
 row.names(airlines) <- NULL
 
 # display. airlines does not have blank row anymore
-kable(airlines)
+kable(airlines, format="markdown")
 ```
 
 
 
-Airlines   Arrival.Status    Los.Angeles   Phoenix   San.Diego   San.Francisco   Seattle
----------  ---------------  ------------  --------  ----------  --------------  --------
-ALASKA     on time                   497       221         212             503      1841
-NA         delayed                    62        12          20             102       305
-AM WEST    on time                   694      4840         383             320       201
-NA         delayed                   117       415          65             129        61
+|Airlines |Arrival.Status | Los.Angeles| Phoenix| San.Diego| San.Francisco| Seattle|
+|:--------|:--------------|-----------:|-------:|---------:|-------------:|-------:|
+|ALASKA   |on time        |         497|     221|       212|           503|    1841|
+|NA       |delayed        |          62|      12|        20|           102|     305|
+|AM WEST  |on time        |         694|    4840|       383|           320|     201|
+|NA       |delayed        |         117|     415|        65|           129|      61|
 
 ### Step 3: Assign an airline name to rows that have a blank airline name. 
 > 
@@ -85,17 +85,17 @@ for(i in 2:nrow(airlines)) {
   }
 }
 #display
-kable(airlines) 
+kable(airlines, format="markdown") 
 ```
 
 
 
-Airlines   Arrival.Status    Los.Angeles   Phoenix   San.Diego   San.Francisco   Seattle
----------  ---------------  ------------  --------  ----------  --------------  --------
-ALASKA     on time                   497       221         212             503      1841
-ALASKA     delayed                    62        12          20             102       305
-AM WEST    on time                   694      4840         383             320       201
-AM WEST    delayed                   117       415          65             129        61
+|Airlines |Arrival.Status | Los.Angeles| Phoenix| San.Diego| San.Francisco| Seattle|
+|:--------|:--------------|-----------:|-------:|---------:|-------------:|-------:|
+|ALASKA   |on time        |         497|     221|       212|           503|    1841|
+|ALASKA   |delayed        |          62|      12|        20|           102|     305|
+|AM WEST  |on time        |         694|    4840|       383|           320|     201|
+|AM WEST  |delayed        |         117|     415|        65|           129|      61|
 
 ### Step 4: 'Gather' different city columns and transform them into cell values.
 > 
@@ -107,33 +107,33 @@ AM WEST    delayed                   117       415          65             129  
 airlines_transform1 <- tidyr::gather(airlines, "City", "Count", 3:7)
 
 #display
-kable(airlines_transform1)
+kable(airlines_transform1, format="markdown")
 ```
 
 
 
-Airlines   Arrival.Status   City             Count
----------  ---------------  --------------  ------
-ALASKA     on time          Los.Angeles        497
-ALASKA     delayed          Los.Angeles         62
-AM WEST    on time          Los.Angeles        694
-AM WEST    delayed          Los.Angeles        117
-ALASKA     on time          Phoenix            221
-ALASKA     delayed          Phoenix             12
-AM WEST    on time          Phoenix           4840
-AM WEST    delayed          Phoenix            415
-ALASKA     on time          San.Diego          212
-ALASKA     delayed          San.Diego           20
-AM WEST    on time          San.Diego          383
-AM WEST    delayed          San.Diego           65
-ALASKA     on time          San.Francisco      503
-ALASKA     delayed          San.Francisco      102
-AM WEST    on time          San.Francisco      320
-AM WEST    delayed          San.Francisco      129
-ALASKA     on time          Seattle           1841
-ALASKA     delayed          Seattle            305
-AM WEST    on time          Seattle            201
-AM WEST    delayed          Seattle             61
+|Airlines |Arrival.Status |City          | Count|
+|:--------|:--------------|:-------------|-----:|
+|ALASKA   |on time        |Los.Angeles   |   497|
+|ALASKA   |delayed        |Los.Angeles   |    62|
+|AM WEST  |on time        |Los.Angeles   |   694|
+|AM WEST  |delayed        |Los.Angeles   |   117|
+|ALASKA   |on time        |Phoenix       |   221|
+|ALASKA   |delayed        |Phoenix       |    12|
+|AM WEST  |on time        |Phoenix       |  4840|
+|AM WEST  |delayed        |Phoenix       |   415|
+|ALASKA   |on time        |San.Diego     |   212|
+|ALASKA   |delayed        |San.Diego     |    20|
+|AM WEST  |on time        |San.Diego     |   383|
+|AM WEST  |delayed        |San.Diego     |    65|
+|ALASKA   |on time        |San.Francisco |   503|
+|ALASKA   |delayed        |San.Francisco |   102|
+|AM WEST  |on time        |San.Francisco |   320|
+|AM WEST  |delayed        |San.Francisco |   129|
+|ALASKA   |on time        |Seattle       |  1841|
+|ALASKA   |delayed        |Seattle       |   305|
+|AM WEST  |on time        |Seattle       |   201|
+|AM WEST  |delayed        |Seattle       |    61|
 
 ### Step 5: 'Spread' <i>Arrival.Status</i> so that each distinct value becames a variable (column). 
 > 
@@ -146,23 +146,23 @@ AM WEST    delayed          Seattle             61
 airlines_transform2 <- tidyr::spread(airlines_transform1, Arrival.Status, Count)
 
 #display
-kable(airlines_transform2)
+kable(airlines_transform2, format="markdown")
 ```
 
 
 
-Airlines   City             delayed   on time
----------  --------------  --------  --------
-ALASKA     Los.Angeles           62       497
-ALASKA     Phoenix               12       221
-ALASKA     San.Diego             20       212
-ALASKA     San.Francisco        102       503
-ALASKA     Seattle              305      1841
-AM WEST    Los.Angeles          117       694
-AM WEST    Phoenix              415      4840
-AM WEST    San.Diego             65       383
-AM WEST    San.Francisco        129       320
-AM WEST    Seattle               61       201
+|Airlines |City          | delayed| on time|
+|:--------|:-------------|-------:|-------:|
+|ALASKA   |Los.Angeles   |      62|     497|
+|ALASKA   |Phoenix       |      12|     221|
+|ALASKA   |San.Diego     |      20|     212|
+|ALASKA   |San.Francisco |     102|     503|
+|ALASKA   |Seattle       |     305|    1841|
+|AM WEST  |Los.Angeles   |     117|     694|
+|AM WEST  |Phoenix       |     415|    4840|
+|AM WEST  |San.Diego     |      65|     383|
+|AM WEST  |San.Francisco |     129|     320|
+|AM WEST  |Seattle       |      61|     201|
 
 ### Step 6: Perform analysis to compare the arrival delays for the two airlines.
 >
@@ -179,12 +179,13 @@ delay_summary <- airlines_transform2 %>% dplyr::group_by(Airlines) %>%
                    sd_delay=sd(delayed),
                    median=median(delayed),
                    IQR=IQR(delayed))
-kable(delay_summary)
+#display
+kable(delay_summary, format="markdown")
 ```
 
 
 
-Airlines    max   min     avg   sd_delay   median   IQR
----------  ----  ----  ------  ---------  -------  ----
-ALASKA      305    12   100.2   120.0175       62    82
-AM WEST     415    61   157.4   147.1625      117    64
+|Airlines | max| min|   avg| sd_delay| median| IQR|
+|:--------|---:|---:|-----:|--------:|------:|---:|
+|ALASKA   | 305|  12| 100.2| 120.0175|     62|  82|
+|AM WEST  | 415|  61| 157.4| 147.1625|    117|  64|
