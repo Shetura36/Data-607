@@ -110,23 +110,23 @@ colnames(data) <- column_names
 
 #preview data in wide format
 #datatable(data) --> does not display on github
-kable(head(data[,1:10],10))
+kable(head(data[,1:10],10), format="markdown")
 ```
 
 
 
- year   Argentina   Developing_Asia   Australia    Austria    Belgium   Bulgaria   Bahrain   Belarus   Brazil
------  ----------  ----------------  ----------  ---------  ---------  ---------  --------  --------  -------
- 1990          NA                NA    6.943297   5.373002   6.550265         NA        NA        NA       NA
- 1991          NA                NA    9.614137   5.823096   6.439811         NA        NA        NA       NA
- 1992          NA                NA   10.750080   5.941711   7.088083   13.23500        NA        NA       NA
- 1993          NA                NA   10.866170   6.811381   8.619116   15.85583        NA        NA       NA
- 1994          NA                NA    9.705695   6.545480   9.753488   14.06583        NA        NA       NA
- 1995          NA                NA    8.471058   6.589767   9.673860   11.38583        NA        NA       NA
- 1996          NA                NA    8.516425   7.033851   9.543726   11.06167        NA        NA       NA
- 1997          NA                NA    8.363718   7.103283   9.212427   14.04583        NA        NA       NA
- 1998          NA                NA    7.651377   7.184796   9.338412   12.20333        NA        NA       NA
- 1999          NA                NA    6.869885   6.645249   8.484549   13.78250        NA        NA       NA
+| year| Argentina| Developing_Asia| Australia|  Austria|  Belgium| Bulgaria| Bahrain| Belarus| Brazil|
+|----:|---------:|---------------:|---------:|--------:|--------:|--------:|-------:|-------:|------:|
+| 1990|        NA|              NA|  6.943297| 5.373002| 6.550265|       NA|      NA|      NA|     NA|
+| 1991|        NA|              NA|  9.614137| 5.823096| 6.439811|       NA|      NA|      NA|     NA|
+| 1992|        NA|              NA| 10.750080| 5.941711| 7.088083| 13.23500|      NA|      NA|     NA|
+| 1993|        NA|              NA| 10.866170| 6.811381| 8.619116| 15.85583|      NA|      NA|     NA|
+| 1994|        NA|              NA|  9.705695| 6.545480| 9.753488| 14.06583|      NA|      NA|     NA|
+| 1995|        NA|              NA|  8.471058| 6.589767| 9.673860| 11.38583|      NA|      NA|     NA|
+| 1996|        NA|              NA|  8.516425| 7.033851| 9.543726| 11.06167|      NA|      NA|     NA|
+| 1997|        NA|              NA|  8.363718| 7.103283| 9.212427| 14.04583|      NA|      NA|     NA|
+| 1998|        NA|              NA|  7.651377| 7.184796| 9.338412| 12.20333|      NA|      NA|     NA|
+| 1999|        NA|              NA|  6.869885| 6.645249| 8.484549| 13.78250|      NA|      NA|     NA|
 
 ### Step 3: Transform wide format into long format
 
@@ -144,23 +144,23 @@ data <- tidyr::gather(data, "country_name", "annual_unemployment", 2:89)
 
 #preview of tidy dataset (long format)
 #datatable(data) --> does not display on Github
-kable(head(data, 10))
+kable(head(data, 10), format="markdown")
 ```
 
 
 
- year  country_name    annual_unemployment
------  -------------  --------------------
- 1990  Argentina                        NA
- 1991  Argentina                        NA
- 1992  Argentina                        NA
- 1993  Argentina                        NA
- 1994  Argentina                        NA
- 1995  Argentina                        NA
- 1996  Argentina                        NA
- 1997  Argentina                        NA
- 1998  Argentina                        NA
- 1999  Argentina                        NA
+| year|country_name | annual_unemployment|
+|----:|:------------|-------------------:|
+| 1990|Argentina    |                  NA|
+| 1991|Argentina    |                  NA|
+| 1992|Argentina    |                  NA|
+| 1993|Argentina    |                  NA|
+| 1994|Argentina    |                  NA|
+| 1995|Argentina    |                  NA|
+| 1996|Argentina    |                  NA|
+| 1997|Argentina    |                  NA|
+| 1998|Argentina    |                  NA|
+| 1999|Argentina    |                  NA|
 
 ### Step 4: Create a subset
 
@@ -243,16 +243,16 @@ data.frame(part1 %>%  dplyr::filter(year >= 2011 & year <= 2015) %>%
 colnames(part2) <- c("country_name", "NA_count")
 
 #display countries to be excluded
-kable(head(dplyr::filter(part2, NA_count > 0), 10))
+kable(head(dplyr::filter(part2, NA_count > 0), 10), format="markdown")
 ```
 
 
 
-country_name    NA_count
--------------  ---------
-Argentina              1
-Israel                 1
-Tunisia                1
+|country_name | NA_count|
+|:------------|--------:|
+|Argentina    |        1|
+|Israel       |        1|
+|Tunisia      |        1|
 
 ```r
 #identify countries with complete data for 5 year period
@@ -288,23 +288,23 @@ nrow(dplyr::distinct(target,country_name))
 ```r
 #preview target subset
 #datatable(target) --> does not display on Github
-kable(head(target, 10))
+kable(head(target, 10), format="markdown")
 ```
 
 
 
- year  country_name    annual_unemployment
------  -------------  --------------------
- 2011  Australia                  5.084754
- 2012  Australia                  5.223256
- 2013  Australia                  5.661276
- 2014  Australia                  6.076739
- 2015  Australia                  6.062296
- 2011  Austria                    6.724885
- 2012  Austria                    6.971840
- 2013  Austria                    7.616157
- 2014  Austria                    8.368532
- 2015  Austria                    9.107860
+| year|country_name | annual_unemployment|
+|----:|:------------|-------------------:|
+| 2011|Australia    |            5.084754|
+| 2012|Australia    |            5.223256|
+| 2013|Australia    |            5.661276|
+| 2014|Australia    |            6.076739|
+| 2015|Australia    |            6.062296|
+| 2011|Austria      |            6.724885|
+| 2012|Austria      |            6.971840|
+| 2013|Austria      |            7.616157|
+| 2014|Austria      |            8.368532|
+| 2015|Austria      |            9.107860|
 
 ### Step 5: Calculate summary data
 
@@ -317,23 +317,23 @@ target_mean <-
                summarise(mean = mean(annual_unemployment)))
 
 #datatable(target_mean) --> does not display on Github
-kable(head(target_mean, 10))
+kable(head(target_mean, 10), format="markdown")
 ```
 
 
 
-country_name          mean
--------------  -----------
-Algeria         10.5200000
-Australia        5.6216642
-Austria          7.7578548
-Bahrain          3.8600000
-Belarus          0.6492506
-Belgium          8.0434458
-Brazil           7.5178434
-Bulgaria        10.6468346
-Canada           7.1483334
-Chile            6.4481292
+|country_name |       mean|
+|:------------|----------:|
+|Algeria      | 10.5200000|
+|Australia    |  5.6216642|
+|Austria      |  7.7578548|
+|Bahrain      |  3.8600000|
+|Belarus      |  0.6492506|
+|Belgium      |  8.0434458|
+|Brazil       |  7.5178434|
+|Bulgaria     | 10.6468346|
+|Canada       |  7.1483334|
+|Chile        |  6.4481292|
 
 ### Step 6: Answer questions
 
