@@ -339,7 +339,7 @@ kable(head(target_mean, 10), format="markdown")
 
 #### 1) For the five year period from 2011 to 2015, what's the average annual unemployment rate of each country?
 
-Below is a bar plot of the average annual unemployment rate of 17 countries ordered from lowest to highest. Belarus ranks lowest at about 0.65%. Macedonia ranks highest at about 29.09%. 
+Below is a bar plot of the average annual unemployment rate of 71 countries ordered from lowest to highest. Belarus ranks lowest at about 0.65%. Macedonia ranks highest at about 29.09%. 
 
 
 
