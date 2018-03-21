@@ -1,0 +1,71 @@
+LRW is looking for a Data Scientist who is passionate about delivering big impact and solving complex business problems. You have an entrepreneurial mindset - you see opportunities to improve something and take them.  
+  
+Our small Data Science group has three core functions:
+Maintain a production-oriented analytics platform for our world class Marketing Science team
+Tackle predictive modeling engagements using client provided data from major global brands
+Deploy machine learning techniques for efficiency gains in LRW’s day to day operations
+  
+We’re all good at what we do, and we care about doing great work while having fun. We’re committed to growth and personal development, and you’ll have plenty of opportunities to learn new skills. 
+  
+Role 
+  
+Your role will encompass three main areas of responsibility:
+Develop automation regarding production-oriented analytics such as regressions, correlations, factor analyses, and clustering of survey data, from data processing/manipulation through analysis and result visualization
+Recommend and execute predictive analytic and model delivery approaches for client engagements that involve non-survey data, including but not limited to transaction/sales data and social media metrics
+Familiarize yourself with the life-cycle of a typical research project from proposal to report delivery, looking for opportunities to inject machine learning and predictive analytics into the process for greater efficiency
+  
+On most projects, you’ll be working in a cross-functional capacity that may include other developers from different teams. You’ll have the right amount of support from your teammates, with enough flexibility and autonomy to try new things. You’ll use your unique skill set to guide the product owners in making the right long-term decisions to solve their business problems. 
+  
+We also work on R&D projects, and you may be experimenting and working through ambiguous requirements. You’ll try new things and collaborate with the team to create solutions and define best practices. 
+  
+What we worked on last year 
+ 
+Developed R packages that processes millions of URLs visited by respondents, allowing them to be classified and analyzed for insight into web browsing behavior
+Built a scalable cloud-based analytics platform that houses production routines designed for our Marketing Science team
+Leveraged DNA sequencing algorithms and machine learning routines to categorize various paths to purchase and project attitudinal classifications onto client databases
+    
+What We Offer 
+ 
+A culture of unlimited opportunity to grow, learn, try new things, and truly have transformational impact on the organization
+Wellness events like yoga, pilates, and nutrition counseling
+A fun, close-knit team with opportunities to both teach and learn across a variety of disciplines
+Walking distance to plenty of food options, including a weekly Farmer’s Market with the best fish tacos
+Bagel Fridays
+Annual merit-based bonuses
+  
+Skills & requirements 
+  
+Ideal Candidate 
+The ideal candidate will be technically deep, have the desire to continue learning new platforms and technologies, work well within a team, and be a great communicator. 
+  
+To be considered for this position, you must have:
+Master’s degree or equivalent in Computer Science, Data Science, Computational Mathematics or related fields
+At least one to three years of experience with modeling structured and/or unstructured data, leveraging such techniques as penalized regression, multinomial logit, multilevel modeling, ensemble models, or time series models. PhD in previously mentioned fields with exposure to such techniques is acceptable in lieu of experience
+Proficiency with R or Python, associated packages concerning predictive analytics, and visualization libraries such as Shiny and Plotly
+Experience with SQL
+Passion for technology and a high technical aptitude
+Insightful and always looking for great ideas
+Self-sufficient
+A desire to keep learning and to teach what you know
+Precise and efficient communicator
+  
+Additional experience in the following is a plus:
+Experience modeling marketing, business intelligence, or market research data
+NoSQL and graph database experience
+Familiarity with cluster computing leveraging platforms such as Hadoop and Spark
+Proficiency in techniques and technology regarding machine learning, artificial intelligence, data mining and optimization such as neural networks, Bayesian networks, decision trees, random forests, and libraries such as TensorFlow
+  
+Our Technologies 
+  
+/ R / Python / JSON / JavaScript Jupyter / GitHub / Team City / Docker / Microsoft SQL Server / Amazon Web Services 
+  
+  
+  
+About Lieberman Research Worldwide 
+  
+LRW is a global force in the full-service custom market research field, recently being ranked as one of the Top 25 Global Research Firms by Marketing News. Partnering with Fortune 500 Companies we are able to provide insight and have impact on real world business problems. We specialize in strategic development, new product development and testing, advertising, customer satisfaction, and tracking research. LRW conducts both qualitative and quantitative research studies and has comprehensive experience across a wide range of industries. Through its main offices in Los Angeles (global headquarters) and London (European headquarters), and its affiliate network of more than 60 companies, LRW conducts research in over 80 countries worldwide. 
+  
+  
+  
+Working Conditions: LRW is a professional office environment, and employees use standard office equipment (occasional lifting up to 15 lbs). Conditions to include prolonged sitting, normal degree of walking, and up to 15% local and national travel, unless specified otherwise. 
+LRW is an equal opportunity employer, and does not discriminate against any employee or applicant because of race, creed, color, religion, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition, or any other basis protected by law. It is our policy to comply with all applicable national, state and local laws pertaining to nondiscrimination and equal opportunity. Further, the functions, specifications, physical demands, and work environment listed in this job description represent the essential functions of the job which the incumbent must be able to perform either with or without reasonable accommodation. The listed functions and responsibilities do not necessarily include all activities that the incumbent may perform. 

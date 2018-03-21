@@ -1,0 +1,16 @@
+Our Client is a global Investment Bank.
+
+The firm is looking to appoint a small number of Data Scientists – at varying levels of experience – to one of its research teams.
+
+This team really enjoys an exciting and broad mandate and is one-of-kind in many respects. In short, the team enjoys access to a plethora of internal trading data and is charged with trying to figure out how to monetize it further. Specifically, in the form of building and deploying new and profitable systematic trading strategies.
+
+This is a very interesting long-term opportunity for investigative data scientists.
+
+Requirements:
+
+• A PhD in Econometrics, Statistics and or similar from a leading faculty.
+• You will have anywhere between 2-10 years of applied data science experience from any industry – the team is hiring at various levels.
+• Strong self-supporting programming skills in Python.
+• Investigative, entrepreneurial mindset.
+
+If you find this role of interest, please do apply here and we would be happy to discuss it in greater deal with you.

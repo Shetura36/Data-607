@@ -1,0 +1,29 @@
+Company Description
+
+GoHealth has an ambitious mission: to improve the health care system in America. Achieving this mission relies on hiring and developing great people, which is why our team is our top priority. We encourage employees to do their best work through innovation and risk taking. Our environment is fun yet constructive, thanks to leaders whose doors are always open. And most importantly, well never stop investing in you and your career.
+
+Job Description
+
+GoHealth is looking for Data Scientists who will support GoHealth's marketing, business operations, product engineering, and executive teams using knowledge discovered from the analysis of GoHealth's data. The Data Scientist is expected to work with the various teams and use data sets to find opportunities for improving GoHealth's software products and business processes.
+
+Qualifications
+Live the GoHealth Culture and ensure it is represented within the team.
+Develop data and predictive models using GoHealth's data in solving business problems, and in improving GoHealth's software products and business processes.
+Collaborate with business stakeholders, business operations, and product engineering teams in analyzing business problems, in building and testing solutions and data models, and in implementing the algorithms and results of the models.
+Work closely with the Data Engineering team as the team designs the schemas and data pipelines needed for downstream use by regression models and jobs.
+Author formal and informal reports that effectively communicate the models and the results to both technical and non-technical audiences.
+Qualifications
+Master's or PhD in Statistics, Mathematics, Computer Science, Economics, or related quantitative field.
+Strong analytical and problem solving ability with strong attention to detail and accuracy.
+Knowledge of and experience in using machine learning techniques such as regression and classification analyses, clustering, neural networks, etc.
+Theoretical and practical knowledge of various techniques and statistical algorithms.
+Proficient in R or Python in manipulating data and drawing insights from data sets.
+Familiar with relational databases and SQL.
+Ability to handle multiple tasks and adapt to evolving business and technical environments.
+Self-starter with the ability to work independently, take initiative, and learn new skills.
+Excellent written and oral communication skills, with the ability to articulate complex processes to individuals of varying technical abilities
+Knowledge of version control systems using Git, Bitbucket, SVN, or Team Foundation.
+Experience in software engineering practices is preferred.
+Additional Information
+
+GoHealth offers a full benefits package, an open vacation policy, a very casual dress code and a fun, interactive working environment.

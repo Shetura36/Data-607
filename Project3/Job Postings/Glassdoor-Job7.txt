@@ -1,0 +1,59 @@
+Company Description
+
+Wi-Tronix provides products and services to wirelessly monitor high-value mobile assets such as locomotives, industrial equipment, and marine vessels. Mobile assets of this class are typically the workhorses of an enterprise. In the past, mobile meant disconnected. Being disconnected causes great inefficiencies in an enterprise that counts on mobile assets for its core business operations. Advanced commercially available wireless technologies now enable all types of assets to be connected throughout most of the world. Wi-Tronixs mission is to integrate these technologies to enable businesses to improve the operational efficiency, service reliability and safety of high-value mobile assets. 
+
+Our products are designed to solve your most difficult challenges with minimal disruption to your operations. Some suppliers only have pieces of the overall puzzle. Wi-Tronix assures that you have an end-to-end solution.
+
+Job Description
+
+As a Data Scientist you will play a key role in pushing the boundaries of our core product. Your responsibilities include designing and implementing state of the art deep neural networks to solve challenging problems in the rail road industry. Working with a world-class team, your contributions are key to executing our roadmap. Your products will be used to save people's lives all around the world. 
+
+Research and Analysis
+Collaborate with product management and engineering departments to understand company needs and devise possible solutions
+Determine new innovative ways to improve data and search quality, and predictive capabilities
+Keep up-to-date with latest technology trends
+Support a wide range of R&D activities relating to end-to-end processing of data collected from fleet vehicles, from data analysis of sensor data to development of map learning algorithms from multiple data
+sources.
+Collaborate with multiple AI product teams to understand their workflow requirements, and the various tradeoffs between flexibility/model exploration and performance
+Collaborate with AI applied researchers and leaders to build future-proof frameworks and abstractions 
+
+Development and Modeling
+Models and analyzes complex problems, discovering insights and identifying opportunities through the use of statistical, algorithmic, mining and visualization techniques.
+Develop working prototypes, proof of concepts, algorithms, predictive models, and custom analysis.
+Design and build new data set processes for modeling, data mining, and production purposes.
+Define the software architectures for new Wi-Tronix artificial intelligence applications/products and influence innovation by conducting various PoC, to create new capabilities and services working closely with engineering and enterprise architecture teams.
+Optimize deep learning based systems for wide scale deployment to thousands of trains around the world.
+Work alongside software developers, software engineers and data engineers to translate algorithms into viable solutions
+Build tools that will increase the productivity of teams developing AI-based systems
+Working with developers and implementation engineers to spec out database models and determine implementation of algorithms 
+
+Leadership
+Communicate results and ideas to key decision makers in a way that can be easily understood by business counterparts.
+Serve as a technical lead on our most demanding, cross-functional projects.
+Work on bridging the gap between the latest in deep learning research and its application in real world products
+
+Qualifications
+
+MUST HAVES 
+
+• BS, MS or PhD in Computer Science, Electrical Engineering or Applied Sciences with relevant experience
+3+ years of experience in developing, crafting or using any deep learning frameworks (e.g. Torch, Theano, TensorFlow, etc.)
+Experience in computer vision, image/video/signal processing, machine learning, feature extraction, statistical analysis, and classification.
+Experience developing Computer Vision algorithms for embedded systems using OpenCV or writing custom made algorithms optimized for performance on small devices 
+
+• Experience with managing the tagging and training process
+Proven track record of developing CNNs and RNNs in Python and Tensorflow
+Solid technical foundation in computer memory model (disk, memory, caches), CPU and GPU architectures, networking, numeric libraries, modular software design
+Deep understanding of deep learning training in distributed contexts: multi-GPU, multi-node, synchronous vs asynchronous
+Python and C/C++ programming
+Experience in software shipping cycles (dev, deploy, release, CI) and open-source software dev
+Highly motivated with excellent verbal and written communication skills
+Ability to work successfully with multi-functional teams, principles and architects. Coordinates effectively across organizational boundaries and geographies
+SQL scripting and database knowledge 
+
+DESIRED 
+
+• Detailed Hardware or Software development experience
+Familiarity with passenger and freight locomotives and their onboard electrical systems
+Knowledge of locomotive industrys products and applications
+Experience with website development using ASP.NET/C#

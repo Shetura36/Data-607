@@ -1,0 +1,31 @@
+Company Description
+
+UserTesting enables companies to put their customers at the center of every business decision by leveraging the power of human insights. The most advanced on-demand customer insights platform, UserTesting enables product managers, UX researchers and designers, marketers, and digital executives to connect with their exact target customer in a matter of hours and uncover actionable insights that drive ROI. More than 35,000 companies have adopted UserTesting to make smarter business decisions throughout the design and development of their digital experiences as well as in their marketing messaging and competitive positioning.
+
+Job Description 
+
+As a member of the Product Insights team, you will work with our growing team of quantitative and qualitative researchers to improve the user experience for our customers. 
+
+You will apply statistical models and analytics to inform product decisions, direction, and strategy. Integral to the role is your curiosity, deep analytic instinct, and your ability to design, create, implement, synthesize, and communicate quantitative research using a variety of data. You'll have an opportunity to interact directly with our Product, Design, and Business teams to surface critical topics, identify innovative practices, and develop high-impact solutions that create great user experiences and advance state-of-the-art user experience research. 
+
+Responsibilities:
+Define and measure quantitative Product/UX goals and metrics in collaboration with Product Managers, Qualitative Researchers, Designers, and Engineers
+Prioritize and drive quantitative research and statistical modeling to improve user experience and product results
+See beyond the numbers to identify findings of strategic importance to UserTesting and practical value to customers conducting their own user experience research
+Communicate analyses and results in ways that are accessible, relevant, and meaningful to a business audience
+Create and support a data-driven culture among company decision makers
+Qualifications
+Bachelor's degree with experience or advanced degree in an analytic field that uses quantitative methods to understand human behavior: Economics, Sociology, Psychology, Statistics, Mathematics, Science, Engineering and similar quantitative degrees welcome
+2 years of experience in an applied research setting, preferably in Consumer or B2B software development
+Coding experience with data/statistical packages, e.g. SQL/Hive, R, Python (Pandas + Statsmodels + Scikit-learn), Pig, Julia, D3.js
+Research or expertise in one or more of the following: User Experience Research, Natural Language Processing, Hierarchical/Multilevel Regression, Data Visualization, Deep Learning, Social Network Analysis, etc.
+Strong working knowledge of research methodology and statistical techniques including experimentation, statistical inference, and machine learning
+Experience performing advanced data analytics in a business, academic, or related context, e.g. high-tech, market research, management consulting, operations research, finance, etc.
+Ability to explain the value of different analytic methods, and the output of data analyses, to non-technical audiences, including executives and managers
+Big picture perspective and a healthy obsession with detail
+Deep curiosity and love of problem solving
+Additional Information
+
+Besides a great work environment and the opportunity to change the world, we offer competitive salary, benefits, plenty of perks, as well as stock options. We value diversity, and were proud to be an inclusive, equal opportunity workplace. 
+
+Learn more about what its like to work at UserTesting at: https://www.usertesting.com/about-us/jobs

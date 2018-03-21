@@ -1,0 +1,15 @@
+Shape Security is looking for individuals who are capable of and interested in leveraging large amounts of complex data to develop robust statistical models.
+
+Job Duties
+Analyze data covering a wide range of information from logs, real time events, and historical data feeds
+Collaborate with other research scientists and engineers to formulate innovative solutions to experiment and implement advanced data mining techniques?
+Apply established statistical techniques to security problems
+Work well with peers across organization and potentially across the company
+Qualifications
+Minimum of 3 years within the cyber security or related industry (nice to have)
+Preferably PhD in statistics, computer science or similar field or MS with a couple of years of related experience
+Deep knowledge of machine learning, data mining, statistics and related field.
+Expert level knowledge of one of the scripting languages such as Python and statistical languages such as R
+Experience working with large data sets and distributed computing tools a plus (Map/Reduce, Hadoop, Hive, Spark etc.)
+Strong communication skills both written and verbal
+Experience in web security or anomaly detection is a plus

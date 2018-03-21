@@ -1,0 +1,29 @@
+Overview 
+
+Join the product development team of a high growth Population Health and Analytics software company. Reporting to the VP of Product Development and joining a talented team of Product Managers, Analysts and Data Scientists. This is a hands-on position designing and promoting the next wave of advanced healthcare data connectivity, analytics and workflow products. Ideate with the best minds in healthcare through our advisory network. Build with engineers that have 5+ years using Hadoop, Spark, and AWS to get jet engines to communicate, others that spent 10 years working in the data trenches created by healthcare’s switch from fee for service to fee for value, and still others with unparalleled capabilities in using data viz to make sense of massive data sets – all focused on pulling healthcare tech into modernity. 
+
+Responsibilities 
+
+Responsibilities
+Design and develop statistical and/or mathematical methodologies to sift through massive amounts of data
+Research, evaluate and implement the latest in machine learning algorithms and technology
+Complete ad-hoc analysis for customers and present that information in support of their business needs
+Interact with and support our engineering team, responding to requests and qualifying features or development questions
+Evaluate all stages of any data pipeline and storage to ensure fitness for use, and data quality
+Support sales and marketing in the growth and visibility of these new products in a fast-moving healthcare analytics market
+Investigate possible future products and/or support the R&D projects of one or more Product Managers
+Qualifications 
+
+Requirements
+Ph.D. or Masters in hard science with heavy data analysis done to support thesis
+2-5 years of experience using statistical modelling and/or machine learning
+Ability to code in languages such as Pyhton, Java and/or Scala
+Experience with analytics tools and languages such as R, SAS, Spark, Hadoop, SQL
+Understanding of confidence intervals, significance of error measurements, and other statistical concepts
+Fast learner
+Preferred
+Background machine learning, graph/network analysis and/or statistics preferred
+Ability to learn from and apply learnings from the latest in machine learning, statistical, artificial intelligence focused publications.
+Understanding of JavaScript, css, HTML5, GGPLOT and/or D3 preferred
+Experience working with a product or product management team a plus
+Experience with ACOs and/or Value Based Care a plus

@@ -1,0 +1,16 @@
+We are looking for a Data Scientist who is passionate about using large data sets to answer tough business questions! Youll collaborate with the product, engineering, and research departments to develop and employ predictive machine learning techniques for internal and external business needs. You must also be comfortable working with stakeholders and collaborating with team members to improve our product features through advanced statistical techniques and mathematical principles. 
+
+Responsibilities:
+Apply advanced statistical techniques and concepts to analyze data from the company database (PostgreSQL), with Salesforce, and other unstructured data sources to drive optimization and improvement of product features, marketing messaging, and internal business processes
+Develop custom data models/algorithms
+Develop tools to analyze data accuracy and model performance
+Leverage machine learning, natural language processing, and/or advanced statistical techniques
+Coordinate across teams (product management, engineering, etc) timely and effectively
+Possess a drive to learn and master new technologies and techniques
+Contribute to the rapid growth of the research organization, being flexible in data engineering, algorithmist, and analyst responsibilities as they arise
+Requirements:
+Masters or PhD in CS, Mathematics, Statistics, or another quantitative field
+Experience with machine learning, including natural language processing, probabilistic reasoning, and neural networks. Background in contemporary machine learning techniques, such as deep/differential learning, preferred.
+Strong knowledge/experience with a variety of analysis tools, including Python, R, and SQL
+Background in information retrieval, data mining, and ETL techniques for processing data
+Experience working cross-organization to service the data analysis needs of different parts of the business

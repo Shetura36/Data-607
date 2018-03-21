@@ -1,0 +1,48 @@
+Data Scientist
+Location 
+
+
+Massachusetts, Boston
+
+Job Category 
+
+IT
+
+Apply Now
+
+Homesite is an innovative national property and casualty insurance company with a fast-paced, start-up environment. We offer multiple products with a focus on direct to consumer distribution in partnership with large national brands. We continually seek to develop new products and improve our existing ones.
+
+We’re looking for a Data Scientist to help expand our data science team. You might be a good fit if:
+You think about ways to automatically figure out the optimal number of clusters in an unsupervised learning problem.
+You know an ensemble classifier is not a single model and educate people who think it is one.
+You are capable of wrestling with numerous disparate, dirty, and inconsistent data sources.
+You are constantly looking to learn new methods and technologies.
+Responsibilities
+
+The correct individual will:
+
+
+• Collaborate with data scientists to analyze data and build machine learning models. This includes:
+o Build classification, clustering, and anomaly detection models using ensemble classifiers, support vector machines, mixture models, linear models, and clustering methods
+
+o Use deep learning techniques such as recurrent neural networks build models using text and natural language processing and possibly convolutional neural networks with images.
+
+o Serve as subject matter expert to research and identify products in the market to use for machine learning tasks in a buy vs build evaluation.
+
+• Carry out data science tasks such as writing code to:
+o Extract, clean, recode and reconcile data from a variety of structured data sources including databases, flat files, and shapefiles.
+
+o Scale, transform, and impute continuous and categorical data.
+
+o Break and distribute computationally intensive jobs as needed.
+
+o Evaluate and recommend optimal combinations of models and model results.
+Collaborate with data scientists and developer team to translate models to business solutions.
+Requirements
+New PhD in Machine Learning, Computer Science, Statistics, Engineering, Applied Mathematics, or other quantitative discipline (ABD is with expected defense is fine). Or Master’s degree with 2 to 3 years’ experience or a Bachelor’s degree with 4 to 5 years’ experience
+Strong experience with Python programming especially with data science libraries including pandas, scikit-learn, numpy, matplotlib, and statsmodels.
+Experience with a variety of statistical and machine learning models and techniques including classification models, anomaly detection, and clustering.
+Some experience with deep learning methods in including recurrent neural nets, convolutional neural nets, or self-organizing maps and of standard libraries like TensorFlow or Keras used to implement these methods
+Comfort working with a variety of databases and data structures.
+Experience working with AWS Services including RedShift, S3, and Athena and using boto3 to use from Python.
+A self-motivated individual who is a fast learner and self-starter.

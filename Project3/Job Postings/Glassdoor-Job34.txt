@@ -1,0 +1,38 @@
+We’re America’s largest mortgage lender, closing loans in all 50 states. J.D Power ranked Quicken Loans “Highest in Customer Satisfaction in Primary Mortgage Origination” for the past eight consecutive years, 2010 – 2017. The company was also ranked highest in the nation for client satisfaction among mortgage servicers by J.D. Power for four consecutive years, 2014 through 2017, each year the company was eligible. There’s a simple reason we’ve been so successful: We care about the people we work with. 
+
+If you’re tired of stuffy, bureaucratic workplaces, then you’ll be delighted to find something different here. We strive to make a creative, fun and collaborative environment you simply won’t find anywhere else. Quicken Loans was named #1 in ESSENCE Magazine’s first ever list of “Best Places to Work for African Americans” in 2015. We've been on Computerworld's "Best Places to Work in IT" list for 13 years running, hitting #1 the last five years and we were ranked #10 in FORTUNE Magazine’s list of "100 Best Companies to Work For" in 2018, remaining in the top-30 for the past 15 years. 
+
+What You'll Do/Need 
+
+The Harvard Business Review characterized “Data Scientist” as the “Sexiest Job of the 21st Century,” and with good reason. Perhaps no other position in today’s technology landscape is so central to the transformation of how business is done. If data is the vehicle that unlocks new frontiers of business capability in the Information Age, Data Scientists are the drivers. At Quicken Loans, we rely on Data Scientists to unleash the potential of machine learning, Big Data and modeling to solve critical business challenges that give us a competitive edge. 
+
+Responsibilities
+Leverage your knowledge of programming, mathematics and computer science to transform the way our company does business
+Translate business opportunities into data-driven machine learning, Big Data, and modeling solutions that revamp our processes or produce data products
+Develop and collect data for ad hoc and statistical analyses
+Identify methods that allow continuous and automated statistical testing to enhance the predictability of deployed models
+Maintain relationships between business-area clients, business intelligence and IT so all teams are aligned to meet team objectives
+Work with Project Managers to develop detailed project timelines
+Summarize and present conclusions and solutions
+Communicate complex analyses clearly to all audiences
+Requirements
+Master’s degree or above in a STEM field, including but not limited to: computer science, statistics, applied mathematics, operations research, engineering, economics, social sciences, physics, chemistry.
+Experience working with raw and missing data
+Understanding of programming fundamentals
+Understanding of Statistics
+Excellent communication skills
+Four years of experience providing advanced analytics within a business setting
+One year of data-science implementation experience within a business setting
+
+Preferred Skills
+Experience with data visualization tools and time series
+Working knowledge of relational databases and standard SQL query methods
+Proficiency in at least one general programming language such as Python, Java or C/C++
+Experience working with Big Data within a Hadoop environment
+Experience working with R, SAS or other statistical packages
+Advanced experience with statistical, econometric or data-mining tools and methods
+Experience with linear models (linear regression, generalized linear regression, logistic regression), and nonlinear modeling techniques
+Knowledge of advanced nonlinear techniques, including smoothing and ensemble methods
+Excellent benefits package that includes a 401(k) match, medical/dental/vision, and much more
+Opportunities to participate in professional and personal development programs, including personal empowerment coaching, leadership training and ongoing personal growth training
+Other incentives, contests and rewards, including trips, event tickets, cash prizes and more

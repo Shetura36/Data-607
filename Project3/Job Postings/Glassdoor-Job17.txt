@@ -1,0 +1,48 @@
+We are looking for a creative and innovative Data Scientist to drive strategic initiatives that will propel the future and continuous growth of Envoy Global by using data to tell a story. Due to continued success and increased demand for our services, we are looking for someone who possesses strong technical experience with machine learning, optimization, and automation. This is a high visibility role integral to our growth. Curious? Read on! 
+
+You Will:
+Mine big data for information that can be used to predict customer behavior and identify business risks and opportunities
+Gather and analyze data by using various types of analytics and reporting tools to detect patterns, trends, and relationships in the data sets
+Utilize machine learning to predict immigration application preferences and/or recommendation for HR, employees as well as attorneys
+Design, implement, and deploy scalable algorithms and models that utilize large amounts of data for improving immigration application process
+Communicate results to clients and end users, and incorporate their feedback into future Data Science projects
+Analyze historical data and build forecasting systems to determine future business opportunities and metrics
+Conduct A/B test to predict contribution impacts from new models and algorithms
+Work cross-functionally with the other technology teams, product teams, finance, and service delivery teams
+Provide insights beyond statistical analysis and own the translation of results to actionable insights that can be utilized across the organization
+You Have:
+5-7 years’ professional working experience – 3+ years data science, 5+ years data experience
+Bachelor’s degree in Computer Science or related discipline highly preferred
+Experience with predictive, statistical, and sentiment analysis
+Data modeling and Business Intelligence knowledge
+Passion for innovating new ways to solve complex issues
+Are comfortable with being given the self-autonomy to work independently and experiment with new ideas and new ways to design and implement data science solutions to advance the company’s goals
+Confidence in making data-driven recommendations based on independent synthesis of a broad range of data
+Strong analytical and reasoning skills that result in clear technical execution
+Proven ability to prioritize, self-direct and execute at velocity
+Passion to deliver craftsman-quality work both individually and as part of a team
+Experience with data visualization tools (such as Tableau and Power BI)
+Working knowledge of multiple scripting languages (SQL, Python, and R)
+Azure Machine Learning experience
+Ability to clearly communicate summary of model – get deep into the model – need to break it down to senior leadership
+Immigration knowledge – would be VERY helpful
+Domain knowledge (preferred)
+Why Envoy:
+Convenient Chicago Loop location – 2 blocks from Metra trains and the CTA
+Extremely competitive benefits plan including BCBS medical coverage, including FREE employee dental and vision coverage, and a company-matched 401k plan that vests immediately
+Stock options after one year of employment
+Annual accrual of 18 days of paid time off (PTO), 2 personal days, and 9 paid holidays per year
+Paid Parental Leave Program
+Casual work environment
+In-office company-paid gym membership with LifeStart Gym
+Company sponsored lunches, happy hours, and events throughout the year
+Healthy snacks & unlimited LaCroix
+Monthly Product Lunch & Learns and ongoing Career Development/Training
+Moxie Award Winner for Best Service Provider in 2015 and Most Disruptive Startup in 2016
+Rated as one of the top 50 employers for Gen Y Emerging Talent in Chicago
+Chicago Inno 50 of Fire – B2B Winner
+Growing social responsibility programs & partnerships
+Opportunity to work for an organization that changes lives every day!
+Envoy Global is an equal opportunity employer regardless of race, color, religion, creed, sex, marital status, national origin, disability, age, veteran status, on-the-job injury, sexual orientation, political affiliation or belief. 
+
+EOE AA M/F/Vet/Disability
