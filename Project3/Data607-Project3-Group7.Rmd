@@ -1,0 +1,21 @@
+---
+title: "Project 3 Group 7"
+author: "Group 7"
+date: "March 23, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(rvest)
+
+```
+
+
+```{r}
+
+```
