@@ -196,7 +196,12 @@ Terms,Replace
 "[ ]{1,}databases[ ]{1,}",   database
 "[ ]{1,}databasesexperience[ ]{1,}",   database
 "[ ]{1,}databaseskills[ ]{1,}",   database
-"[ ]{1,}decision[ ]{1,}",   decisions
-"[ ]{1,}decisioning[ ]{1,}",   decisions
-,
-,
+"[ ]{1,}decision[ ]{1,}",   decisions-science
+"[ ]{1,}decisioning[ ]{1,}",   decisions-science
+"[ ]{1,}decisionstree[ ]{1,}",   decisions-science
+"[ ]{1,}decisionsforest [ ]{1,}",   decisions-science
+"[ ]{1,}decisionspoints[ ]{1,}",   decisions-science
+"[ ]{1,}decisionsrules[ ]{1,}",   decisions-science
+"[ ]{1,}decisionsscience[ ]{1,}",   decisions-science
+"[ ]{1,}decisionssupports[ ]{1,}",   decisions-science
+"[ ]{1,}decisionstools[ ]{1,}",   decisions-science
