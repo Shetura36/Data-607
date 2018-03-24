@@ -18,4 +18,9 @@ library(rvest)
 
 ```{r}
 
+url_source <- "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Monster.comJobs-Shahparan.csv"
+
+url_listing <- read.csv(url_source)
+
+  
 ```
