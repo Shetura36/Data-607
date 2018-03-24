@@ -268,16 +268,15 @@ docs &lt;- VCorpus(DirSource(cname))
 <h3>Data clean up</h3>
 <p>The clean up steps below, which is done by a mapper function called <code>tm_map</code> of the <code>tm</code> library is used to</p>
 <ul>
+<li>convert to lowercase</li>
 <li>remove punctuation</li>
 <li>remove numbers</li>
 <li>remove unnecessary white spaces</li>
-<li>convert to lowercase</li>
-<li>substitute multi-term keywords into a string with no white spaces (list of terms from a file)</li>
+<li>substitute terms (list of terms from a file)</li>
 <li>remove stop words</li>
 <li>remove irrelevant words (list of terms from a file)</li>
 </ul>
-<p>For the multi-term keyword substitution, a team member manually built a list of these words.</p>
-<p>For the removal of irrelevant words, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. A term frequency list is generated and reviewed by a team member. Building a list of irrelevant words will help lower down the presence of noise words if we do decide to run a different set of job postings to analyze.</p>
+<p>For the removal of irrelevant words, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. A term frequency list is generated and reviewed by a team member. Only words with scores of 20 or higher were reviewed to determine if they are irrelevant. Examples of words removed are business, world, high, full, etc.</p>
 <p>About preserving the term “r” in the dataset.</p>
 </div>
 <div id="convert-to-lowercase" class="section level3">
@@ -381,8 +380,8 @@ kable(head(terms,5), format=&quot;markdown&quot;)</code></pre>
 </tbody>
 </table>
 </div>
-<div id="replace-the-multi-term-keywords" class="section level4">
-<h4>Replace the multi-term keywords</h4>
+<div id="substitute-terms-from-list" class="section level4">
+<h4>Substitute terms from list</h4>
 <pre class="r"><code>for (j in seq(docs))
 {
   #docs[[j]] &lt;- gsub(&quot;fake news&quot;, &quot;fake_news&quot;, docs[[j]])
@@ -459,8 +458,8 @@ inspect(docs[[1]])</code></pre>
 <p>There are 100 documents with 5,431 terms.</p>
 <pre class="r"><code>tdm &lt;- TermDocumentMatrix(docs) 
 tdm  </code></pre>
-<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4550, documents: 100)&gt;&gt;
-## Non-/sparse entries: 14679/440321
+<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4551, documents: 100)&gt;&gt;
+## Non-/sparse entries: 14689/440411
 ## Sparsity           : 97%
 ## Maximal term length: 43
 ## Weighting          : term frequency (tf)</code></pre>
@@ -483,22 +482,195 @@ for(i in 1:nrow(m)){
 
 freq &lt;- rowSums(m)
 termFreq &lt;- cbind(names(freq),freq)
-rownames(termFreq) &lt;- NULL
-colnames(termFreq) &lt;- c(&quot;term&quot;, &quot;frequency&quot;)
-termFreq &lt;- data.frame(termFreq)
-#termFreq$frequency &lt;- as.numeric(termFreq$frequency)
 
-#typeof(termFreq)
-#termFreq
+rownames(termFreq) &lt;- NULL
+
+colnames(termFreq) &lt;- c(&quot;term&quot;, &quot;frequency&quot;)
+
+termFreq &lt;- data.frame(termFreq, stringsAsFactors = FALSE)
+termFreq$frequency &lt;- as.numeric(termFreq$frequency)
 
 #write.csv(m, file=&quot;TermDocumentMatrix_adjusted.csv&quot;) 
-write.csv(termFreq, file=&quot;TermFrequency_adjusted_7.csv&quot;)
-
-dplyr::filter(termFreq, frequency &gt;= 20) %&gt;% dplyr::arrange(desc(frequency()))</code></pre>
+write.csv(termFreq, file=&quot;TermFrequency_adjusted_8.csv&quot;)</code></pre>
+<div id="terms-with-frequency-scores-of-20-and-higher" class="section level3">
+<h3>Terms with frequency scores of 20 and higher</h3>
+<pre class="r"><code>kable(termFreq %&gt;% dplyr::select(term, frequency) %&gt;% dplyr::filter(frequency &gt; 19) %&gt;% dplyr::arrange(desc(frequency)),format=&quot;markdown&quot;)</code></pre>
 <pre><code>## Warning: package 'bindrcpp' was built under R version 3.4.3</code></pre>
-<pre><code>## Warning in Ops.factor(frequency, 20): '&gt;=' not meaningful for factors</code></pre>
-<pre><code>## [1] term      frequency
-## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">term</th>
+<th align="right">frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">data</td>
+<td align="right">89</td>
+</tr>
+<tr class="even">
+<td align="left">analytics</td>
+<td align="right">88</td>
+</tr>
+<tr class="odd">
+<td align="left">data-scientist</td>
+<td align="right">80</td>
+</tr>
+<tr class="even">
+<td align="left">statistics</td>
+<td align="right">74</td>
+</tr>
+<tr class="odd">
+<td align="left">modeling</td>
+<td align="right">71</td>
+</tr>
+<tr class="even">
+<td align="left">team</td>
+<td align="right">69</td>
+</tr>
+<tr class="odd">
+<td align="left">programming</td>
+<td align="right">68</td>
+</tr>
+<tr class="even">
+<td align="left">degree</td>
+<td align="right">61</td>
+</tr>
+<tr class="odd">
+<td align="left">r-programming</td>
+<td align="right">58</td>
+</tr>
+<tr class="even">
+<td align="left">python</td>
+<td align="right">57</td>
+</tr>
+<tr class="odd">
+<td align="left">machine-learning</td>
+<td align="right">55</td>
+</tr>
+<tr class="even">
+<td align="left">problem-solving</td>
+<td align="right">55</td>
+</tr>
+<tr class="odd">
+<td align="left">design</td>
+<td align="right">45</td>
+</tr>
+<tr class="even">
+<td align="left">sql</td>
+<td align="right">45</td>
+</tr>
+<tr class="odd">
+<td align="left">computer-science</td>
+<td align="right">44</td>
+</tr>
+<tr class="even">
+<td align="left">communication</td>
+<td align="right">42</td>
+</tr>
+<tr class="odd">
+<td align="left">data-processing</td>
+<td align="right">41</td>
+</tr>
+<tr class="even">
+<td align="left">data-science</td>
+<td align="right">41</td>
+</tr>
+<tr class="odd">
+<td align="left">engineering</td>
+<td align="right">41</td>
+</tr>
+<tr class="even">
+<td align="left">research</td>
+<td align="right">40</td>
+</tr>
+<tr class="odd">
+<td align="left">software</td>
+<td align="right">39</td>
+</tr>
+<tr class="even">
+<td align="left">algorithms</td>
+<td align="right">38</td>
+</tr>
+<tr class="odd">
+<td align="left">database</td>
+<td align="right">38</td>
+</tr>
+<tr class="even">
+<td align="left">data-mining</td>
+<td align="right">32</td>
+</tr>
+<tr class="odd">
+<td align="left">data-visualization</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="left">written</td>
+<td align="right">31</td>
+</tr>
+<tr class="odd">
+<td align="left">mathematics</td>
+<td align="right">30</td>
+</tr>
+<tr class="even">
+<td align="left">decisions-science</td>
+<td align="right">28</td>
+</tr>
+<tr class="odd">
+<td align="left">spark</td>
+<td align="right">28</td>
+</tr>
+<tr class="even">
+<td align="left">sas</td>
+<td align="right">27</td>
+</tr>
+<tr class="odd">
+<td align="left">bachelor</td>
+<td align="right">26</td>
+</tr>
+<tr class="even">
+<td align="left">big-data</td>
+<td align="right">26</td>
+</tr>
+<tr class="odd">
+<td align="left">phd</td>
+<td align="right">26</td>
+</tr>
+<tr class="even">
+<td align="left">artificial-intelligence</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td align="left">java</td>
+<td align="right">24</td>
+</tr>
+<tr class="even">
+<td align="left">professional</td>
+<td align="right">23</td>
+</tr>
+<tr class="odd">
+<td align="left">communicate</td>
+<td align="right">21</td>
+</tr>
+<tr class="even">
+<td align="left">consulting</td>
+<td align="right">21</td>
+</tr>
+<tr class="odd">
+<td align="left">master</td>
+<td align="right">21</td>
+</tr>
+<tr class="even">
+<td align="left">trends</td>
+<td align="right">21</td>
+</tr>
+<tr class="odd">
+<td align="left">innovative</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 

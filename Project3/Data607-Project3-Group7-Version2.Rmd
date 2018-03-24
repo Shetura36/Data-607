@@ -110,17 +110,15 @@ inspect(docs[[1]])
 
 The clean up steps below, which is done by a mapper function called `tm_map` of the `tm` library is used to 
 
+* convert to lowercase
 * remove punctuation
 * remove numbers
 * remove unnecessary white spaces
-* convert to lowercase
-* substitute multi-term keywords into a string with no white spaces (list of terms from a file)
+* substitute terms  (list of terms from a file)
 * remove stop words
 * remove irrelevant words (list of terms from a file)
 
-For the multi-term keyword substitution, a team member manually built a list of these words. 
-
-For the removal of irrelevant words, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. A term frequency list is generated and reviewed by a team member. Building a list of irrelevant words will help lower down the presence of noise words if we do decide to run a different set of job postings to analyze. 
+For the removal of irrelevant words, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. A term frequency list is generated and reviewed by a team member. Only words with scores of 20 or higher were reviewed to determine if they are irrelevant. Examples of words removed are business, world, high, full, etc.
 
 About preserving the term "r" in the dataset. 
 
@@ -212,7 +210,7 @@ kable(head(terms,5), format="markdown")
 ```
 
 
-#### Replace the multi-term keywords
+#### Substitute terms from list
 ```{r}
 for (j in seq(docs))
 {
@@ -288,18 +286,22 @@ for(i in 1:nrow(m)){
 
 freq <- rowSums(m)
 termFreq <- cbind(names(freq),freq)
-rownames(termFreq) <- NULL
-colnames(termFreq) <- c("term", "frequency")
-termFreq <- data.frame(termFreq)
-#termFreq$frequency <- as.numeric(termFreq$frequency)
 
-#typeof(termFreq)
-#termFreq
+rownames(termFreq) <- NULL
+
+colnames(termFreq) <- c("term", "frequency")
+
+termFreq <- data.frame(termFreq, stringsAsFactors = FALSE)
+termFreq$frequency <- as.numeric(termFreq$frequency)
 
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(termFreq, file="TermFrequency_adjusted_7.csv")
+write.csv(termFreq, file="TermFrequency_adjusted_8.csv")
 
-dplyr::filter(termFreq, frequency >= 20) %>% dplyr::arrange(desc(frequency()))
+```
+
+### Terms with frequency scores of 20 and higher
+```{r}
+kable(termFreq %>% dplyr::select(term, frequency) %>% dplyr::filter(frequency > 19) %>% dplyr::arrange(desc(frequency)),format="markdown")
 ```
 
 
