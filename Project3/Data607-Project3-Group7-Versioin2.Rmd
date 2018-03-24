@@ -214,13 +214,19 @@ docs <- tm_map(docs, PlainTextDocument)
 
 The initial term frequency output was analyzed by a team member. 
 ```{r}
-docs <- tm_map(docs, removeWords, c("syllogism", "tautology"))   
+file <-
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher.csv"
+
+terms <- 
+  as.vector(read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL))
+
+docs <- tm_map(docs, removeWords, terms)   
 ```
 
 ### Remove whitespace
 ```{r}
 docs <- tm_map(docs, stripWhitespace)
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
 
 ## Stage the Data
