@@ -12,62 +12,60 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(rvest)
-
+library(knitr)
 ```
 
 
+### Load list of job URLs for web scraping.
+The job URL file contains 100 entries. It has three columns: row_id, job_url, and selector. 
+The "selector" column contains the selector item as determined by `selectorgadget` tool. 
+
 ```{r}
+url_source <- "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv"
 
-url_source <- "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Monster.comJobs-Shahparan.csv"
-
-url_listing <- read.csv(url_source, header=TRUE, sep=",")
+#load the list of URLs
+url_listing <- read.csv(url_source, header=TRUE, sep=",") 
 
 url_listing$job_url <- as.character(url_listing$job_url)
+url_listing$selector <- as.character(url_listing$selector)
 
+#preview URL listing
+kable(head(url_listing,10), format="markdown")
+
+#initialize vector to collect job text data from 100 webpages
 jobposting_text <- vector(mode="character", nrow(url_listing))
-
-
-#for (i in 1:nrow(url_listing)){
-#}
-
-url_listing$job_url[1:10]
-
-jobposting_text <- vector(mode="character", length=10)
-
 ```
 
-#TrackingJobBody
+### Extract job posting data from the web and save output to local files. 
 
-jobposting_text <- vector(mode="character", length=10)
+It's important that the raw data scrapped from the web pages are saved locally because I noticed that some of the URLs expired, and we can no longer access the content.
+
+The code below will go through each URL, scrape the web page for the data sepcified by the selector, and save the output to a local text file. This code will generate 100 text files. 
 
 ```{r}
+#setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3/JobpostingText")
 
-
-
-for (i in 1:10){
+for (i in 1:nrow(url_listing)){
   
-  jobposting_text[i] <-
   read_html(url_listing$job_url[i]) %>% 
-      html_nodes("#JobDescription") %>% html_text()
+      html_nodes(url_listing$selector[i]) %>% html_text() -> jobposting_text[i]
+
+  #jobposting_text[i]
+  filename <- paste("job", i, ".txt")
+  fileConn<-file(filename)
+  writeLines(c(jobposting_text[i]), fileConn)
+  close(fileConn)
 }
-
-jobposting_text
-write.table(jobposting_text, file="jobdata.txt",sep="|",row.names=FALSE)
-getwd()
-setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3/JobpostingText")
 ```
 
 ```{r}
 
-i <- 21
-read_html(url_listing$job_url[i]) %>% 
-      html_nodes("#JobDescription") %>% html_text() -> jobposting_text[i]
 
 ```
 
 
 ```{r}
-for(i in 1:10){
+for(i in 11:20){
   filename <- paste("job", i, ".txt")
   fileConn<-file(filename)
   writeLines(c(jobposting_text[i]), fileConn)
