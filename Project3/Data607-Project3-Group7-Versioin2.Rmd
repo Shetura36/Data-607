@@ -123,12 +123,18 @@ For the removal of irrelevant words, a pre-processing of the term document matri
 
 About preserving the term "r" in the dataset. 
 
-
+### Convert to lowercase
+```{r}
+docs <- tm_map(docs, tolower)   
+docs <- tm_map(docs, PlainTextDocument)
+inspect(docs[[1]])
+```
 
 ```{r}
 clean.text <- function(text){
   str_replace_all(text, regex('\r\n|\n|\t|\r|,|/|<|>|\\.'), ' ')}
 docs <- tm::tm_map(docs, clean.text)
+docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
 
@@ -139,6 +145,7 @@ for (j in seq(docs)) {
 
     docs[[j]]$content <- gsub("[[:punct:][:blank:]]+", " ", docs[[j]])
 }
+docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
 
@@ -166,29 +173,23 @@ for (j in seq(docs)) {
     docs[[j]]$content <- gsub(notLetters[i], " ", docs[[j]])
   }
 }
-#inspect(docs[[1]])
+inspect(docs[[1]])
 ```
 
 ### Remove Whitespace
 ```{r}
 docs <- tm_map(docs, stripWhitespace)
-#inspect(docs[[1]])
+inspect(docs[[1]])
 ```
 
 ```{r}
-docs[[1]] <- gsub("[ ]r[ ]", "r-programming", docs[[1]], ignore.case = TRUE)
+docs[[1]] <- gsub("r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r", " r-programming ", docs[[1]], ignore.case = TRUE)
 docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
 
 
-### Convert to lowercase
-```{r}
-docs <- tm_map(docs, tolower)   
-docs <- tm_map(docs, PlainTextDocument)
-DocsCopy <- docs
-inspect(docs[[1]])
-```
+
 
 
 ### Combining words that should stay together
