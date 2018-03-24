@@ -677,7 +677,7 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 <pre class="r"><code>result &lt;- 
   termFreq %&gt;% dplyr::select(term, frequency) %&gt;% dplyr::arrange(desc(frequency))
 #write.csv(m, file=&quot;TermDocumentMatrix_adjusted.csv&quot;) 
-write.csv(termFreq, file=&quot;TermFrequency_adjusted_8.csv&quot;)</code></pre>
+write.csv(result, file=&quot;TermFrequency_adjusted_8.csv&quot;)</code></pre>
 </div>
 </div>
 

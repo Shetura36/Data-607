@@ -333,7 +333,7 @@ kable(result,format="markdown")
 result <- 
   termFreq %>% dplyr::select(term, frequency) %>% dplyr::arrange(desc(frequency))
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(termFreq, file="TermFrequency_adjusted_8.csv")
+write.csv(result, file="TermFrequency_adjusted_8.csv")
 ```
 
 
