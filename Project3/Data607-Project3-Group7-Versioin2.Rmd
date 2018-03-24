@@ -51,15 +51,12 @@ url_source <-
   "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv"
 
 #load the list of URLs
-url_listing <- read.csv(url_source, header=TRUE, sep=",") 
-
-url_listing$job_url <- as.character(url_listing$job_url)
-url_listing$selector <- as.character(url_listing$selector)
+url_listing <- data.frame(read.csv(url_source, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL))
 ```
 
 ### Preview of URL list
-```{r}
-rownames(url_listing) <- NULL
+```{r echo=FALSE}
+row.names(url_listing) <- NULL
 kable(url_listing[12:18,], format="markdown")
 ```
 
@@ -67,15 +64,13 @@ kable(url_listing[12:18,], format="markdown")
 
 ### Extract and save the job posting
 
-While manually stepping through each URL to confirm that the selector grabs text from each page, I noticed that some of the URLs started to expire. In addition, there was a post in the class slack channel about being banned from a job site. So while going through the the step by step check, a line of code saved each extracted data to a text file. However, when an attempt was made to run the entire for loop to go through the 100 URLs to automatically build the dataset of job postings, Monster.com had already blocked access to the site. 
+While manually stepping through each URL to confirm that the selector grabs data from each page, I noticed that some of the URLs started to expire. In addition, there was a post in the class slack channel about being banned from a job site. So while going through the the step by step check, a line of code saved each extracted data to a text file just in case the posting expires or access gets denied. However, when an attempt was made to run the entire for loop to go through the 100 URLs to automatically build the dataset of job postings, Monster.com had already blocked access to the site. 
 
-```{r echo=FALSE, out.width='70%'}
+```{r echo=FALSE, out.width='80%'}
 knitr::include_graphics("./images/Monster.com-Forbidden Access-3.23.2018-snippet.png")
 ```
 
-The code below will go through each URL, scrape the web page for the data sepcified by the selector, and save the output as a text file. This code will generate 100 text files.  
-
-The code has been commented out for the reason mentioned above.
+The code below will go through each URL, scrape the web page for the data sepcified by the selector, and save the output as a text file. This code will generate 100 text files in the specified directory. The code has been commented out for the reason mentioned above.
 ```{r}
 setwd("./JobpostingText")
 
@@ -94,40 +89,46 @@ setwd("./JobpostingText")
 ## Text mining and data clean up
 
 The `tm` library is used to clean up the data and build a term document matrix. 
-
 The code below will grab all 100 job postings under the specified directory. 
-
 ```{r}
-cname <- "../Jobposting-Archive"
+cname <- "./Jobposting-Archive"
 docs <- VCorpus(DirSource(cname))   
 #summary(docs) 
 ```
 
-```{r }
-typeof(docs) #list
-inspect(docs[1])
-meta(docs[[1]], "id") #get the ID
-meta(docs[[1]]) #get meta data
-inspect(docs[[1]]) #you see the actual document content
-writeLines(as.character(docs)) #loads all the text in all the files
-writeLines(as.character(docs[1])) #loads only the text on the first document
-```
-
 ### Preview first document
 
-```{r}
+```{r echo=FALSE}
 #writeLines(as.character(docs[1]))
 #writeLines(as.character(docs))
 inspect(docs[[1]])
 ```
 
 
-### Remove punctuation
-```{r}
-docs <- tm_map(docs,removePunctuation)
-#inspect(docs[[1]])
-```
+### Data clean up
 
+The clean up steps below, which is done by a mapper function called `tm_map` of the `tm` library is used to 
+
+* remove punctuations
+* remove numbers
+* remove unecessary whitespaces
+* convert to lowercase
+* substitute multi-term keywrods into a string with no whitespaces (list of terms from a file)
+* remove stop words
+* remove irrelevant words (list of terms from a file)
+
+For the multi-term keyword substitution, a team member manually built a list of these words. 
+
+For the removal of irrelevant words, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. A term frequency list is generated and reviewed by a team member. Building a list of irrelevant words will help lower down the presence of noise words if we do decide to run a different set of job postings to analyze. 
+
+About preserving the term "r" in the dataset. 
+
+
+```{r}
+docs <- tm::tm_map(docs,removePunctuation) #remove punctuation
+#docs <- tm_map(docs, removeNumbers) #remove numbers
+
+```
 
 ### Identify characters that are NOT letters
 ```{r}
@@ -141,8 +142,8 @@ notLetters <- unlist(str_extract_all(content, '[^A-Za-z ]'))
 notLetters <- unique(unlist(strsplit(notLetters, "[ ]")))
 ```
 
-### These are the special characters identified
-```{r}
+### Special characters identified
+```{r echo=FALSE}
 kable(notLetters, format="markdown")
 ```
 
@@ -162,12 +163,6 @@ docs <- tm_map(docs, stripWhitespace)
 #inspect(docs[[1]])
 ```
 
-### Remove Numbers
-The removal of special characters above also removed numbers
-```{r}
-docs <- tm_map(docs, removeNumbers) 
-#inspect(docs[[1]])
-```
 
 ### Convert to lowercase
 ```{r}
@@ -177,29 +172,13 @@ DocsCopy <- docs
 #inspect(docs[[1]])
 ```
 
-### Remove stop words
-```{r}
-# For a list of the stopwords, see:   
-# length(stopwords("english"))   
-# stopwords("english")   
-docs <- tm_map(docs, removeWords, stopwords("english"))   
-docs <- tm_map(docs, PlainTextDocument)
-#inspect(docs[[1]])
-```
-
-### Removing particular words:
-```{r}
-docs <- tm_map(docs, removeWords, c("syllogism", "tautology"))   
-# Just remove the words "syllogism" and "tautology". 
-# These words don't actually exist in these texts. But this is how you would remove them if they had.
-```
 
 ### Combining words that should stay together
 
-This takes a list of multi-term data science keywords. These keywords will be preserved together by concatenating each term with a symbol to eliminate the whitespace in between the terms. 
+This takes a list of multi-term data science keywords from a file. This file was prepared by a team member.
+These keywords will be preserved together by concatenating each term with a symbol to eliminate the whitespace in between the terms. 
 
-
-#### Preview of list
+#### Preview list of multi-term keywords to preserve
 ```{r}
 file <-
   "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/Multi-part%20DS%20terms_Shahparan-Version2.csv"
@@ -222,6 +201,21 @@ for (j in seq(docs))
 docs <- tm_map(docs, PlainTextDocument)
 ```
 
+### Remove stop words
+```{r}
+# For a list of the stopwords, see:   
+# length(stopwords("english"))   
+# stopwords("english")   
+docs <- tm_map(docs, removeWords, stopwords("english"))   
+docs <- tm_map(docs, PlainTextDocument)
+```
+
+### Removing irrelevant words
+
+The initial term frequency output was analyzed by a team member. 
+```{r}
+docs <- tm_map(docs, removeWords, c("syllogism", "tautology"))   
+```
 
 ### Remove whitespace
 ```{r}
@@ -233,23 +227,12 @@ inspect(docs[[1]])
 
 ### create a term document matrix.
 
-100 documents with 5,431 terms. 
+There are 100 documents with 5,431 terms.
 ```{r}
 tdm <- TermDocumentMatrix(docs) 
 tdm  
 ```
 
-### Remove Sparse Terms
-
-If sparse = .01, then only terms that appear in (nearly) every document will be retained.
-
-```{r}
-#dtms <- removeSparseTerms(dtm, 0.70)
-#dim(dtms)
-#dtms
-tdms <- removeSparseTerms(tdm, 0.99)
-tdms
-```
 
 ## Explore your data
 
