@@ -185,9 +185,9 @@ inspect(docs[[1]])
 
 ```{r echo=FALSE}
 #for testing of regular expressions
-docs[[1]] <- gsub("^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$", " r-programming ", docs[[1]], ignore.case = TRUE)
-docs <- tm_map(docs, PlainTextDocument)
-inspect(docs[[1]])
+#docs[[1]] <- gsub("^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$", " r-programming ", docs[[1]], ignore.case = TRUE)
+#docs <- tm_map(docs, PlainTextDocument)
+#inspect(docs[[1]])
 ```
 
 
@@ -246,7 +246,8 @@ terms <-
 
 terms <- unlist(terms)
 
-docs <- tm_map(docs, removeWords, terms)   
+docs <- tm_map(docs, removeWords, terms)  
+inspect(docs[[1]])
 ```
 
 ### Remove whitespace
@@ -268,7 +269,6 @@ tdm
 
 ## Explore your data
 
-### Preview
 ```{r}
 #m <- as.matrix(tdms)
 m <- as.matrix(tdm)
@@ -290,8 +290,7 @@ colnames(termFreq) <- c("term", "frequency")
 termFreq <- data.frame(termFreq)
 
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(termFreq, file="TermFrequency_adjusted_2.csv") 
+write.csv(termFreq, file="TermFrequency_adjusted_5.csv") 
 ```
-
 
 
