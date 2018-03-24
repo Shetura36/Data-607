@@ -1,0 +1,192 @@
+Terms,Replace
+descriptive analytics,   analytics   
+predictive analytics,   analytics   
+prescriptive analytics,   analytics   
+behavioral analytics,   analytics   
+clickstream analytics,   analytics   
+data mining,   data-mining   
+dark data,   dark-data   
+machine learning,   machine-learning   
+neural network,   neural-network   
+cloud computing,   cloud-computing   
+cluster computing,   cluster-computing   
+distributed file system,   distributed-file-system   
+apache spark,   big-data   
+artificial intelligence,   artificial-intelligence   
+business intelligence,   artificial-intelligence   
+call detail record (cdr) analysis,   call-detail-record   
+data aggregation,   data-aggregation   
+data architecture and design,   data-architecture   
+data cleansing,   data-cleansing   
+data collection,   data-collection   
+data governance,   data-governance   
+data profiling,   data-profiling   
+data visualization,   data-visualization   
+data warehouse,   data-warehouse   
+internet of things,   internet-of-things   
+load balancing,   load-balancing   
+pattern recognition,   artificial-intelligence   
+recommendation engine,   recommendation-engine   
+root-cause analysis,   root-cause-analysis   
+sentiment analysis,   sentiment-analysis   
+deep learning,   deep-learning   
+quality assurance,   quality-assurance   
+big data,   big-data   
+hadoop ecosystem,   big-data   
+google cloud platform,   google-cloud-platform   
+microsoft azure,   microsoft-azure   
+strategic analytics,   analytics   
+marketing analytics,   analytics   
+quant research,   research   
+quantitative analysis,   quantitative-analysis   
+big datasets,   big-datasets   
+ai models,   ai-models   
+bidding optimization,   bidding-optimization   
+messaging optimization,   messaging-optimization   
+multi-touch attribution,   multi-touch-attribution   
+data science life cycle,   data-science-life-cycle   
+data wrangling,   data-wrangling   
+feature engineering,   feature-engineering   
+model generation,   model-generation   
+statistic,   statistics   
+data warehousing,   data-warehousing   
+feature extractions,   feature-extractions   
+model selection,   model-selection   
+model optimization,   model-optimization   
+model deployment,   model-deployment   
+support vector machine,   support-vector-machine   
+genetic algorithms,   genetic-algorithms   
+fuzzy logic,   fuzzy-logic   
+parallel computing,   parallel-computing   
+rest api,   rest-api   
+logistic regression,   logistic-regression   
+bayesian techniques,   bayesian-techniques   
+time-series analysis,   time-series-analysis   
+stochastic optimization,   stochastic-optimization   
+computer science,   computer-science   
+text mining,   data-mining   
+data science,   data-science   
+predictive modeling,   modeling   
+data scientist,   data-scientist   
+data scientists,   data-scientist   
+java,   java   
+javascript,   java   
+java script,   java   
+"^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$",   r-programming   
+python,   python   
+pythonbased,   python   
+pythonexperience,   python   
+pythonexperienced,   python   
+pythonfamiliarity,   python   
+pythonjavamatlab,   python   
+pythonminimum,   python   
+pythonpreferred,   python   
+pythonsql,   python   
+bioinformaticists,   biology   
+bioinformatics,   biology   
+biologists,   biology   
+biology,   biology   
+biomedical,   biology   
+biometrics,   biology   
+biostatistics,   biology   
+biostatisticsstatistics,   biology   
+biotech,   biology   
+big-dataadvanced,   big-data   
+analytics,   analytics   
+analysis,   analytics   
+mannerdata wrangling,   data-wrangling   
+visualisation,   data-visualization   
+visualizationsdesigning,   data-visualization   
+visualizationsidentify,   data-visualization   
+visual,   data-visualization   
+visualization,   data-visualization   
+statisticians,   statistics   
+computer scienceinformation,   computer-science   
+computer sciencestatistics,   computer-science   
+statistical,   statistics   
+mysql,   sql   
+nosql,   sql   
+accesssql,   sql   
+mysqlpostgresql,   sql   
+rsql,   sql   
+sqlhive,   big-data   
+sqlhive,   big-data   
+sqlhivespark,   big-data   
+sqlmastery,   sql   
+sqlpreferred,   sql   
+sqlstatistics,   sql   
+hadoop-ecosystembachelor,   big-data   
+hadoopknowledge,   big-data   
+apache-spark,   big-data   
+apache-sparklrs,   big-data   
+pyspark,   big-data   
+hadoop,   big-data   
+spark,   big-data   
+models,   modeling   
+model,   modeling   
+predictive-modelingassess,   modeling   
+predictive-modelingwhat,   modeling   
+machine,   machine-learning   
+machine-learningexperience,   machine-learning   
+machinekeywords,   machine-learning   
+machinelearning,   machine-learning   
+machine-learningbut,   machine-learning   
+machine-learningmachine,   machine-learning   
+machine-learningmust,   machine-learning   
+machine-learningrecommending,   machine-learning   
+analytical,   analytics   
+programmatically,   programming   
+programmable,   programming   
+programmingbe,   programming   
+programmingexperience,   programming   
+programmingminimum,   programming   
+programmingscripting,   programming   
+programmingsolid,   programming   
+softwarealgorithm,   software   
+softwareexperience,   software   
+softwares,   software   
+softwaretools,   software   
+researchers,   research   
+researcher,   research   
+researches,   research   
+researchfocused,   research   
+academicresearch,   research   
+businessresearch,   research   
+researchanalytical,   research   
+researched,   research   
+researchersubject,   research   
+researching,   research   
+researchresponsibilitiesexploratory,   research   
+researchscientific,   research   
+algorithm,   algorithms   
+algorithmic,   algorithms   
+algorithmsdesired,   algorithms   
+algorithmsexperience,   algorithms   
+algorithmsim,   algorithms   
+algorithmswhat,   algorithms   
+protocolalgorithms,   algorithms   
+mining,   data-mining   
+data-miningstrong,   data-mining   
+data-miningunderstanding,   data-mining   
+mathematicians,   mathematics   
+mathstatistics,   mathematics   
+analytic,   analytics   
+phds,   phd   
+qualificationsphd,   phd   
+msphd,   phd   
+phddecent,   phd   
+postphd,   phd   
+predictive,   modeling   
+program,   programming   
+solve,   problem-solving   
+problems,   problem-solving   
+problem,   problem-solving   
+languages,   programming   
+languages,   programming   
+processing,   data-processing   
+process,   data-processing   
+intelligence,   artificial-intelligence   
+business intelligenceanalysis,   artificial-intelligence   
+business intelligenceexpert,   artificial-intelligence   
+defenseintelligence,   artificial-intelligence   
+quantitative,   analytics   

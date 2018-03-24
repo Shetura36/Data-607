@@ -182,13 +182,13 @@ docs <- tm_map(docs, stripWhitespace)
 inspect(docs[[1]])
 ```
 
-```{r}
-docs[[1]] <- gsub("r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r", " r-programming ", docs[[1]], ignore.case = TRUE)
+
+```{r echo=FALSE}
+#for testing of regular expressions
+docs[[1]] <- gsub("^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$", " r-programming ", docs[[1]], ignore.case = TRUE)
 docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
-
-
 
 
 
