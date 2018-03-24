@@ -134,6 +134,17 @@ $(document).ready(function () {
 </blockquote>
 <hr />
 </div>
+<div id="files" class="section level3">
+<h3>Files</h3>
+<ul>
+<li><p>List of 100 job URLs: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-Shahparan-Version2.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-Shahparan-Version2.csv</a></p></li>
+<li><p>Job posting text files (scrapped form the web): <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive" class="uri">https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive</a></p></li>
+<li><p>List of term substitution: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version3.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version3.csv</a></p></li>
+<li><p>List of words removed: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher.csv</a></p></li>
+<li><p>Term Frequency output: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_8.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_8.csv</a></p></li>
+</ul>
+<hr />
+</div>
 <div id="active-group-members" class="section level3">
 <h3>Active group members</h3>
 <ul>
@@ -158,7 +169,7 @@ library(dplyr)</code></pre>
 <div id="load-job-posting-urls" class="section level3">
 <h3>Load job posting URLs</h3>
 <p>The job URL file contains 100 entries. It has three columns: row_id, job_url, and selector. The <code>selector</code> column store the selector item as determined by <code>selectorgadget</code> tool.</p>
-<pre class="r"><code>setwd(&quot;C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3&quot;)
+<pre class="r"><code>#setwd(&quot;C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3&quot;)
 
 url_source &lt;- 
   &quot;https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv&quot;
@@ -328,14 +339,7 @@ notLetters &lt;- unique(unlist(strsplit(notLetters, &quot; &quot;)))</code></pre
 <div id="remove-whitespace" class="section level3">
 <h3>Remove Whitespace</h3>
 <pre class="r"><code>docs &lt;- tm_map(docs, stripWhitespace)
-inspect(docs[[1]])</code></pre>
-<pre><code>## &lt;&lt;PlainTextDocument&gt;&gt;
-## Metadata:  7
-## Content:  chars: 4532
-## 
-## 
-## 
-## job descriptionjob title associate data scientistlocation portland or reports to manager data science come join us comscore is a media measurement company providing multiscreen reporting and analytics with cutting edge technology to serve clients in the entertainment media retail and advertising industries comscore s data science team helps design the intelligent engines that power the company s advanced movies tv everywhere measurement systems through our research comscore builds projections that make the massive amount of raw data we take in from screens across the world meaningful and useful for our clients we are currently seeking an associate data scientist to add to our growing company of talented team members if you re hardworking and enjoy a cooperative work environment we re offering a place where you can work alongside talented peers on interesting dynamic and fun projects we re a small enough company that you can make a big difference here but we re big enough to reach a national audience essential duties include validate analyze and conduct statistical analysis on data using analytical software excel sql and sas analyze and define efficient workable solutions that support client business processes and functional requirements for research projects extract qualitative findings from large data sets write reports that include effective graphs tables summaries and narratives develop and execute test cases to ensure data requirements have been met research and resolve client reported issues interpret results present findings and recommend alternative solutions to research management and business decision makers track daily industry news and disseminate relevant articles to management and teamqualifications and required skills bachelor degree in statistics decision sciences economics physics mathematics engineering or similar field required experience with sql python or other programming language highly competent in data manipulation and critical thinking intrinsic ability to look at data and identify patterns problems or analysis opportunities knowledge of data mining and software applications ability to distill large amounts of information into key findings the ability to clearly articulate research in written and verbal presentations with software developers clients management and sales staff data management experience with one or more data analysis packages e g spss sas stata r required experience with excel including pivot tables formulae vlookup s and graphing strong organizational skills including the ability to multi task and prioritize efficiently to meet deadlines strong attention to detail and problem solving skills self motivated takes initiative loves to learn and continuously seeks new knowledge strong documentation skills from both a business and technology perspective effective troubleshooting and investigation skills to identify root cause of problems proven ability to manage and perform multiple tasks under conditions of fluctuating workloads competing requirements and changing deadlines while maintaining accuracy working independently and completing assignments with minimal direction self starter who is self motivated efficient responsible and dependable additional consideration will be given to candidates with experience in the television media research industry is a plus about comscore comscore is a leading cross platform measurement company that measures audiences brands and consumer behavior everywhere comscore completed its merger with rentrak corporation in january to create the new model for a dynamic cross platform world built on precision and innovation comscore s data footprint combines proprietary digital tv and movie intelligence with vast demographic details to quantify consumers multiscreen behavior at massive scale this approach helps media companies monetize their complete audiences and allows marketers to reach these audiences more effectively with more than clients and a global footprint in more than countries comscore is delivering the future of measurement shares of comscore stock are currently traded on the otc market otc scor for more information on comscore please visit comscore com eeo statement we are an equal employment opportunity employer all qualified applicants will receive consideration for employment without regard to race color religion national origin sex disability status sexual orientation gender identity age protected veteran status or any other characteristic protected by law li jz msja</code></pre>
+#inspect(docs[[1]])</code></pre>
 </div>
 <div id="term-substitution" class="section level3">
 <h3>Term substitution</h3>
@@ -390,7 +394,6 @@ kable(head(terms,5), format=&quot;markdown&quot;)</code></pre>
   }
 }
 docs &lt;- tm_map(docs, PlainTextDocument)
-
 inspect(docs[[1]])</code></pre>
 <pre><code>## &lt;&lt;PlainTextDocument&gt;&gt;
 ## Metadata:  7
@@ -449,12 +452,10 @@ inspect(docs[[1]])</code></pre>
 ## 
 ## 
 ##  descriptionjob title associate data scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw data take screens meaningful useful currently associate data-scientist add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analytics conduct statistics analytics data analytics software excel sql sas analytics define efficient workable functional research extract qualitative findings data write effective graphs tables summaries narratives execute test cases ensure data met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications bachelor degree statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent data manipulation critical thinking intrinsic look data patterns problem-solving analytics data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff data data analytics packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s data footprint combines proprietary digital tv movie artificial-intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja</code></pre>
+<hr />
 </div>
-</div>
-<div id="stage-the-data" class="section level2">
-<h2>Stage the Data</h2>
-<div id="create-a-term-document-matrix." class="section level3">
-<h3>create a term document matrix.</h3>
+<div id="create-a-term-document-matrix" class="section level3">
+<h3>Create a term document matrix</h3>
 <p>There are 100 documents with 5,431 terms.</p>
 <pre class="r"><code>tdm &lt;- TermDocumentMatrix(docs) 
 tdm  </code></pre>
@@ -464,9 +465,9 @@ tdm  </code></pre>
 ## Maximal term length: 43
 ## Weighting          : term frequency (tf)</code></pre>
 </div>
-</div>
-<div id="explore-your-data" class="section level2">
-<h2>Explore your data</h2>
+<div id="adjust-term-document-matrix-count" class="section level3">
+<h3>Adjust term document matrix count</h3>
+<p>The code below will update the count to 1 if the count is greater than 1. A term is mentioned at least once in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance.</p>
 <pre class="r"><code>#m &lt;- as.matrix(tdms)
 m &lt;- as.matrix(tdm)
 
@@ -478,24 +479,24 @@ for(i in 1:nrow(m)){
       m[i,j] &lt;- 1
     }
   }
-}
-
-freq &lt;- rowSums(m)
+}</code></pre>
+</div>
+<div id="create-the-term-frequency-list" class="section level3">
+<h3>Create the term frequency list</h3>
+<p>The code below sums the count across all 100 documents for reach term. This will assign a frequency score for each term. If a term has a score of 50. This means that the term was mentioned on 50 different job postings.</p>
+<pre class="r"><code>freq &lt;- rowSums(m)
 termFreq &lt;- cbind(names(freq),freq)
-
 rownames(termFreq) &lt;- NULL
-
 colnames(termFreq) &lt;- c(&quot;term&quot;, &quot;frequency&quot;)
-
 termFreq &lt;- data.frame(termFreq, stringsAsFactors = FALSE)
-termFreq$frequency &lt;- as.numeric(termFreq$frequency)
-
-#write.csv(m, file=&quot;TermDocumentMatrix_adjusted.csv&quot;) 
-write.csv(termFreq, file=&quot;TermFrequency_adjusted_8.csv&quot;)</code></pre>
+termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
+</div>
 <div id="terms-with-frequency-scores-of-20-and-higher" class="section level3">
 <h3>Terms with frequency scores of 20 and higher</h3>
-<pre class="r"><code>kable(termFreq %&gt;% dplyr::select(term, frequency) %&gt;% dplyr::filter(frequency &gt; 19) %&gt;% dplyr::arrange(desc(frequency)),format=&quot;markdown&quot;)</code></pre>
+<pre class="r"><code>result &lt;- 
+  termFreq %&gt;% dplyr::select(term, frequency) %&gt;% dplyr::filter(frequency &gt; 19) %&gt;% dplyr::arrange(desc(frequency))</code></pre>
 <pre><code>## Warning: package 'bindrcpp' was built under R version 3.4.3</code></pre>
+<pre class="r"><code>kable(result,format=&quot;markdown&quot;)</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -670,6 +671,13 @@ write.csv(termFreq, file=&quot;TermFrequency_adjusted_8.csv&quot;)</code></pre>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="write-the-term-frequency-to-a-file" class="section level3">
+<h3>Write the term frequency to a file</h3>
+<pre class="r"><code>result &lt;- 
+  termFreq %&gt;% dplyr::select(term, frequency) %&gt;% dplyr::arrange(desc(frequency))
+#write.csv(m, file=&quot;TermDocumentMatrix_adjusted.csv&quot;) 
+write.csv(termFreq, file=&quot;TermFrequency_adjusted_8.csv&quot;)</code></pre>
 </div>
 </div>
 

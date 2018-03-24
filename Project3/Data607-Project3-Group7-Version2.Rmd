@@ -17,6 +17,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ---------------
 
+### Files
+
+* List of 100 job URLs: <br/>
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-Shahparan-Version2.csv 
+
+* Job posting text files (scrapped form the web): <br/>
+https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive
+
+* List of term substitution: <br/>
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version3.csv
+
+* List of words removed: <br/>
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher.csv
+
+* Term Frequency output: <br/>
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_8.csv
+
+
+---------------
+
 ### Active group members
 
 * AHM Shahparan
@@ -46,7 +66,7 @@ The job URL file contains 100 entries. It has three columns: row_id, job_url, an
 The `selector` column store the selector item as determined by `selectorgadget` tool.
 
 ```{r}
-setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3")
+#setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3")
 
 url_source <- 
   "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv"
@@ -182,7 +202,7 @@ for (j in seq(docs)) {
 ### Remove Whitespace
 ```{r}
 docs <- tm_map(docs, stripWhitespace)
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
 
 
@@ -220,7 +240,6 @@ for (j in seq(docs))
   }
 }
 docs <- tm_map(docs, PlainTextDocument)
-
 inspect(docs[[1]])
 ```
 
@@ -257,9 +276,9 @@ docs <- tm_map(docs, stripWhitespace)
 inspect(docs[[1]])
 ```
 
-## Stage the Data
+-------------------
 
-### create a term document matrix.
+### Create a term document matrix
 
 There are 100 documents with 5,431 terms.
 ```{r}
@@ -268,7 +287,9 @@ tdm
 ```
 
 
-## Explore your data
+### Adjust term document matrix count
+
+The code below will update the count to 1 if the count is greater than 1. A term is mentioned at least once in a document, it is only counted once.  Mentioning the term more than once in a single job posting does not increase its relevance.
 
 ```{r}
 #m <- as.matrix(tdms)
@@ -283,25 +304,37 @@ for(i in 1:nrow(m)){
     }
   }
 }
+```
 
+### Create the term frequency list
+
+The code below sums the count across all 100 documents for reach term. This will assign a frequency score for each term. 
+If a term has a score of 50. This means that the term was mentioned on 50 different job postings. 
+
+```{r}
 freq <- rowSums(m)
 termFreq <- cbind(names(freq),freq)
-
 rownames(termFreq) <- NULL
-
 colnames(termFreq) <- c("term", "frequency")
-
 termFreq <- data.frame(termFreq, stringsAsFactors = FALSE)
 termFreq$frequency <- as.numeric(termFreq$frequency)
-
-#write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(termFreq, file="TermFrequency_adjusted_8.csv")
-
 ```
 
 ### Terms with frequency scores of 20 and higher
 ```{r}
-kable(termFreq %>% dplyr::select(term, frequency) %>% dplyr::filter(frequency > 19) %>% dplyr::arrange(desc(frequency)),format="markdown")
+result <- 
+  termFreq %>% dplyr::select(term, frequency) %>% dplyr::filter(frequency > 19) %>% dplyr::arrange(desc(frequency))
+kable(result,format="markdown")
 ```
+
+
+### Write the term frequency to a file
+```{r}
+result <- 
+  termFreq %>% dplyr::select(term, frequency) %>% dplyr::arrange(desc(frequency))
+#write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
+write.csv(termFreq, file="TermFrequency_adjusted_8.csv")
+```
+
 
 
