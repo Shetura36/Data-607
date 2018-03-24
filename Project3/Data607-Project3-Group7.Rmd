@@ -20,7 +20,57 @@ library(rvest)
 
 url_source <- "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Monster.comJobs-Shahparan.csv"
 
-url_listing <- read.csv(url_source)
+url_listing <- read.csv(url_source, header=TRUE, sep=",")
 
+url_listing$job_url <- as.character(url_listing$job_url)
+
+jobposting_text <- vector(mode="character", nrow(url_listing))
+
+
+#for (i in 1:nrow(url_listing)){
+#}
+
+url_listing$job_url[1:10]
+
+jobposting_text <- vector(mode="character", length=10)
+
+```
+
+#TrackingJobBody
+
+jobposting_text <- vector(mode="character", length=10)
+
+```{r}
+
+
+
+for (i in 1:10){
   
+  jobposting_text[i] <-
+  read_html(url_listing$job_url[i]) %>% 
+      html_nodes("#JobDescription") %>% html_text()
+}
+
+jobposting_text
+write.table(jobposting_text, file="jobdata.txt",sep="|",row.names=FALSE)
+getwd()
+setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3/JobpostingText")
+```
+
+```{r}
+
+i <- 21
+read_html(url_listing$job_url[i]) %>% 
+      html_nodes("#JobDescription") %>% html_text() -> jobposting_text[i]
+
+```
+
+
+```{r}
+for(i in 1:10){
+  filename <- paste("job", i, ".txt")
+  fileConn<-file(filename)
+  writeLines(c(jobposting_text[i]), fileConn)
+  close(fileConn)
+}
 ```

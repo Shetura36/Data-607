@@ -1,0 +1,3 @@
+
+
+  Job Description      Data Scientist- (Salary is based on experience)        Great Company, Culture and Benefits!!!    Skills:  7+ years of engineering experience with python    3+ years of working experience in data science    scikit-learn    Java or C++    Git    Strong communication skills (English)  Experience with:  Writing memory-efficient pre-processing pipelines    Clustering and unsupervised learning    Time series    NLP  Bonus:  Visualizing data with javascript    Kaggle grandmaster, former top 10, or current top 100    R    Spark    Geospatial modeling    Past experience with startups    Currently located in Boston or Singapore    Core contributor of an open source machine learning or data science project              
