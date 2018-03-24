@@ -200,7 +200,7 @@ These keywords will be preserved together by concatenating each term with a symb
 #### Preview list of multi-term keywords to preserve
 ```{r}
 file <-
-  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/Multi-part%20DS%20terms_Shahparan-Version2.csv"
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/Multi-part%20DS%20terms_Shahparan-Version3.csv"
 
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
@@ -228,9 +228,10 @@ inspect(docs[[1]])
 ```{r}
 # For a list of the stopwords, see:   
 # length(stopwords("english"))   
-# stopwords("english")   
+#stopwords("english")   
 docs <- tm_map(docs, removeWords, stopwords("english"))   
 docs <- tm_map(docs, PlainTextDocument)
+inspect(docs[[1]])
 ```
 
 ### Removing irrelevant words
@@ -272,6 +273,7 @@ tdm
 #m <- as.matrix(tdms)
 m <- as.matrix(tdm)
 
+#adjust the term count so that when a term appears in a document, it is only counted once
 for(i in 1:nrow(m)){
   
   for(j in 1:ncol(m)){
@@ -288,17 +290,7 @@ colnames(termFreq) <- c("term", "frequency")
 termFreq <- data.frame(termFreq)
 
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(termFreq, file="TermFrequency_adjusted.csv") 
-```
-
-### Export to Excel for further investigation
-```{r}
-m <- as.matrix(tdms)
-freq <- rowSums(m)
-names(freq)
-dim(m)   
-#write.csv(m, file="DocumentTermMatrix2.csv")  
-write.csv(m, file="TermDocumentMatrix.csv")  
+write.csv(termFreq, file="TermFrequency_adjusted_2.csv") 
 ```
 
 
