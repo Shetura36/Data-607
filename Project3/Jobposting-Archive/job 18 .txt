@@ -1,1 +1,65 @@
-NA
+
+
+Data Scientist
+
+
+
+
+Signature Consultants
+•
+St. Louis, MO
+
+
+Posted 19 days ago
+
+
+
+
+Full-Time
+
+
+Degree - 4 Year Degree
+
+
+$30.00 - $45.00 /Hour
+
+
+Computer Software
+
+
+Information Technology
+
+
+
+Job Description
+
+Data Scientist Summary:Signature Consultants has an opportunity for a Data Scientist. Our client has a small but rapidly growing analysis and engineering team that builds and leverages state-of-the-art analytics systems. The team work informs decisions and direction for the business, while also impacting the products. In this role the candidate will work cooperatively across research teams to ensure the best possible data and models are being used to help growers understand the impacts of decisions on their operations. Our client is seeking an agile researcher with broad experience in applied statistical or physical science research.Responsibilities:Exploratory data analysis, data cleaning & processing
+Directed and/or independent research to test scientific hypotheses
+Write beautiful, robust, well-documented research code
+Engage with diverse research groups to understand their models and products and develop solutions to meet their data needs
+Evaluate the limitations of existing data sources and provide recommendations to address unmet data needs
+Undertake written & verbal communication with stakeholders in various parts of the organization
+Qualifications:Bachelor's degree in data science, statistics, computer science or physical sciences, or comparable work experience in agriculture/biotechnology with research experience
+Proficient with statistical software environments such as Python, Scala or R-Studio
+Proficient use of SQL to extract and manipulate data from oracle, postgres, relational database
+Experience designing and developing advisers, business rules and metrics using business intelligence (BI) using tools such as Spotfire, tableau, Business objects, Crystal Reports
+Experience with oral presentation and technical writing
+Preferred Qualifications:Excitement to learn new topics, develop new skills and use new tools
+Knowledge of Bayesian statistical methods
+Familiarity with NOSQL tools like Hadoop (hive, pig, presto) and Spark is a plus.
+Interdisciplinary communication and collaboration skills
+Experience with application of statistics to environmental or agricultural problems is a plus.
+Experience with web services, api and database design
+Expertise in data interoperability and analytics
+Experience with Linux and AWS or other cloud based platforms is a plus, but not required
+What Our Client Offers:The team is composed of top scientists and engineers. The environment is extremely engaging and fast-paced, with a diverse set of top agronomists, statisticians and engineers working together to provide the best possible products and experiences for our customers.
+We a large assortment of snacks & drinks to get you through the day
+Encouragement to get out of the office and into the field with agents and farmers to see first-hand how our products are being used
+Unique opportunity to make a real world impact - we are solving problems that have a massive impact on farmers' lives and food security
+Award winning offices with smart designs, large common areas and open floor plans that fuel collaboration
+We strive for the highest quality in everything we do. From the precision of our agronomic models and the performance of our in-house databases, to the food we serve for lunch; we are constantly refining and improving.
+We let you explore personally compelling topics by occasionally taking time to work on independent projects
+We regularly host meet-up groups and tech-talks and encourage participation in relevant workshops and conferences
+About Signature Consultants, LLCHeadquartered in Fort Lauderdale, Florida, Signature Consultants was established in 1997 with a singular focus: to provide clients and consultants with superior staffing solutions. For the seventh consecutive year, Signature was voted as one of the "Best Staffing Firms to Work For" and is now the 14th largest IT staffing firm in the United States (source: Staffing Industry Analysts). With 26 locations throughout North America, Signature annually deploys thousands of consultants to support, run, and manage their clients' technology needs. Signature offers IT staffing, consulting, managed solutions, and direct placement services. For more information on the company, please visit www.sigconsult.com. 
+
+

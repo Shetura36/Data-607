@@ -1,1 +1,100 @@
-NA
+
+
+Data Scientist
+
+
+
+
+ICONMA
+•
+St. Louis, MO
+
+
+Posted 10 days ago
+
+
+
+
+Contractor
+
+
+Experience - At least 6 year(s)
+
+
+Other Great Industries
+
+
+Other
+
+
+
+Job Description
+
+
+Location              : Creve Coeur, MODuration             : One Year
+
+Description:
+Looking for a data scientist to assist with the design, development and evaluation of both Deep Neural Networks and traditional Machine Learning models with emphasis on feature engineering of "structured data" to provide step improvement in our current field placement model. The position will require collection of data from public or company databases that are relevant to crop yield prediction
+
+
+Job Requirements
+
+
+3-5 responsibilities:
+- Work with the data team to prioritize data needs (environment & genetics) to model placement of hybrids & products
+- Develop automated R or Python scripts for
+- Data QA/QC
+- Environmental feature extraction
+- Environmental feature engineering
+- Develop machine learning & Deep learning predictive models
+
+Daily basis:
+- Herbert Ssegane
+- Tell me about the team dynamic/culture.
+- we work in a matrix structure where 1:1 meetings can be set up with anyone in the team and within the S&P leadership
+
+Must haves:
+- Ability to take cloudy, uncertain ideas, and build them into project concepts
+· Masters or Ph.D. in machine learning or deep learning, statistics, computer science or a related discipline.
+· Demonstrated experience in scientific programming in R or Python
+
+Opportunity stand out for potential candidates:
+- An opportunity to optimize Climate’s product recommendation to farmers, and support Climate’s efforts in predictive and prescriptive agricultural analysis.
+
+Soft skills are you looking for:
+- Team work
+- communication skills are key. This position will require presenting your work on a regular basis
+- Ability to prepare results-oriented slides compared to conference presentation slides
+
+Highest level of education is needed for this position: Ph.D
+
+Position Overview: 
+The Climate Corporation seeks a high-performing, detail-oriented, self-starter data scientist to develop predictive environmental features to enrich models for customer-facing business products. The successful candidate will report to Climate’s Placement Analytics team, whose effort is to optimize Climate’s product recommendation to farmers, and support Climate’s efforts in predictive and prescriptive agricultural analysis. The position provides an opportunity to learn Climate’s digital tools and recommendation platforms in the digital Ag industry.
+
+Major responsibilities
+- Assist with the design, development and evaluation of both Deep Neural Networks and traditional Machine Learning models with emphasis on feature engineering
+- Collect data from public or company databases to extract or generate predictive features relevant to crop yield prediction
+- Prepare & give presentations to leadership to support key business decisions 
+- Results focused and capable of delivering work assignments on tight deadlines
+
+Basic Qualifications
+- Ability to take cloudy, uncertain ideas, and build them into project concepts
+- Masters or Ph.D. in machine learning or deep learning, statistics, computer science or a related discipline.
+- Demonstrated experience in scientific programming in R or Python
+
+Preferred Qualifications
+- Strong scientific programming in R or Python
+- Experience with Machine & Deep Learning 
+- Strong communication skills
+
+Our environment is extremely engaging and fast-paced, with a diverse set of top engineers, agronomists, and statisticians working together to provide the best possible products and experiences for our customers.
+- We offer competitive pay and perks.
+- We provide meals and a large assortment of snacks and drinks to get you through the day.
+- We provide a diverse team with the opportunity to work on cutting edge technology
+- We regularly host meet-up groups and tech-talks and encourage participation in relevant workshops and conferences
+- Candidate will have the opportunity to interact with key executives and leadership.
+            
+Years’ Experience: 6
+
+
+

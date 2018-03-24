@@ -1,5 +1,5 @@
 ---
-title: "Project 3 Group 7"
+title: "Most Valued Data Science Skills"
 author: "Group 7"
 date: "March 23, 2018"
 output: html_document
@@ -9,66 +9,285 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+---------------
 
-```{r}
+### Project 3 
+
+> W. Edwards Deming said, "In God we trust, all others must bring data." Please use data to answer the question, "Which are the most valued data science skills?" Consider your work as an exploration; there is not necessarily a "right answer."
+
+---------------
+
+### Active group members
+
+* AHM Shahparan
+* Alejandro Osborne 
+* Brian Liles
+* Sherranette Tinapunan
+
+---------------
+
+### Load libraries
+
+```{r warning=FALSE, message=FALSE}
 library(rvest)
 library(knitr)
+library(tm)
+library(stringr)
 ```
 
+---------------
 
-### Load list of job URLs for web scraping.
+### Load job posting URLs
+
 The job URL file contains 100 entries. It has three columns: row_id, job_url, and selector. 
-The "selector" column contains the selector item as determined by `selectorgadget` tool. 
+The `selector` column store the selector item as determined by `selectorgadget` tool.
 
 ```{r}
-url_source <- "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv"
+url_source <- 
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv"
 
 #load the list of URLs
 url_listing <- read.csv(url_source, header=TRUE, sep=",") 
 
 url_listing$job_url <- as.character(url_listing$job_url)
 url_listing$selector <- as.character(url_listing$selector)
-
-#preview URL listing
-kable(head(url_listing,10), format="markdown")
-
-#initialize vector to collect job text data from 100 webpages
-jobposting_text <- vector(mode="character", nrow(url_listing))
 ```
 
-### Extract job posting data from the web and save output to local files. 
+### Preview of URL list
+```{r}
+rownames(url_listing) <- NULL
+kable(url_listing[12:18,], format="markdown")
+```
 
-It's important that the raw data scrapped from the web pages are saved locally because I noticed that some of the URLs expired, and we can no longer access the content.
+---------------
 
-The code below will go through each URL, scrape the web page for the data sepcified by the selector, and save the output to a local text file. This code will generate 100 text files. 
+### Extract and save the job posting
 
+While manually stepping through each URL to confirm that the selector grabs text from each page, I noticed that some of the URLs started to expire. In addition, there was a post in the class slack channel about being banned from a job site. So while going through the the step by step check, a line of code saved each extracted data to a text file. However, when an attempt was made to run the entire for loop to go through the 100 URLs to automatically build the dataset of job postings, Monster.com had already blocked access to the site. 
+
+```{r echo=FALSE, out.width='70%'}
+knitr::include_graphics("./images/Monster.com-Forbidden Access-3.23.2018-snippet.png")
+```
+
+The code below will go through each URL, scrape the web page for the data sepcified by the selector, and save the output as a text file. This code will generate 100 text files.  
+
+The code has been commented out for the reason mentioned above.
 ```{r}
 #setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3/JobpostingText")
 
-for (i in 1:nrow(url_listing)){
+#for (i in 1:nrow(url_listing)){
+#  read_html(url_listing$job_url[i]) %>% 
+#      html_nodes(url_listing$selector[i]) %>% html_text() -> data
   
-  read_html(url_listing$job_url[i]) %>% 
-      html_nodes(url_listing$selector[i]) %>% html_text() -> jobposting_text[i]
-
-  #jobposting_text[i]
-  filename <- paste("job", i, ".txt")
-  fileConn<-file(filename)
-  writeLines(c(jobposting_text[i]), fileConn)
-  close(fileConn)
-}
+#  filename <- paste("job", i, ".txt")
+#  fileConn<-file(filename)
+#  writeLines(c(data), fileConn)
+#  close(fileConn)
+#}
 ```
+
+
+### Text mining and data clean up
+
+The `tm` library is used to clean up the data and build a term document matrix. 
+
+The code below will grab all 100 job postings under the specified directory. 
 
 ```{r}
-
-
+cname <- "../Jobposting-Archive"
+docs <- VCorpus(DirSource(cname))   
+#summary(docs) 
 ```
 
+### Notes
+```{r}
+typeof(docs) #list
+inspect(docs[1])
+meta(docs[[1]], "id") #get the ID
+meta(docs[[1]]) #get meta data
+inspect(docs[[1]]) #you see the actual document content
+writeLines(as.character(docs)) #loads all the text in all the files
+writeLines(as.character(docs[1])) #loads only the text on the first document
+```
+
+
+### Preview first document
 
 ```{r}
-for(i in 11:20){
-  filename <- paste("job", i, ".txt")
-  fileConn<-file(filename)
-  writeLines(c(jobposting_text[i]), fileConn)
-  close(fileConn)
-}
+#writeLines(as.character(docs[1]))
+#writeLines(as.character(docs))
+inspect(docs[[1]])
 ```
+
+
+### Remove punctuation
+```{r}
+docs <- tm_map(docs,removePunctuation)
+#inspect(docs[[1]])
+```
+
+
+### Identify characters that are NOT letters
+```{r}
+content <- ""
+for(i in 1:length(docs)){
+ 
+  content <- paste(content, paste(as.character(docs[[i]]), collapse = " "))
+  
+}
+notLetters <- unlist(str_extract_all(content, '[^A-Za-z ]'))
+notLetters <- unique(unlist(strsplit(notLetters, "[ ]")))
+```
+
+### These are the special characters identified
+```{r}
+kable(notLetters, format="markdown")
+```
+
+### Remove the special characters
+```{r}
+for (j in 1:seq(docs)) {
+  for (i in 1:length(notLetters)){
+    docs[[j]]$content <- gsub(notLetters[i], " ", docs[[j]])
+  }
+}
+#inspect(docs[[1]])
+```
+
+### Remove Whitespace
+```{r}
+docs <- tm_map(docs, stripWhitespace)
+#inspect(docs[[1]])
+```
+
+### Remove Numbers
+The removal of special characters above also removed numbers
+```{r}
+docs <- tm_map(docs, removeNumbers) 
+#inspect(docs[[1]])
+```
+
+### Convert to lowercase
+```{r}
+docs <- tm_map(docs, tolower)   
+docs <- tm_map(docs, PlainTextDocument)
+DocsCopy <- docs
+#inspect(docs[[1]])
+```
+
+### Remove stop words
+```{r}
+# For a list of the stopwords, see:   
+# length(stopwords("english"))   
+# stopwords("english")   
+docs <- tm_map(docs, removeWords, stopwords("english"))   
+docs <- tm_map(docs, PlainTextDocument)
+#inspect(docs[[1]])
+```
+
+### Removing particular words:
+We may want to remove certain words that are of no particular interest to us
+```{r}
+docs <- tm_map(docs, removeWords, c("syllogism", "tautology"))   
+# Just remove the words "syllogism" and "tautology". 
+# These words don't actually exist in these texts. But this is how you would remove them if they had.
+```
+
+### Combining words that should stay together
+
+```{r}
+for (j in 1:seq(docs))
+{
+  docs[[j]] <- gsub("fake news", "fake_news", docs[[j]])
+  docs[[j]] <- gsub("inner city", "inner-city", docs[[j]])
+  docs[[j]] <- gsub("politically correct", "politically_correct", docs[[j]])
+}
+docs <- tm_map(docs, PlainTextDocument)
+```
+
+### Removing common word endings (e.g., "ing", "es", "s")
+
+I'm not sure if this is something we would like to do. This causes a lot of words I think to be cut off when it doesn't need to be. For example, "many" --> "mani", "science" -> "scienc".
+
+From author of tutorial: 
+This is referred to as "stemming" documents. We stem the documents so that a word will be recognizable to the computer, despite whether or not it may have a variety of possible endings in the original text.
+
+Note: The "stem completion" function is currently problemmatic, and stemmed words are often annoying to read. For now, I have this section commented out. But you are welcome to try these functions (by removing the hashmark from the beginning of the line) if they interest you. Just don't expect them to operate smoothly.
+
+This procedure has been a little hanky in the recent past, so I change the name of the data object when I do this to keep from overwriting what I have done to this point.
+
+```{r}
+#docs_st <- tm_map(docs, stemDocument)   
+#docs_st <- tm_map(docs_st, PlainTextDocument)
+#writeLines(as.character(docs_st[1])) # Check to see if it worked.
+# docs <- docs_st
+```
+
+### Then add common endings to improve intrepretability.
+This did NOT work. I'm not a big fan of this. 
+```{r}
+#docs_stc <- tm_map(docs_st, stemCompletion, dictionary = DocsCopy, lazy=TRUE)
+#docs_stc <- tm_map(docs_stc, PlainTextDocument)
+#writeLines(as.character(docs_stc[1])) # Check to see if it worked.
+#writeLines(as.character(docs[1]))
+# docs <- docs_stc
+```
+
+### Stripping unnecesary whitespace from your documents:
+The above preprocessing will leave the documents with a lot of "white space". White space is the result of all the left over spaces that were not removed along with the words that were deleted. The white space can, and should, be removed.
+
+```{r}
+docs <- tm_map(docs, stripWhitespace)
+inspect(docs[[1]])
+```
+
+## Stage the Data
+
+### create a document term matrix.
+
+```{r}
+dtm <- DocumentTermMatrix(docs)   
+dtm 
+```
+
+### Inspect
+```{r}
+#inspect(dtm[1:5, 1:20]) #view first 5 docs & first 20 terms - modify as you like
+dim(dtm) #This will display the number of documents & terms (in that order)
+```
+
+### Remove Sparse Terms
+
+```{r}
+dtms <- removeSparseTerms(dtm, 0.2) # This makes a matrix that is 20% empty space, maximum.
+dim(dtms)
+dtms
+```
+
+### You'll also need a transpose of this matrix. Create it using:
+
+```{r}
+tdm <- TermDocumentMatrix(docs) 
+tdm  
+```
+
+## Explore your data
+
+### Organize terms by their frequency:
+```{r}
+#freq <- colSums(as.matrix(dtm))   
+freq <- colSums(as.matrix(dtms))  
+length(freq)
+ord <- order(freq) 
+```
+
+### Export to Excel for further investigation
+```{r}
+#m <- as.matrix(dtm)   
+m <- as.matrix(dtms)   
+dim(m)   
+write.csv(m, file="DocumentTermMatrix2.csv")  
+```
+
+
+
