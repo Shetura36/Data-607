@@ -1,0 +1,192 @@
+Terms,Replace
+"[ ]{1,}descriptive analytics[ ]{1,}",   analytics   
+"[ ]{1,}predictive analytics[ ]{1,}",   analytics   
+"[ ]{1,}prescriptive analytics[ ]{1,}",   analytics   
+"[ ]{1,}behavioral analytics[ ]{1,}",   analytics   
+"[ ]{1,}clickstream analytics[ ]{1,}",   analytics   
+"[ ]{1,}data mining[ ]{1,}",   data-mining   
+"[ ]{1,}dark data[ ]{1,}",   dark-data   
+"[ ]{1,}machine learning[ ]{1,}",   machine-learning   
+"[ ]{1,}neural network[ ]{1,}",   neural-network   
+"[ ]{1,}cloud computing[ ]{1,}",   cloud-computing   
+"[ ]{1,}cluster computing[ ]{1,}",   cluster-computing   
+"[ ]{1,}distributed file system[ ]{1,}",   distributed-file-system   
+"[ ]{1,}apache spark[ ]{1,}",   big-data   
+"[ ]{1,}artificial intelligence[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}business intelligence[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}call detail record (cdr) analysis[ ]{1,}",   call-detail-record   
+"[ ]{1,}data aggregation[ ]{1,}",   data-aggregation   
+"[ ]{1,}data architecture and design[ ]{1,}",   data-architecture   
+"[ ]{1,}data cleansing[ ]{1,}",   data-cleansing   
+"[ ]{1,}data collection[ ]{1,}",   data-collection   
+"[ ]{1,}data governance[ ]{1,}",   data-governance   
+"[ ]{1,}data profiling[ ]{1,}",   data-profiling   
+"[ ]{1,}data visualization[ ]{1,}",   data-visualization   
+"[ ]{1,}data warehouse[ ]{1,}",   data-warehouse   
+"[ ]{1,}internet of things[ ]{1,}",   internet-of-things   
+"[ ]{1,}load balancing[ ]{1,}",   load-balancing   
+"[ ]{1,}pattern recognition[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}recommendation engine[ ]{1,}",   recommendation-engine   
+"[ ]{1,}root-cause analysis[ ]{1,}",   root-cause-analysis   
+"[ ]{1,}sentiment analysis[ ]{1,}",   sentiment-analysis   
+"[ ]{1,}deep learning[ ]{1,}",   deep-learning   
+"[ ]{1,}quality assurance[ ]{1,}",   quality-assurance   
+"[ ]{1,}big data[ ]{1,}",   big-data   
+"[ ]{1,}hadoop ecosystem[ ]{1,}",   big-data   
+"[ ]{1,}google cloud platform[ ]{1,}",   google-cloud-platform   
+"[ ]{1,}microsoft azure[ ]{1,}",   microsoft-azure   
+"[ ]{1,}strategic analytics[ ]{1,}",   analytics   
+"[ ]{1,}marketing analytics[ ]{1,}",   analytics   
+"[ ]{1,}quant research[ ]{1,}",   research   
+"[ ]{1,}quantitative analysis[ ]{1,}",   quantitative-analysis   
+"[ ]{1,}big datasets[ ]{1,}",   big-datasets   
+"[ ]{1,}ai models[ ]{1,}",   ai-models   
+"[ ]{1,}bidding optimization[ ]{1,}",   bidding-optimization   
+"[ ]{1,}messaging optimization[ ]{1,}",   messaging-optimization   
+"[ ]{1,}multi-touch attribution[ ]{1,}",   multi-touch-attribution   
+"[ ]{1,}data science life cycle[ ]{1,}",   data-science-life-cycle   
+"[ ]{1,}data wrangling[ ]{1,}",   data-wrangling   
+"[ ]{1,}feature engineering[ ]{1,}",   feature-engineering   
+"[ ]{1,}model generation[ ]{1,}",   model-generation   
+"[ ]{1,}statistic[ ]{1,}",   statistics   
+"[ ]{1,}data warehousing[ ]{1,}",   data-warehousing   
+"[ ]{1,}feature extractions[ ]{1,}",   feature-extractions   
+"[ ]{1,}model selection[ ]{1,}",   model-selection   
+"[ ]{1,}model optimization[ ]{1,}",   model-optimization   
+"[ ]{1,}model deployment[ ]{1,}",   model-deployment   
+"[ ]{1,}support vector machine[ ]{1,}",   support-vector-machine   
+"[ ]{1,}genetic algorithms[ ]{1,}",   genetic-algorithms   
+"[ ]{1,}fuzzy logic[ ]{1,}",   fuzzy-logic   
+"[ ]{1,}parallel computing[ ]{1,}",   parallel-computing   
+"[ ]{1,}rest api[ ]{1,}",   rest-api   
+"[ ]{1,}logistic regression[ ]{1,}",   logistic-regression   
+"[ ]{1,}bayesian techniques[ ]{1,}",   bayesian-techniques   
+"[ ]{1,}time-series analysis[ ]{1,}",   time-series-analysis   
+"[ ]{1,}stochastic optimization[ ]{1,}",   stochastic-optimization   
+"[ ]{1,}computer science[ ]{1,}",   computer-science   
+"[ ]{1,}text mining[ ]{1,}",   data-mining   
+"[ ]{1,}data science[ ]{1,}",   data-science   
+"[ ]{1,}predictive modeling[ ]{1,}",   modeling   
+"[ ]{1,}data scientist[ ]{1,}",   data-scientist   
+"[ ]{1,}data scientists[ ]{1,}",   data-scientist   
+"[ ]{1,}java[ ]{1,}",   java   
+"[ ]{1,}javascript[ ]{1,}",   java   
+"[ ]{1,}java script[ ]{1,}",   java   
+"^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$",   r-programming   
+"[ ]{1,}python[ ]{1,}",   python   
+"[ ]{1,}pythonbased[ ]{1,}",   python   
+"[ ]{1,}pythonexperience[ ]{1,}",   python   
+"[ ]{1,}pythonexperienced[ ]{1,}",   python   
+"[ ]{1,}pythonfamiliarity[ ]{1,}",   python   
+"[ ]{1,}pythonjavamatlab[ ]{1,}",   python   
+"[ ]{1,}pythonminimum[ ]{1,}",   python   
+"[ ]{1,}pythonpreferred[ ]{1,}",   python   
+"[ ]{1,}pythonsql[ ]{1,}",   python   
+"[ ]{1,}bioinformaticists[ ]{1,}",   biology   
+"[ ]{1,}bioinformatics[ ]{1,}",   biology   
+"[ ]{1,}biologists[ ]{1,}",   biology   
+"[ ]{1,}biology[ ]{1,}",   biology   
+"[ ]{1,}biomedical[ ]{1,}",   biology   
+"[ ]{1,}biometrics[ ]{1,}",   biology   
+"[ ]{1,}biostatistics[ ]{1,}",   biology   
+"[ ]{1,}biostatisticsstatistics[ ]{1,}",   biology   
+"[ ]{1,}biotech[ ]{1,}",   biology   
+"[ ]{1,}big-dataadvanced[ ]{1,}",   big-data   
+"[ ]{1,}analytics[ ]{1,}",   analytics   
+"[ ]{1,}analysis[ ]{1,}",   analytics   
+"[ ]{1,}mannerdata wrangling[ ]{1,}",   data-wrangling   
+"[ ]{1,}visualisation[ ]{1,}",   data-visualization   
+"[ ]{1,}visualizationsdesigning[ ]{1,}",   data-visualization   
+"[ ]{1,}visualizationsidentify[ ]{1,}",   data-visualization   
+"[ ]{1,}visual[ ]{1,}",   data-visualization   
+"[ ]{1,}visualization[ ]{1,}",   data-visualization   
+"[ ]{1,}statisticians[ ]{1,}",   statistics   
+"[ ]{1,}computer scienceinformation[ ]{1,}",   computer-science   
+"[ ]{1,}computer sciencestatistics[ ]{1,}",   computer-science   
+"[ ]{1,}statistical[ ]{1,}",   statistics   
+"[ ]{1,}mysql[ ]{1,}",   sql   
+"[ ]{1,}nosql[ ]{1,}",   sql   
+"[ ]{1,}accesssql[ ]{1,}",   sql   
+"[ ]{1,}mysqlpostgresql[ ]{1,}",   sql   
+"[ ]{1,}rsql[ ]{1,}",   sql   
+"[ ]{1,}sqlhive[ ]{1,}",   big-data   
+"[ ]{1,}sqlhive[ ]{1,}",   big-data   
+"[ ]{1,}sqlhivespark[ ]{1,}",   big-data   
+"[ ]{1,}sqlmastery[ ]{1,}",   sql   
+"[ ]{1,}sqlpreferred[ ]{1,}",   sql   
+"[ ]{1,}sqlstatistics[ ]{1,}",   sql   
+"[ ]{1,}hadoop-ecosystembachelor[ ]{1,}",   big-data   
+"[ ]{1,}hadoopknowledge[ ]{1,}",   big-data   
+"[ ]{1,}apache-spark[ ]{1,}",   big-data   
+"[ ]{1,}apache-sparklrs[ ]{1,}",   big-data   
+"[ ]{1,}pyspark[ ]{1,}",   big-data   
+"[ ]{1,}hadoop[ ]{1,}",   big-data   
+"[ ]{1,}spark[ ]{1,}",   big-data   
+"[ ]{1,}models[ ]{1,}",   modeling   
+"[ ]{1,}model[ ]{1,}",   modeling   
+"[ ]{1,}predictive-modelingassess[ ]{1,}",   modeling   
+"[ ]{1,}predictive-modelingwhat[ ]{1,}",   modeling   
+"[ ]{1,}machine[ ]{1,}",   machine-learning   
+"[ ]{1,}machine-learningexperience[ ]{1,}",   machine-learning   
+"[ ]{1,}machinekeywords[ ]{1,}",   machine-learning   
+"[ ]{1,}machinelearning[ ]{1,}",   machine-learning   
+"[ ]{1,}machine-learningbut[ ]{1,}",   machine-learning   
+"[ ]{1,}machine-learningmachine[ ]{1,}",   machine-learning   
+"[ ]{1,}machine-learningmust[ ]{1,}",   machine-learning   
+"[ ]{1,}machine-learningrecommending[ ]{1,}",   machine-learning   
+"[ ]{1,}analytical[ ]{1,}",   analytics   
+"[ ]{1,}programmatically[ ]{1,}",   programming   
+"[ ]{1,}programmable[ ]{1,}",   programming   
+"[ ]{1,}programmingbe[ ]{1,}",   programming   
+"[ ]{1,}programmingexperience[ ]{1,}",   programming   
+"[ ]{1,}programmingminimum[ ]{1,}",   programming   
+"[ ]{1,}programmingscripting[ ]{1,}",   programming   
+"[ ]{1,}programmingsolid[ ]{1,}",   programming   
+"[ ]{1,}softwarealgorithm[ ]{1,}",   software   
+"[ ]{1,}softwareexperience[ ]{1,}",   software   
+"[ ]{1,}softwares[ ]{1,}",   software   
+"[ ]{1,}softwaretools[ ]{1,}",   software   
+"[ ]{1,}researchers[ ]{1,}",   research   
+"[ ]{1,}researcher[ ]{1,}",   research   
+"[ ]{1,}researches[ ]{1,}",   research   
+"[ ]{1,}researchfocused[ ]{1,}",   research   
+"[ ]{1,}academicresearch[ ]{1,}",   research   
+"[ ]{1,}businessresearch[ ]{1,}",   research   
+"[ ]{1,}researchanalytical[ ]{1,}",   research   
+"[ ]{1,}researched[ ]{1,}",   research   
+"[ ]{1,}researchersubject[ ]{1,}",   research   
+"[ ]{1,}researching[ ]{1,}",   research   
+"[ ]{1,}researchresponsibilitiesexploratory[ ]{1,}",   research   
+"[ ]{1,}researchscientific[ ]{1,}",   research   
+"[ ]{1,}algorithm[ ]{1,}",   algorithms   
+"[ ]{1,}algorithmic[ ]{1,}",   algorithms   
+"[ ]{1,}algorithmsdesired[ ]{1,}",   algorithms   
+"[ ]{1,}algorithmsexperience[ ]{1,}",   algorithms   
+"[ ]{1,}algorithmsim[ ]{1,}",   algorithms   
+"[ ]{1,}algorithmswhat[ ]{1,}",   algorithms   
+"[ ]{1,}protocolalgorithms[ ]{1,}",   algorithms   
+"[ ]{1,}mining[ ]{1,}",   data-mining   
+"[ ]{1,}data-miningstrong[ ]{1,}",   data-mining   
+"[ ]{1,}data-miningunderstanding[ ]{1,}",   data-mining   
+"[ ]{1,}mathematicians[ ]{1,}",   mathematics   
+"[ ]{1,}mathstatistics[ ]{1,}",   mathematics   
+"[ ]{1,}analytic[ ]{1,}",   analytics   
+"[ ]{1,}phds[ ]{1,}",   phd   
+"[ ]{1,}qualificationsphd[ ]{1,}",   phd   
+"[ ]{1,}msphd[ ]{1,}",   phd   
+"[ ]{1,}phddecent[ ]{1,}",   phd   
+"[ ]{1,}postphd[ ]{1,}",   phd   
+"[ ]{1,}predictive[ ]{1,}",   modeling   
+"[ ]{1,}program[ ]{1,}",   programming   
+"[ ]{1,}solve[ ]{1,}",   problem-solving   
+"[ ]{1,}problems[ ]{1,}",   problem-solving   
+"[ ]{1,}problem[ ]{1,}",   problem-solving   
+"[ ]{1,}languages[ ]{1,}",   programming   
+"[ ]{1,}languages[ ]{1,}",   programming   
+"[ ]{1,}processing[ ]{1,}",   data-processing   
+"[ ]{1,}process[ ]{1,}",   data-processing   
+"[ ]{1,}intelligence[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}business intelligenceanalysis[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}business intelligenceexpert[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}defenseintelligence[ ]{1,}",   artificial-intelligence   
+"[ ]{1,}quantitative[ ]{1,}",   analytics   
