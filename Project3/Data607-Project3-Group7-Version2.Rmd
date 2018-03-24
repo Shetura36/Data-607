@@ -33,6 +33,7 @@ library(rvest)
 library(knitr)
 library(tm)
 library(stringr)
+library(dplyr)
 ```
 
 ---------------
@@ -45,7 +46,7 @@ The job URL file contains 100 entries. It has three columns: row_id, job_url, an
 The `selector` column store the selector item as determined by `selectorgadget` tool.
 
 ```{r}
-#setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3")
+setwd("C:/Users/stina/Documents/GitHub/Data-607-Assignments/Project3")
 
 url_source <- 
   "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/100Jobs-Shahparan-Version2.csv"
@@ -70,7 +71,7 @@ While manually stepping through each URL to confirm that the selector grabs data
 knitr::include_graphics("./images/Monster.com-Forbidden Access-3.23.2018-snippet.png")
 ```
 
-The code below will go through each URL, scrape the web page for the data sepcified by the selector, and save the output as a text file. This code will generate 100 text files in the specified directory. The code has been commented out for the reason mentioned above.
+The code below will go through each URL, scrape the web page for the data specified by the selector, and save the output as a text file. This code will generate 100 text files in the specified directory. The code has been commented out for the reason mentioned above.
 ```{r}
 setwd("./JobpostingText")
 
@@ -109,11 +110,11 @@ inspect(docs[[1]])
 
 The clean up steps below, which is done by a mapper function called `tm_map` of the `tm` library is used to 
 
-* remove punctuations
+* remove punctuation
 * remove numbers
-* remove unecessary whitespaces
+* remove unnecessary white spaces
 * convert to lowercase
-* substitute multi-term keywrods into a string with no whitespaces (list of terms from a file)
+* substitute multi-term keywords into a string with no white spaces (list of terms from a file)
 * remove stop words
 * remove irrelevant words (list of terms from a file)
 
@@ -127,7 +128,7 @@ About preserving the term "r" in the dataset.
 ```{r}
 docs <- tm_map(docs, tolower)   
 docs <- tm_map(docs, PlainTextDocument)
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
 
 ```{r}
@@ -135,7 +136,7 @@ clean.text <- function(text){
   str_replace_all(text, regex('\r\n|\n|\t|\r|,|/|<|>|\\.'), ' ')}
 docs <- tm::tm_map(docs, clean.text)
 docs <- tm_map(docs, PlainTextDocument)
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
 
 
@@ -146,7 +147,7 @@ for (j in seq(docs)) {
     docs[[j]]$content <- gsub("[[:punct:][:blank:]]+", " ", docs[[j]])
 }
 docs <- tm_map(docs, PlainTextDocument)
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
 
 ### Identify characters that are NOT letters
@@ -158,22 +159,26 @@ for(i in 1:length(docs)){
   
 }
 notLetters <- unlist(str_extract_all(content, '[^A-Za-z ]'))
-notLetters <- unique(unlist(strsplit(notLetters, "[ ]")))
+notLetters <- unique(unlist(strsplit(notLetters, " ")))
 ```
 
-### Special characters identified
+### Characters that are not letters
 ```{r echo=FALSE}
-kable(notLetters, format="markdown")
+notLetters
 ```
 
-### Remove the special characters
+### Remove characters that are not letters
+
+Characters that are not letters are going to be replaced by a white space. 
+We are not concerned with tracking strings that numbers.
+
 ```{r}
 for (j in seq(docs)) {
   for (i in 1:length(notLetters)){
     docs[[j]]$content <- gsub(notLetters[i], " ", docs[[j]])
   }
 }
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
 
 ### Remove Whitespace
@@ -190,22 +195,20 @@ inspect(docs[[1]])
 #inspect(docs[[1]])
 ```
 
+### Term substitution
 
+This takes a list of data science terms from a file. This file was prepared by a team member.
+This file serves two purpose: (1) to preserve multi-term keywords like "artificial-intelligence", and (2) to group similar terms into a single category. For example terms like decisions, decisions support, decisions tools are substituted with the term decision-science. 
 
-### Combining words that should stay together
-
-This takes a list of multi-term data science keywords from a file. This file was prepared by a team member.
-These keywords will be preserved together by concatenating each term with a symbol to eliminate the whitespace in between the terms. 
-
-#### Preview list of multi-term keywords to preserve
+#### Preview list of terms
 ```{r}
 file <-
-  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/Multi-part%20DS%20terms_Shahparan-Version3.csv"
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-Version3.csv"
 
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
 
-kable(head(terms,10), format="markdown")
+kable(head(terms,5), format="markdown")
 ```
 
 
@@ -288,9 +291,15 @@ termFreq <- cbind(names(freq),freq)
 rownames(termFreq) <- NULL
 colnames(termFreq) <- c("term", "frequency")
 termFreq <- data.frame(termFreq)
+#termFreq$frequency <- as.numeric(termFreq$frequency)
+
+#typeof(termFreq)
+#termFreq
 
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(termFreq, file="TermFrequency_adjusted_5.csv") 
+write.csv(termFreq, file="TermFrequency_adjusted_7.csv")
+
+dplyr::filter(termFreq, frequency >= 20) %>% dplyr::arrange(desc(frequency()))
 ```
 
 

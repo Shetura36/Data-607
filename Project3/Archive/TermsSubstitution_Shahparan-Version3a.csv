@@ -11,7 +11,7 @@ Terms,Replace
 "[ ]{1,}cloud computing[ ]{1,}",     cloud-computing     
 "[ ]{1,}cluster computing[ ]{1,}",     cluster-computing     
 "[ ]{1,}distributed file system[ ]{1,}",     distributed-file-system     
-"[ ]{1,}apache spark[ ]{1,}",     spark     
+"[ ]{1,}apache spark[ ]{1,}",     big-data     
 "[ ]{1,}artificial intelligence[ ]{1,}",     artificial-intelligence     
 "[ ]{1,}business intelligence[ ]{1,}",     artificial-intelligence     
 "[ ]{1,}call detail record (cdr) analysis[ ]{1,}",     call-detail-record     
@@ -32,8 +32,8 @@ Terms,Replace
 "[ ]{1,}deep learning[ ]{1,}",     deep-learning     
 "[ ]{1,}quality assurance[ ]{1,}",     quality-assurance     
 "[ ]{1,}big data[ ]{1,}",     big-data     
-"[ ]{1,}hadoop ecosystem[ ]{1,}",     hadoop     
-"[ ]{1,}google cloud platform[ ]{1,}",     cloud    
+"[ ]{1,}hadoop ecosystem[ ]{1,}",     big-data     
+"[ ]{1,}google cloud platform[ ]{1,}",     google-cloud-platform     
 "[ ]{1,}microsoft azure[ ]{1,}",     microsoft-azure     
 "[ ]{1,}strategic analytics[ ]{1,}",     analytics     
 "[ ]{1,}marketing analytics[ ]{1,}",     analytics     
@@ -109,19 +109,19 @@ Terms,Replace
 "[ ]{1,}accesssql[ ]{1,}",     sql     
 "[ ]{1,}mysqlpostgresql[ ]{1,}",     sql     
 "[ ]{1,}rsql[ ]{1,}",     sql     
-"[ ]{1,}sqlhive[ ]{1,}",     sql     
-"[ ]{1,}sqlhive[ ]{1,}",     spark    
-"[ ]{1,}sqlhivespark[ ]{1,}",     spark     
+"[ ]{1,}sqlhive[ ]{1,}",     big-data     
+"[ ]{1,}sqlhive[ ]{1,}",     big-data     
+"[ ]{1,}sqlhivespark[ ]{1,}",     big-data     
 "[ ]{1,}sqlmastery[ ]{1,}",     sql     
 "[ ]{1,}sqlpreferred[ ]{1,}",     sql     
 "[ ]{1,}sqlstatistics[ ]{1,}",     sql     
-"[ ]{1,}hadoop-ecosystembachelor[ ]{1,}",     hadoop    
-"[ ]{1,}hadoopknowledge[ ]{1,}",     hadoop     
-"[ ]{1,}apache-spark[ ]{1,}",     spark     
-"[ ]{1,}apache-sparklrs[ ]{1,}",     spark     
-"[ ]{1,}pyspark[ ]{1,}",     spark     
-"[ ]{1,}hadoop[ ]{1,}",     spark     
-"[ ]{1,}spark[ ]{1,}",     spark     
+"[ ]{1,}hadoop-ecosystembachelor[ ]{1,}",     big-data     
+"[ ]{1,}hadoopknowledge[ ]{1,}",     big-data     
+"[ ]{1,}apache-spark[ ]{1,}",     big-data     
+"[ ]{1,}apache-sparklrs[ ]{1,}",     big-data     
+"[ ]{1,}pyspark[ ]{1,}",     big-data     
+"[ ]{1,}hadoop[ ]{1,}",     big-data     
+"[ ]{1,}spark[ ]{1,}",     big-data     
 "[ ]{1,}models[ ]{1,}",     modeling     
 "[ ]{1,}model[ ]{1,}",     modeling     
 "[ ]{1,}predictive-modelingassess[ ]{1,}",     modeling     
