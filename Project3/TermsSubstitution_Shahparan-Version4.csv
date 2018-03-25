@@ -185,9 +185,9 @@ Terms,Replace
 "^analyze[ ]{1,}|[ ]{1,}analyze[ ]{1,}|[ ]{1,}analyze$",     analytics     
 "^solving[ ]{1,}|[ ]{1,}solving[ ]{1,}|[ ]{1,}solving$",     problem-solving     
 "^teams[ ]{1,}|[ ]{1,}teams[ ]{1,}|[ ]{1,}teams$",     team     
-"^databases[ ]{1,}|[ ]{1,}databases[ ]{1,}|[ ]{1,}databases$",     database  
-"^databasesexperience[ ]{1,}|[ ]{1,}databasesexperience[ ]{1,}|[ ]{1,}databasesexperience$",     database  
-"^databaseskills[ ]{1,}|[ ]{1,}databaseskills[ ]{1,}|[ ]{1,}databaseskills$",     database  
+"^databases[ ]{1,}|[ ]{1,}databases[ ]{1,}|[ ]{1,}databases$",     database     
+"^databasesexperience[ ]{1,}|[ ]{1,}databasesexperience[ ]{1,}|[ ]{1,}databasesexperience$",     database     
+"^databaseskills[ ]{1,}|[ ]{1,}databaseskills[ ]{1,}|[ ]{1,}databaseskills$",     database     
 "^decision[ ]{1,}|[ ]{1,}decision[ ]{1,}|[ ]{1,}decision$",     decisions-science  
 "^decisioning[ ]{1,}|[ ]{1,}decisioning[ ]{1,}|[ ]{1,}decisioning$",     decisions-science  
 "^decisionstree[ ]{1,}|[ ]{1,}decisionstree[ ]{1,}|[ ]{1,}decisionstree$",     decisions-science  
