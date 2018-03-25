@@ -1,0 +1,208 @@
+Terms,Replace
+"^descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics$",     analytics     
+"^predictive analytics[ ]{1,}|[ ]{1,}predictive analytics[ ]{1,}|[ ]{1,}predictive analytics$",     analytics     
+"^prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics$",     analytics     
+"^behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics$",     analytics     
+"^clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics$",     analytics     
+"^data mining[ ]{1,}|[ ]{1,}data mining[ ]{1,}|[ ]{1,}data mining$",     data-mining     
+"^dark data[ ]{1,}|[ ]{1,}dark data[ ]{1,}|[ ]{1,}dark data$",     dark-data     
+"^machine learning[ ]{1,}|[ ]{1,}machine learning[ ]{1,}|[ ]{1,}machine learning$",     machine-learning     
+"^neural network[ ]{1,}|[ ]{1,}neural network[ ]{1,}|[ ]{1,}neural network$",     neural-network     
+"^cloud computing[ ]{1,}|[ ]{1,}cloud computing[ ]{1,}|[ ]{1,}cloud computing$",     cloud-computing     
+"^cluster computing[ ]{1,}|[ ]{1,}cluster computing[ ]{1,}|[ ]{1,}cluster computing$",     cluster-computing     
+"^distributed file system[ ]{1,}|[ ]{1,}distributed file system[ ]{1,}|[ ]{1,}distributed file system$",     distributed-file-system     
+"^apache spark[ ]{1,}|[ ]{1,}apache spark[ ]{1,}|[ ]{1,}apache spark$",     spark     
+"^artificial intelligence[ ]{1,}|[ ]{1,}artificial intelligence[ ]{1,}|[ ]{1,}artificial intelligence$",     artificial-intelligence     
+"^business intelligence[ ]{1,}|[ ]{1,}business intelligence[ ]{1,}|[ ]{1,}business intelligence$",     artificial-intelligence     
+"^call detail record (cdr) analysis[ ]{1,}|[ ]{1,}call detail record (cdr) analysis[ ]{1,}|[ ]{1,}call detail record (cdr) analysis$",     call-detail-record     
+"^data aggregation[ ]{1,}|[ ]{1,}data aggregation[ ]{1,}|[ ]{1,}data aggregation$",     data-aggregation     
+"^data architecture and design[ ]{1,}|[ ]{1,}data architecture and design[ ]{1,}|[ ]{1,}data architecture and design$",     data-architecture     
+"^data cleansing[ ]{1,}|[ ]{1,}data cleansing[ ]{1,}|[ ]{1,}data cleansing$",     data-cleansing     
+"^data collection[ ]{1,}|[ ]{1,}data collection[ ]{1,}|[ ]{1,}data collection$",     data-collection     
+"^data governance[ ]{1,}|[ ]{1,}data governance[ ]{1,}|[ ]{1,}data governance$",     data-governance     
+"^data profiling[ ]{1,}|[ ]{1,}data profiling[ ]{1,}|[ ]{1,}data profiling$",     data-profiling     
+"^data visualization[ ]{1,}|[ ]{1,}data visualization[ ]{1,}|[ ]{1,}data visualization$",     data-visualization     
+"^data warehouse[ ]{1,}|[ ]{1,}data warehouse[ ]{1,}|[ ]{1,}data warehouse$",     data-warehouse     
+"^internet of things[ ]{1,}|[ ]{1,}internet of things[ ]{1,}|[ ]{1,}internet of things$",     internet-of-things     
+"^load balancing[ ]{1,}|[ ]{1,}load balancing[ ]{1,}|[ ]{1,}load balancing$",     load-balancing     
+"^pattern recognition[ ]{1,}|[ ]{1,}pattern recognition[ ]{1,}|[ ]{1,}pattern recognition$",     artificial-intelligence     
+"^recommendation engine[ ]{1,}|[ ]{1,}recommendation engine[ ]{1,}|[ ]{1,}recommendation engine$",     recommendation-engine     
+"^root-cause analysis[ ]{1,}|[ ]{1,}root-cause analysis[ ]{1,}|[ ]{1,}root-cause analysis$",     root-cause-analysis     
+"^sentiment analysis[ ]{1,}|[ ]{1,}sentiment analysis[ ]{1,}|[ ]{1,}sentiment analysis$",     sentiment-analysis     
+"^deep learning[ ]{1,}|[ ]{1,}deep learning[ ]{1,}|[ ]{1,}deep learning$",     deep-learning     
+"^quality assurance[ ]{1,}|[ ]{1,}quality assurance[ ]{1,}|[ ]{1,}quality assurance$",     quality-assurance     
+"^big data[ ]{1,}|[ ]{1,}big data[ ]{1,}|[ ]{1,}big data$",     big-data     
+"^hadoop ecosystem[ ]{1,}|[ ]{1,}hadoop ecosystem[ ]{1,}|[ ]{1,}hadoop ecosystem$",     hadoop     
+"^google cloud platform[ ]{1,}|[ ]{1,}google cloud platform[ ]{1,}|[ ]{1,}google cloud platform$",     cloud    
+"^microsoft azure[ ]{1,}|[ ]{1,}microsoft azure[ ]{1,}|[ ]{1,}microsoft azure$",     microsoft-azure     
+"^strategic analytics[ ]{1,}|[ ]{1,}strategic analytics[ ]{1,}|[ ]{1,}strategic analytics$",     analytics     
+"^marketing analytics[ ]{1,}|[ ]{1,}marketing analytics[ ]{1,}|[ ]{1,}marketing analytics$",     analytics     
+"^quant research[ ]{1,}|[ ]{1,}quant research[ ]{1,}|[ ]{1,}quant research$",     research     
+"^quantitative analysis[ ]{1,}|[ ]{1,}quantitative analysis[ ]{1,}|[ ]{1,}quantitative analysis$",     quantitative-analysis     
+"^big datasets[ ]{1,}|[ ]{1,}big datasets[ ]{1,}|[ ]{1,}big datasets$",     big-datasets     
+"^ai models[ ]{1,}|[ ]{1,}ai models[ ]{1,}|[ ]{1,}ai models$",     ai-models     
+"^bidding optimization[ ]{1,}|[ ]{1,}bidding optimization[ ]{1,}|[ ]{1,}bidding optimization$",     bidding-optimization     
+"^messaging optimization[ ]{1,}|[ ]{1,}messaging optimization[ ]{1,}|[ ]{1,}messaging optimization$",     messaging-optimization     
+"^multi-touch attribution[ ]{1,}|[ ]{1,}multi-touch attribution[ ]{1,}|[ ]{1,}multi-touch attribution$",     multi-touch-attribution     
+"^data science life cycle[ ]{1,}|[ ]{1,}data science life cycle[ ]{1,}|[ ]{1,}data science life cycle$",     data-science-life-cycle     
+"^data wrangling[ ]{1,}|[ ]{1,}data wrangling[ ]{1,}|[ ]{1,}data wrangling$",     data-wrangling     
+"^feature engineering[ ]{1,}|[ ]{1,}feature engineering[ ]{1,}|[ ]{1,}feature engineering$",     feature-engineering     
+"^model generation[ ]{1,}|[ ]{1,}model generation[ ]{1,}|[ ]{1,}model generation$",     model-generation     
+"^statistic[ ]{1,}|[ ]{1,}statistic[ ]{1,}|[ ]{1,}statistic$",     statistics     
+"^data warehousing[ ]{1,}|[ ]{1,}data warehousing[ ]{1,}|[ ]{1,}data warehousing$",     data-warehousing     
+"^feature extractions[ ]{1,}|[ ]{1,}feature extractions[ ]{1,}|[ ]{1,}feature extractions$",     feature-extractions     
+"^model selection[ ]{1,}|[ ]{1,}model selection[ ]{1,}|[ ]{1,}model selection$",     model-selection     
+"^model optimization[ ]{1,}|[ ]{1,}model optimization[ ]{1,}|[ ]{1,}model optimization$",     model-optimization     
+"^model deployment[ ]{1,}|[ ]{1,}model deployment[ ]{1,}|[ ]{1,}model deployment$",     model-deployment     
+"^support vector machine[ ]{1,}|[ ]{1,}support vector machine[ ]{1,}|[ ]{1,}support vector machine$",     support-vector-machine     
+"^genetic algorithms[ ]{1,}|[ ]{1,}genetic algorithms[ ]{1,}|[ ]{1,}genetic algorithms$",     genetic-algorithms     
+"^fuzzy logic[ ]{1,}|[ ]{1,}fuzzy logic[ ]{1,}|[ ]{1,}fuzzy logic$",     fuzzy-logic     
+"^parallel computing[ ]{1,}|[ ]{1,}parallel computing[ ]{1,}|[ ]{1,}parallel computing$",     parallel-computing     
+"^rest api[ ]{1,}|[ ]{1,}rest api[ ]{1,}|[ ]{1,}rest api$",     rest-api     
+"^logistic regression[ ]{1,}|[ ]{1,}logistic regression[ ]{1,}|[ ]{1,}logistic regression$",     logistic-regression     
+"^bayesian techniques[ ]{1,}|[ ]{1,}bayesian techniques[ ]{1,}|[ ]{1,}bayesian techniques$",     bayesian-techniques     
+"^time-series analysis[ ]{1,}|[ ]{1,}time-series analysis[ ]{1,}|[ ]{1,}time-series analysis$",     time-series-analysis     
+"^stochastic optimization[ ]{1,}|[ ]{1,}stochastic optimization[ ]{1,}|[ ]{1,}stochastic optimization$",     stochastic-optimization     
+"^computer science[ ]{1,}|[ ]{1,}computer science[ ]{1,}|[ ]{1,}computer science$",     computer-science     
+"^text mining[ ]{1,}|[ ]{1,}text mining[ ]{1,}|[ ]{1,}text mining$",     data-mining     
+"^data science[ ]{1,}|[ ]{1,}data science[ ]{1,}|[ ]{1,}data science$",     data-science     
+"^predictive modeling[ ]{1,}|[ ]{1,}predictive modeling[ ]{1,}|[ ]{1,}predictive modeling$",     modeling     
+"^data scientist[ ]{1,}|[ ]{1,}data scientist[ ]{1,}|[ ]{1,}data scientist$",     data-scientist     
+"^data scientists[ ]{1,}|[ ]{1,}data scientists[ ]{1,}|[ ]{1,}data scientists$",     data-scientist     
+"^java[ ]{1,}|[ ]{1,}java[ ]{1,}|[ ]{1,}java$",     java     
+"^javascript[ ]{1,}|[ ]{1,}javascript[ ]{1,}|[ ]{1,}javascript$",     java     
+"^java script[ ]{1,}|[ ]{1,}java script[ ]{1,}|[ ]{1,}java script$",     java     
+"^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$",     r-programming     
+"^python[ ]{1,}|[ ]{1,}python[ ]{1,}|[ ]{1,}python$",     python     
+"^pythonbased[ ]{1,}|[ ]{1,}pythonbased[ ]{1,}|[ ]{1,}pythonbased$",     python     
+"^pythonexperience[ ]{1,}|[ ]{1,}pythonexperience[ ]{1,}|[ ]{1,}pythonexperience$",     python     
+"^pythonexperienced[ ]{1,}|[ ]{1,}pythonexperienced[ ]{1,}|[ ]{1,}pythonexperienced$",     python     
+"^pythonfamiliarity[ ]{1,}|[ ]{1,}pythonfamiliarity[ ]{1,}|[ ]{1,}pythonfamiliarity$",     python     
+"^pythonjavamatlab[ ]{1,}|[ ]{1,}pythonjavamatlab[ ]{1,}|[ ]{1,}pythonjavamatlab$",     python     
+"^pythonminimum[ ]{1,}|[ ]{1,}pythonminimum[ ]{1,}|[ ]{1,}pythonminimum$",     python     
+"^pythonpreferred[ ]{1,}|[ ]{1,}pythonpreferred[ ]{1,}|[ ]{1,}pythonpreferred$",     python     
+"^pythonsql[ ]{1,}|[ ]{1,}pythonsql[ ]{1,}|[ ]{1,}pythonsql$",     python     
+"^bioinformaticists[ ]{1,}|[ ]{1,}bioinformaticists[ ]{1,}|[ ]{1,}bioinformaticists$",     biology     
+"^bioinformatics[ ]{1,}|[ ]{1,}bioinformatics[ ]{1,}|[ ]{1,}bioinformatics$",     biology     
+"^biologists[ ]{1,}|[ ]{1,}biologists[ ]{1,}|[ ]{1,}biologists$",     biology     
+"^biology[ ]{1,}|[ ]{1,}biology[ ]{1,}|[ ]{1,}biology$",     biology     
+"^biomedical[ ]{1,}|[ ]{1,}biomedical[ ]{1,}|[ ]{1,}biomedical$",     biology     
+"^biometrics[ ]{1,}|[ ]{1,}biometrics[ ]{1,}|[ ]{1,}biometrics$",     biology     
+"^biostatistics[ ]{1,}|[ ]{1,}biostatistics[ ]{1,}|[ ]{1,}biostatistics$",     biology     
+"^biostatisticsstatistics[ ]{1,}|[ ]{1,}biostatisticsstatistics[ ]{1,}|[ ]{1,}biostatisticsstatistics$",     biology     
+"^biotech[ ]{1,}|[ ]{1,}biotech[ ]{1,}|[ ]{1,}biotech$",     biology     
+"^big-dataadvanced[ ]{1,}|[ ]{1,}big-dataadvanced[ ]{1,}|[ ]{1,}big-dataadvanced$",     big-data     
+"^analytics[ ]{1,}|[ ]{1,}analytics[ ]{1,}|[ ]{1,}analytics$",     analytics     
+"^analysis[ ]{1,}|[ ]{1,}analysis[ ]{1,}|[ ]{1,}analysis$",     analytics     
+"^mannerdata wrangling[ ]{1,}|[ ]{1,}mannerdata wrangling[ ]{1,}|[ ]{1,}mannerdata wrangling$",     data-wrangling     
+"^visualisation[ ]{1,}|[ ]{1,}visualisation[ ]{1,}|[ ]{1,}visualisation$",     data-visualization     
+"^visualizationsdesigning[ ]{1,}|[ ]{1,}visualizationsdesigning[ ]{1,}|[ ]{1,}visualizationsdesigning$",     data-visualization     
+"^visualizationsidentify[ ]{1,}|[ ]{1,}visualizationsidentify[ ]{1,}|[ ]{1,}visualizationsidentify$",     data-visualization     
+"^visual[ ]{1,}|[ ]{1,}visual[ ]{1,}|[ ]{1,}visual$",     data-visualization     
+"^visualization[ ]{1,}|[ ]{1,}visualization[ ]{1,}|[ ]{1,}visualization$",     data-visualization     
+"^statisticians[ ]{1,}|[ ]{1,}statisticians[ ]{1,}|[ ]{1,}statisticians$",     statistics     
+"^computer scienceinformation[ ]{1,}|[ ]{1,}computer scienceinformation[ ]{1,}|[ ]{1,}computer scienceinformation$",     computer-science     
+"^computer sciencestatistics[ ]{1,}|[ ]{1,}computer sciencestatistics[ ]{1,}|[ ]{1,}computer sciencestatistics$",     computer-science     
+"^statistical[ ]{1,}|[ ]{1,}statistical[ ]{1,}|[ ]{1,}statistical$",     statistics     
+"^mysql[ ]{1,}|[ ]{1,}mysql[ ]{1,}|[ ]{1,}mysql$",     sql     
+"^nosql[ ]{1,}|[ ]{1,}nosql[ ]{1,}|[ ]{1,}nosql$",     sql     
+"^accesssql[ ]{1,}|[ ]{1,}accesssql[ ]{1,}|[ ]{1,}accesssql$",     sql     
+"^mysqlpostgresql[ ]{1,}|[ ]{1,}mysqlpostgresql[ ]{1,}|[ ]{1,}mysqlpostgresql$",     sql     
+"^rsql[ ]{1,}|[ ]{1,}rsql[ ]{1,}|[ ]{1,}rsql$",     sql     
+"^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$",     sql     
+"^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$",     spark    
+"^sqlhivespark[ ]{1,}|[ ]{1,}sqlhivespark[ ]{1,}|[ ]{1,}sqlhivespark$",     spark     
+"^sqlmastery[ ]{1,}|[ ]{1,}sqlmastery[ ]{1,}|[ ]{1,}sqlmastery$",     sql     
+"^sqlpreferred[ ]{1,}|[ ]{1,}sqlpreferred[ ]{1,}|[ ]{1,}sqlpreferred$",     sql     
+"^sqlstatistics[ ]{1,}|[ ]{1,}sqlstatistics[ ]{1,}|[ ]{1,}sqlstatistics$",     sql     
+"^hadoop-ecosystembachelor[ ]{1,}|[ ]{1,}hadoop-ecosystembachelor[ ]{1,}|[ ]{1,}hadoop-ecosystembachelor$",     hadoop    
+"^hadoopknowledge[ ]{1,}|[ ]{1,}hadoopknowledge[ ]{1,}|[ ]{1,}hadoopknowledge$",     hadoop     
+"^apache-spark[ ]{1,}|[ ]{1,}apache-spark[ ]{1,}|[ ]{1,}apache-spark$",     spark     
+"^apache-sparklrs[ ]{1,}|[ ]{1,}apache-sparklrs[ ]{1,}|[ ]{1,}apache-sparklrs$",     spark     
+"^pyspark[ ]{1,}|[ ]{1,}pyspark[ ]{1,}|[ ]{1,}pyspark$",     spark     
+"^hadoop[ ]{1,}|[ ]{1,}hadoop[ ]{1,}|[ ]{1,}hadoop$",     spark     
+"^spark[ ]{1,}|[ ]{1,}spark[ ]{1,}|[ ]{1,}spark$",     spark     
+"^models[ ]{1,}|[ ]{1,}models[ ]{1,}|[ ]{1,}models$",     modeling     
+"^model[ ]{1,}|[ ]{1,}model[ ]{1,}|[ ]{1,}model$",     modeling     
+"^predictive-modelingassess[ ]{1,}|[ ]{1,}predictive-modelingassess[ ]{1,}|[ ]{1,}predictive-modelingassess$",     modeling     
+"^predictive-modelingwhat[ ]{1,}|[ ]{1,}predictive-modelingwhat[ ]{1,}|[ ]{1,}predictive-modelingwhat$",     modeling     
+"^machine[ ]{1,}|[ ]{1,}machine[ ]{1,}|[ ]{1,}machine$",     machine-learning     
+"^machine-learningexperience[ ]{1,}|[ ]{1,}machine-learningexperience[ ]{1,}|[ ]{1,}machine-learningexperience$",     machine-learning     
+"^machinekeywords[ ]{1,}|[ ]{1,}machinekeywords[ ]{1,}|[ ]{1,}machinekeywords$",     machine-learning     
+"^machinelearning[ ]{1,}|[ ]{1,}machinelearning[ ]{1,}|[ ]{1,}machinelearning$",     machine-learning     
+"^machine-learningbut[ ]{1,}|[ ]{1,}machine-learningbut[ ]{1,}|[ ]{1,}machine-learningbut$",     machine-learning     
+"^machine-learningmachine[ ]{1,}|[ ]{1,}machine-learningmachine[ ]{1,}|[ ]{1,}machine-learningmachine$",     machine-learning     
+"^machine-learningmust[ ]{1,}|[ ]{1,}machine-learningmust[ ]{1,}|[ ]{1,}machine-learningmust$",     machine-learning     
+"^machine-learningrecommending[ ]{1,}|[ ]{1,}machine-learningrecommending[ ]{1,}|[ ]{1,}machine-learningrecommending$",     machine-learning     
+"^analytical[ ]{1,}|[ ]{1,}analytical[ ]{1,}|[ ]{1,}analytical$",     analytics     
+"^programmatically[ ]{1,}|[ ]{1,}programmatically[ ]{1,}|[ ]{1,}programmatically$",     programming     
+"^programmable[ ]{1,}|[ ]{1,}programmable[ ]{1,}|[ ]{1,}programmable$",     programming     
+"^programmingbe[ ]{1,}|[ ]{1,}programmingbe[ ]{1,}|[ ]{1,}programmingbe$",     programming     
+"^programmingexperience[ ]{1,}|[ ]{1,}programmingexperience[ ]{1,}|[ ]{1,}programmingexperience$",     programming     
+"^programmingminimum[ ]{1,}|[ ]{1,}programmingminimum[ ]{1,}|[ ]{1,}programmingminimum$",     programming     
+"^programmingscripting[ ]{1,}|[ ]{1,}programmingscripting[ ]{1,}|[ ]{1,}programmingscripting$",     programming     
+"^programmingsolid[ ]{1,}|[ ]{1,}programmingsolid[ ]{1,}|[ ]{1,}programmingsolid$",     programming     
+"^softwarealgorithm[ ]{1,}|[ ]{1,}softwarealgorithm[ ]{1,}|[ ]{1,}softwarealgorithm$",     software     
+"^softwareexperience[ ]{1,}|[ ]{1,}softwareexperience[ ]{1,}|[ ]{1,}softwareexperience$",     software     
+"^softwares[ ]{1,}|[ ]{1,}softwares[ ]{1,}|[ ]{1,}softwares$",     software     
+"^softwaretools[ ]{1,}|[ ]{1,}softwaretools[ ]{1,}|[ ]{1,}softwaretools$",     software     
+"^researchers[ ]{1,}|[ ]{1,}researchers[ ]{1,}|[ ]{1,}researchers$",     research     
+"^researcher[ ]{1,}|[ ]{1,}researcher[ ]{1,}|[ ]{1,}researcher$",     research     
+"^researches[ ]{1,}|[ ]{1,}researches[ ]{1,}|[ ]{1,}researches$",     research     
+"^researchfocused[ ]{1,}|[ ]{1,}researchfocused[ ]{1,}|[ ]{1,}researchfocused$",     research     
+"^academicresearch[ ]{1,}|[ ]{1,}academicresearch[ ]{1,}|[ ]{1,}academicresearch$",     research     
+"^businessresearch[ ]{1,}|[ ]{1,}businessresearch[ ]{1,}|[ ]{1,}businessresearch$",     research     
+"^researchanalytical[ ]{1,}|[ ]{1,}researchanalytical[ ]{1,}|[ ]{1,}researchanalytical$",     research     
+"^researched[ ]{1,}|[ ]{1,}researched[ ]{1,}|[ ]{1,}researched$",     research     
+"^researchersubject[ ]{1,}|[ ]{1,}researchersubject[ ]{1,}|[ ]{1,}researchersubject$",     research     
+"^researching[ ]{1,}|[ ]{1,}researching[ ]{1,}|[ ]{1,}researching$",     research     
+"^researchresponsibilitiesexploratory[ ]{1,}|[ ]{1,}researchresponsibilitiesexploratory[ ]{1,}|[ ]{1,}researchresponsibilitiesexploratory$",     research     
+"^researchscientific[ ]{1,}|[ ]{1,}researchscientific[ ]{1,}|[ ]{1,}researchscientific$",     research     
+"^algorithm[ ]{1,}|[ ]{1,}algorithm[ ]{1,}|[ ]{1,}algorithm$",     algorithms     
+"^algorithmic[ ]{1,}|[ ]{1,}algorithmic[ ]{1,}|[ ]{1,}algorithmic$",     algorithms     
+"^algorithmsdesired[ ]{1,}|[ ]{1,}algorithmsdesired[ ]{1,}|[ ]{1,}algorithmsdesired$",     algorithms     
+"^algorithmsexperience[ ]{1,}|[ ]{1,}algorithmsexperience[ ]{1,}|[ ]{1,}algorithmsexperience$",     algorithms     
+"^algorithmsim[ ]{1,}|[ ]{1,}algorithmsim[ ]{1,}|[ ]{1,}algorithmsim$",     algorithms     
+"^algorithmswhat[ ]{1,}|[ ]{1,}algorithmswhat[ ]{1,}|[ ]{1,}algorithmswhat$",     algorithms     
+"^protocolalgorithms[ ]{1,}|[ ]{1,}protocolalgorithms[ ]{1,}|[ ]{1,}protocolalgorithms$",     algorithms     
+"^mining[ ]{1,}|[ ]{1,}mining[ ]{1,}|[ ]{1,}mining$",     data-mining     
+"^data-miningstrong[ ]{1,}|[ ]{1,}data-miningstrong[ ]{1,}|[ ]{1,}data-miningstrong$",     data-mining     
+"^data-miningunderstanding[ ]{1,}|[ ]{1,}data-miningunderstanding[ ]{1,}|[ ]{1,}data-miningunderstanding$",     data-mining     
+"^mathematicians[ ]{1,}|[ ]{1,}mathematicians[ ]{1,}|[ ]{1,}mathematicians$",     mathematics     
+"^mathstatistics[ ]{1,}|[ ]{1,}mathstatistics[ ]{1,}|[ ]{1,}mathstatistics$",     mathematics     
+"^analytic[ ]{1,}|[ ]{1,}analytic[ ]{1,}|[ ]{1,}analytic$",     analytics     
+"^phds[ ]{1,}|[ ]{1,}phds[ ]{1,}|[ ]{1,}phds$",     phd     
+"^qualificationsphd[ ]{1,}|[ ]{1,}qualificationsphd[ ]{1,}|[ ]{1,}qualificationsphd$",     phd     
+"^msphd[ ]{1,}|[ ]{1,}msphd[ ]{1,}|[ ]{1,}msphd$",     phd     
+"^phddecent[ ]{1,}|[ ]{1,}phddecent[ ]{1,}|[ ]{1,}phddecent$",     phd     
+"^postphd[ ]{1,}|[ ]{1,}postphd[ ]{1,}|[ ]{1,}postphd$",     phd     
+"^predictive[ ]{1,}|[ ]{1,}predictive[ ]{1,}|[ ]{1,}predictive$",     modeling     
+"^program[ ]{1,}|[ ]{1,}program[ ]{1,}|[ ]{1,}program$",     programming     
+"^solve[ ]{1,}|[ ]{1,}solve[ ]{1,}|[ ]{1,}solve$",     problem-solving     
+"^problems[ ]{1,}|[ ]{1,}problems[ ]{1,}|[ ]{1,}problems$",     problem-solving     
+"^problem[ ]{1,}|[ ]{1,}problem[ ]{1,}|[ ]{1,}problem$",     problem-solving     
+"^languages[ ]{1,}|[ ]{1,}languages[ ]{1,}|[ ]{1,}languages$",     programming     
+"^language[ ]{1,}|[ ]{1,}language[ ]{1,}|[ ]{1,}language$",     programming     
+"^processing[ ]{1,}|[ ]{1,}processing[ ]{1,}|[ ]{1,}processing$",     data-processing     
+"^process[ ]{1,}|[ ]{1,}process[ ]{1,}|[ ]{1,}process$",     data-processing     
+"^intelligence[ ]{1,}|[ ]{1,}intelligence[ ]{1,}|[ ]{1,}intelligence$",     artificial-intelligence     
+"^business intelligenceanalysis[ ]{1,}|[ ]{1,}business intelligenceanalysis[ ]{1,}|[ ]{1,}business intelligenceanalysis$",     artificial-intelligence     
+"^business intelligenceexpert[ ]{1,}|[ ]{1,}business intelligenceexpert[ ]{1,}|[ ]{1,}business intelligenceexpert$",     artificial-intelligence     
+"^defenseintelligence[ ]{1,}|[ ]{1,}defenseintelligence[ ]{1,}|[ ]{1,}defenseintelligence$",     artificial-intelligence     
+"^quantitative[ ]{1,}|[ ]{1,}quantitative[ ]{1,}|[ ]{1,}quantitative$",     analytics     
+"^analyze[ ]{1,}|[ ]{1,}analyze[ ]{1,}|[ ]{1,}analyze$",     analytics     
+"^solving[ ]{1,}|[ ]{1,}solving[ ]{1,}|[ ]{1,}solving$",     problem-solving     
+"^teams[ ]{1,}|[ ]{1,}teams[ ]{1,}|[ ]{1,}teams$",     team     
+"^databases[ ]{1,}|[ ]{1,}databases[ ]{1,}|[ ]{1,}databases$",     database  
+"^databasesexperience[ ]{1,}|[ ]{1,}databasesexperience[ ]{1,}|[ ]{1,}databasesexperience$",     database  
+"^databaseskills[ ]{1,}|[ ]{1,}databaseskills[ ]{1,}|[ ]{1,}databaseskills$",     database  
+"^decision[ ]{1,}|[ ]{1,}decision[ ]{1,}|[ ]{1,}decision$",     decisions-science  
+"^decisioning[ ]{1,}|[ ]{1,}decisioning[ ]{1,}|[ ]{1,}decisioning$",     decisions-science  
+"^decisionstree[ ]{1,}|[ ]{1,}decisionstree[ ]{1,}|[ ]{1,}decisionstree$",     decisions-science  
+"^decisionsforest [ ]{1,}|[ ]{1,}decisionsforest [ ]{1,}|[ ]{1,}decisionsforest $",     decisions-science  
+"^decisionspoints[ ]{1,}|[ ]{1,}decisionspoints[ ]{1,}|[ ]{1,}decisionspoints$",     decisions-science  
+"^decisionsrules[ ]{1,}|[ ]{1,}decisionsrules[ ]{1,}|[ ]{1,}decisionsrules$",     decisions-science  
+"^decisionsscience[ ]{1,}|[ ]{1,}decisionsscience[ ]{1,}|[ ]{1,}decisionsscience$",     decisions-science  
+"^decisionssupports[ ]{1,}|[ ]{1,}decisionssupports[ ]{1,}|[ ]{1,}decisionssupports$",     decisions-science  
+"^decisionstools[ ]{1,}|[ ]{1,}decisionstools[ ]{1,}|[ ]{1,}decisionstools$",     decisions-science  
+"^communicate[ ]{1,}|[ ]{1,}communicate[ ]{1,}|[ ]{1,}communicate$",     communication        

@@ -296,18 +296,10 @@ for (j in seq(docs))
   for(i in 1:nrow(terms)){
     docs[[j]] <- gsub(terms$Terms[i], terms$Replace[i], docs[[j]], ignore.case = TRUE)
   }
-  #docs[[j]] <- gsub("*", "  ", docs[[j]], ignore.case = TRUE)
+  docs[[j]] <- gsub("xyz", "  ", docs[[j]], ignore.case = TRUE)
 }
-docs <- tm_map(docs, PlainTextDocument)
-inspect(docs[[1]])
-```
-
-
-
-
-### Remove whitespace
-```{r}
 docs <- tm_map(docs, stripWhitespace)
+docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
 
