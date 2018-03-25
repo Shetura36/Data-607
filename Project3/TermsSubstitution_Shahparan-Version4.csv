@@ -168,11 +168,6 @@ Terms,Replace
 "^mathematicians[ ]{1,}|[ ]{1,}mathematicians[ ]{1,}|[ ]{1,}mathematicians$",     mathematics     
 "^mathstatistics[ ]{1,}|[ ]{1,}mathstatistics[ ]{1,}|[ ]{1,}mathstatistics$",     mathematics     
 "^analytic[ ]{1,}|[ ]{1,}analytic[ ]{1,}|[ ]{1,}analytic$",     analytics     
-"^phds[ ]{1,}|[ ]{1,}phds[ ]{1,}|[ ]{1,}phds$",     phd     
-"^qualificationsphd[ ]{1,}|[ ]{1,}qualificationsphd[ ]{1,}|[ ]{1,}qualificationsphd$",     phd     
-"^msphd[ ]{1,}|[ ]{1,}msphd[ ]{1,}|[ ]{1,}msphd$",     phd     
-"^phddecent[ ]{1,}|[ ]{1,}phddecent[ ]{1,}|[ ]{1,}phddecent$",     phd     
-"^postphd[ ]{1,}|[ ]{1,}postphd[ ]{1,}|[ ]{1,}postphd$",     phd     
 "^predictive[ ]{1,}|[ ]{1,}predictive[ ]{1,}|[ ]{1,}predictive$",     modeling     
 "^program[ ]{1,}|[ ]{1,}program[ ]{1,}|[ ]{1,}program$",     programming     
 "^solve[ ]{1,}|[ ]{1,}solve[ ]{1,}|[ ]{1,}solve$",     problem-solving     
@@ -198,15 +193,15 @@ Terms,Replace
 "^decisionstree[ ]{1,}|[ ]{1,}decisionstree[ ]{1,}|[ ]{1,}decisionstree$",     decisions-science  
 "^decisionsforest [ ]{1,}|[ ]{1,}decisionsforest [ ]{1,}|[ ]{1,}decisionsforest $",     decisions-science  
 "^decisionspoints[ ]{1,}|[ ]{1,}decisionspoints[ ]{1,}|[ ]{1,}decisionspoints$",     decisions-science  
-"^decisionsrules[ ]{1,}|[ ]{1,}decisionsrules[ ]{1,}|[ ]{1,}decisionsrules$",     decisions-science  
-"^decisionsscience[ ]{1,}|[ ]{1,}decisionsscience[ ]{1,}|[ ]{1,}decisionsscience$",     decisions-science  
-"^decisionssupports[ ]{1,}|[ ]{1,}decisionssupports[ ]{1,}|[ ]{1,}decisionssupports$",     decisions-science  
-"^decisionstools[ ]{1,}|[ ]{1,}decisionstools[ ]{1,}|[ ]{1,}decisionstools$",     decisions-science  
+"^decisionsrules[ ]{1,}|[ ]{1,}decisionsrules[ ]{1,}|[ ]{1,}decisionsrules$",     decisions-science     
+"^decisionsscience[ ]{1,}|[ ]{1,}decisionsscience[ ]{1,}|[ ]{1,}decisionsscience$",     decisions-science     
+"^decisionssupports[ ]{1,}|[ ]{1,}decisionssupports[ ]{1,}|[ ]{1,}decisionssupports$",     decisions-science     
+"^decisionstools[ ]{1,}|[ ]{1,}decisionstools[ ]{1,}|[ ]{1,}decisionstools$",     decisions-science     
 "^communicate[ ]{1,}|[ ]{1,}communicate[ ]{1,}|[ ]{1,}communicate$",     communication        
-"^tableauyou[ ]{1,}|[ ]{1,}tableauyou[ ]{1,}|[ ]{1,}tableauyou$",     tableau
-"^tableu[ ]{1,}|[ ]{1,}tableu[ ]{1,}|[ ]{1,}tableu$",     tableau
-"^collaborates[ ]{1,}|[ ]{1,}collaborates[ ]{1,}|[ ]{1,}collaborates$",     collaborate
+"^tableauyou[ ]{1,}|[ ]{1,}tableauyou[ ]{1,}|[ ]{1,}tableauyou$",     tableau         
+"^tableu[ ]{1,}|[ ]{1,}tableu[ ]{1,}|[ ]{1,}tableu$",     tableau        
+"^collaborates[ ]{1,}|[ ]{1,}collaborates[ ]{1,}|[ ]{1,}collaborates$",     collaborate      
 "^communicating[ ]{1,}|[ ]{1,}communicating[ ]{1,}|[ ]{1,}communicating$",     communication        
-"^communications[ ]{1,}|[ ]{1,}communications[ ]{1,}|[ ]{1,}communications$",     communication        
-"^cloud[ ]{1,}|[ ]{1,}cloud[ ]{1,}|[ ]{1,}cloud$",     cloud-computing     
-"^cloudbase[ ]{1,}|[ ]{1,}cloudbase[ ]{1,}|[ ]{1,}cloudbase$",     cloud-computing     
+"^communications[ ]{1,}|[ ]{1,}communications[ ]{1,}|[ ]{1,}communications$",     communication         
+"^cloud[ ]{1,}|[ ]{1,}cloud[ ]{1,}|[ ]{1,}cloud$",     cloud-computing       
+"^cloudbase[ ]{1,}|[ ]{1,}cloudbase[ ]{1,}|[ ]{1,}cloudbase$",     cloud-computing       
