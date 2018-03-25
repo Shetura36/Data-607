@@ -139,9 +139,9 @@ $(document).ready(function () {
 <ul>
 <li><p>List of 100 job URLs: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-Shahparan-Version2.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-Shahparan-Version2.csv</a></p></li>
 <li><p>Job posting text files (scrapped form the web): <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive" class="uri">https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive</a></p></li>
-<li><p>List of term substitution: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version3.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version3.csv</a></p></li>
-<li><p>List of words removed: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher.csv</a></p></li>
-<li><p>Term Frequency output: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_8.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_8.csv</a></p></li>
+<li><p>List of term substitution: <br /> <a href="https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-base.csv" class="uri">https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-base.csv</a></p></li>
+<li><p>List of words removed: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher-Version3.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher-Version3.csv</a></p></li>
+<li><p>Term Frequency output: <br /> <a href="https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_9.csv" class="uri">https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_9.csv</a></p></li>
 </ul>
 <hr />
 </div>
@@ -343,14 +343,17 @@ docs &lt;- tm_map(docs, stripWhitespace)
 <div id="preview-list-of-terms" class="section level4">
 <h4>Preview list of terms</h4>
 <pre class="r"><code>file &lt;-
-  &quot;https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-Version4.csv&quot;
+  &quot;https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-base.csv&quot;
 
 terms &lt;- 
   read.csv(file, header=TRUE, sep=&quot;,&quot;, stringsAsFactors = FALSE, row.names = NULL)
 
-#kable(head(terms,10), format=&quot;markdown&quot;)
-kable(terms)</code></pre>
+kable(head(terms,10), format=&quot;markdown&quot;)</code></pre>
 <table>
+<colgroup>
+<col width="82%"></col>
+<col width="17%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Terms</th>
@@ -360,23 +363,23 @@ kable(terms)</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">^descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics$</td>
-<td align="left">analytics</td>
+<td align="left">descriptive analytics</td>
 </tr>
 <tr class="even">
 <td align="left">^predictive analytics[ ]{1,}|[ ]{1,}predictive analytics[ ]{1,}|[ ]{1,}predictive analytics$</td>
-<td align="left">analytics</td>
+<td align="left">predictive analytics</td>
 </tr>
 <tr class="odd">
 <td align="left">^prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics$</td>
-<td align="left">analytics</td>
+<td align="left">prescriptive analytics</td>
 </tr>
 <tr class="even">
 <td align="left">^behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics$</td>
-<td align="left">analytics</td>
+<td align="left">behavioral analytics</td>
 </tr>
 <tr class="odd">
 <td align="left">^clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics$</td>
-<td align="left">analytics</td>
+<td align="left">clickstream analytics</td>
 </tr>
 <tr class="even">
 <td align="left">^data mining[ ]{1,}|[ ]{1,}data mining[ ]{1,}|[ ]{1,}data mining$</td>
@@ -398,792 +401,9 @@ kable(terms)</code></pre>
 <td align="left">^cloud computing[ ]{1,}|[ ]{1,}cloud computing[ ]{1,}|[ ]{1,}cloud computing$</td>
 <td align="left">cloud-computing</td>
 </tr>
-<tr class="odd">
-<td align="left">^cluster computing[ ]{1,}|[ ]{1,}cluster computing[ ]{1,}|[ ]{1,}cluster computing$</td>
-<td align="left">cluster-computing</td>
-</tr>
-<tr class="even">
-<td align="left">^distributed file system[ ]{1,}|[ ]{1,}distributed file system[ ]{1,}|[ ]{1,}distributed file system$</td>
-<td align="left">distributed-file-system</td>
-</tr>
-<tr class="odd">
-<td align="left">^apache spark[ ]{1,}|[ ]{1,}apache spark[ ]{1,}|[ ]{1,}apache spark$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="even">
-<td align="left">^artificial intelligence[ ]{1,}|[ ]{1,}artificial intelligence[ ]{1,}|[ ]{1,}artificial intelligence$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="odd">
-<td align="left">^business intelligence[ ]{1,}|[ ]{1,}business intelligence[ ]{1,}|[ ]{1,}business intelligence$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="even">
-<td align="left">^call detail record (cdr) analysis[ ]{1,}|[ ]{1,}call detail record (cdr) analysis[ ]{1,}|[ ]{1,}call detail record (cdr) analysis$</td>
-<td align="left">call-detail-record</td>
-</tr>
-<tr class="odd">
-<td align="left">^data aggregation[ ]{1,}|[ ]{1,}data aggregation[ ]{1,}|[ ]{1,}data aggregation$</td>
-<td align="left">data-aggregation</td>
-</tr>
-<tr class="even">
-<td align="left">^data architecture and design[ ]{1,}|[ ]{1,}data architecture and design[ ]{1,}|[ ]{1,}data architecture and design$</td>
-<td align="left">data-architecture</td>
-</tr>
-<tr class="odd">
-<td align="left">^data cleansing[ ]{1,}|[ ]{1,}data cleansing[ ]{1,}|[ ]{1,}data cleansing$</td>
-<td align="left">data-cleansing</td>
-</tr>
-<tr class="even">
-<td align="left">^data collection[ ]{1,}|[ ]{1,}data collection[ ]{1,}|[ ]{1,}data collection$</td>
-<td align="left">data-collection</td>
-</tr>
-<tr class="odd">
-<td align="left">^data governance[ ]{1,}|[ ]{1,}data governance[ ]{1,}|[ ]{1,}data governance$</td>
-<td align="left">data-governance</td>
-</tr>
-<tr class="even">
-<td align="left">^data profiling[ ]{1,}|[ ]{1,}data profiling[ ]{1,}|[ ]{1,}data profiling$</td>
-<td align="left">data-profiling</td>
-</tr>
-<tr class="odd">
-<td align="left">^data visualization[ ]{1,}|[ ]{1,}data visualization[ ]{1,}|[ ]{1,}data visualization$</td>
-<td align="left">data-visualization</td>
-</tr>
-<tr class="even">
-<td align="left">^data warehouse[ ]{1,}|[ ]{1,}data warehouse[ ]{1,}|[ ]{1,}data warehouse$</td>
-<td align="left">data-warehouse</td>
-</tr>
-<tr class="odd">
-<td align="left">^internet of things[ ]{1,}|[ ]{1,}internet of things[ ]{1,}|[ ]{1,}internet of things$</td>
-<td align="left">internet-of-things</td>
-</tr>
-<tr class="even">
-<td align="left">^load balancing[ ]{1,}|[ ]{1,}load balancing[ ]{1,}|[ ]{1,}load balancing$</td>
-<td align="left">load-balancing</td>
-</tr>
-<tr class="odd">
-<td align="left">^pattern recognition[ ]{1,}|[ ]{1,}pattern recognition[ ]{1,}|[ ]{1,}pattern recognition$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="even">
-<td align="left">^recommendation engine[ ]{1,}|[ ]{1,}recommendation engine[ ]{1,}|[ ]{1,}recommendation engine$</td>
-<td align="left">recommendation-engine</td>
-</tr>
-<tr class="odd">
-<td align="left">^root-cause analysis[ ]{1,}|[ ]{1,}root-cause analysis[ ]{1,}|[ ]{1,}root-cause analysis$</td>
-<td align="left">root-cause-analysis</td>
-</tr>
-<tr class="even">
-<td align="left">^sentiment analysis[ ]{1,}|[ ]{1,}sentiment analysis[ ]{1,}|[ ]{1,}sentiment analysis$</td>
-<td align="left">sentiment-analysis</td>
-</tr>
-<tr class="odd">
-<td align="left">^deep learning[ ]{1,}|[ ]{1,}deep learning[ ]{1,}|[ ]{1,}deep learning$</td>
-<td align="left">deep-learning</td>
-</tr>
-<tr class="even">
-<td align="left">^quality assurance[ ]{1,}|[ ]{1,}quality assurance[ ]{1,}|[ ]{1,}quality assurance$</td>
-<td align="left">quality-assurance</td>
-</tr>
-<tr class="odd">
-<td align="left">^big data[ ]{1,}|[ ]{1,}big data[ ]{1,}|[ ]{1,}big data$</td>
-<td align="left">big-data</td>
-</tr>
-<tr class="even">
-<td align="left">^google cloud platform[ ]{1,}|[ ]{1,}google cloud platform[ ]{1,}|[ ]{1,}google cloud platform$</td>
-<td align="left">cloud</td>
-</tr>
-<tr class="odd">
-<td align="left">^microsoft azure[ ]{1,}|[ ]{1,}microsoft azure[ ]{1,}|[ ]{1,}microsoft azure$</td>
-<td align="left">microsoft-azure</td>
-</tr>
-<tr class="even">
-<td align="left">^strategic analytics[ ]{1,}|[ ]{1,}strategic analytics[ ]{1,}|[ ]{1,}strategic analytics$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="odd">
-<td align="left">^marketing analytics[ ]{1,}|[ ]{1,}marketing analytics[ ]{1,}|[ ]{1,}marketing analytics$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="even">
-<td align="left">^quant research[ ]{1,}|[ ]{1,}quant research[ ]{1,}|[ ]{1,}quant research$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^quantitative analysis[ ]{1,}|[ ]{1,}quantitative analysis[ ]{1,}|[ ]{1,}quantitative analysis$</td>
-<td align="left">quantitative-analysis</td>
-</tr>
-<tr class="even">
-<td align="left">^big datasets[ ]{1,}|[ ]{1,}big datasets[ ]{1,}|[ ]{1,}big datasets$</td>
-<td align="left">big-datasets</td>
-</tr>
-<tr class="odd">
-<td align="left">^ai models[ ]{1,}|[ ]{1,}ai models[ ]{1,}|[ ]{1,}ai models$</td>
-<td align="left">ai-models</td>
-</tr>
-<tr class="even">
-<td align="left">^bidding optimization[ ]{1,}|[ ]{1,}bidding optimization[ ]{1,}|[ ]{1,}bidding optimization$</td>
-<td align="left">bidding-optimization</td>
-</tr>
-<tr class="odd">
-<td align="left">^messaging optimization[ ]{1,}|[ ]{1,}messaging optimization[ ]{1,}|[ ]{1,}messaging optimization$</td>
-<td align="left">messaging-optimization</td>
-</tr>
-<tr class="even">
-<td align="left">^multi-touch attribution[ ]{1,}|[ ]{1,}multi-touch attribution[ ]{1,}|[ ]{1,}multi-touch attribution$</td>
-<td align="left">multi-touch-attribution</td>
-</tr>
-<tr class="odd">
-<td align="left">^data science life cycle[ ]{1,}|[ ]{1,}data science life cycle[ ]{1,}|[ ]{1,}data science life cycle$</td>
-<td align="left">data-science-life-cycle</td>
-</tr>
-<tr class="even">
-<td align="left">^data wrangling[ ]{1,}|[ ]{1,}data wrangling[ ]{1,}|[ ]{1,}data wrangling$</td>
-<td align="left">data-wrangling</td>
-</tr>
-<tr class="odd">
-<td align="left">^feature engineering[ ]{1,}|[ ]{1,}feature engineering[ ]{1,}|[ ]{1,}feature engineering$</td>
-<td align="left">feature-engineering</td>
-</tr>
-<tr class="even">
-<td align="left">^model generation[ ]{1,}|[ ]{1,}model generation[ ]{1,}|[ ]{1,}model generation$</td>
-<td align="left">model-generation</td>
-</tr>
-<tr class="odd">
-<td align="left">^statistic[ ]{1,}|[ ]{1,}statistic[ ]{1,}|[ ]{1,}statistic$</td>
-<td align="left">statistics</td>
-</tr>
-<tr class="even">
-<td align="left">^data warehousing[ ]{1,}|[ ]{1,}data warehousing[ ]{1,}|[ ]{1,}data warehousing$</td>
-<td align="left">data-warehousing</td>
-</tr>
-<tr class="odd">
-<td align="left">^feature extractions[ ]{1,}|[ ]{1,}feature extractions[ ]{1,}|[ ]{1,}feature extractions$</td>
-<td align="left">feature-extractions</td>
-</tr>
-<tr class="even">
-<td align="left">^model selection[ ]{1,}|[ ]{1,}model selection[ ]{1,}|[ ]{1,}model selection$</td>
-<td align="left">model-selection</td>
-</tr>
-<tr class="odd">
-<td align="left">^model optimization[ ]{1,}|[ ]{1,}model optimization[ ]{1,}|[ ]{1,}model optimization$</td>
-<td align="left">model-optimization</td>
-</tr>
-<tr class="even">
-<td align="left">^model deployment[ ]{1,}|[ ]{1,}model deployment[ ]{1,}|[ ]{1,}model deployment$</td>
-<td align="left">model-deployment</td>
-</tr>
-<tr class="odd">
-<td align="left">^support vector machine[ ]{1,}|[ ]{1,}support vector machine[ ]{1,}|[ ]{1,}support vector machine$</td>
-<td align="left">support-vector-machine</td>
-</tr>
-<tr class="even">
-<td align="left">^genetic algorithms[ ]{1,}|[ ]{1,}genetic algorithms[ ]{1,}|[ ]{1,}genetic algorithms$</td>
-<td align="left">genetic-algorithms</td>
-</tr>
-<tr class="odd">
-<td align="left">^fuzzy logic[ ]{1,}|[ ]{1,}fuzzy logic[ ]{1,}|[ ]{1,}fuzzy logic$</td>
-<td align="left">fuzzy-logic</td>
-</tr>
-<tr class="even">
-<td align="left">^parallel computing[ ]{1,}|[ ]{1,}parallel computing[ ]{1,}|[ ]{1,}parallel computing$</td>
-<td align="left">parallel-computing</td>
-</tr>
-<tr class="odd">
-<td align="left">^rest api[ ]{1,}|[ ]{1,}rest api[ ]{1,}|[ ]{1,}rest api$</td>
-<td align="left">rest-api</td>
-</tr>
-<tr class="even">
-<td align="left">^logistic regression[ ]{1,}|[ ]{1,}logistic regression[ ]{1,}|[ ]{1,}logistic regression$</td>
-<td align="left">logistic-regression</td>
-</tr>
-<tr class="odd">
-<td align="left">^bayesian techniques[ ]{1,}|[ ]{1,}bayesian techniques[ ]{1,}|[ ]{1,}bayesian techniques$</td>
-<td align="left">bayesian-techniques</td>
-</tr>
-<tr class="even">
-<td align="left">^time-series analysis[ ]{1,}|[ ]{1,}time-series analysis[ ]{1,}|[ ]{1,}time-series analysis$</td>
-<td align="left">time-series-analysis</td>
-</tr>
-<tr class="odd">
-<td align="left">^stochastic optimization[ ]{1,}|[ ]{1,}stochastic optimization[ ]{1,}|[ ]{1,}stochastic optimization$</td>
-<td align="left">stochastic-optimization</td>
-</tr>
-<tr class="even">
-<td align="left">^computer science[ ]{1,}|[ ]{1,}computer science[ ]{1,}|[ ]{1,}computer science$</td>
-<td align="left">computer-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^text mining[ ]{1,}|[ ]{1,}text mining[ ]{1,}|[ ]{1,}text mining$</td>
-<td align="left">data-mining</td>
-</tr>
-<tr class="even">
-<td align="left">^data science[ ]{1,}|[ ]{1,}data science[ ]{1,}|[ ]{1,}data science$</td>
-<td align="left">data-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^predictive modeling[ ]{1,}|[ ]{1,}predictive modeling[ ]{1,}|[ ]{1,}predictive modeling$</td>
-<td align="left">modeling</td>
-</tr>
-<tr class="even">
-<td align="left">^data scientist[ ]{1,}|[ ]{1,}data scientist[ ]{1,}|[ ]{1,}data scientist$</td>
-<td align="left">data-scientist</td>
-</tr>
-<tr class="odd">
-<td align="left">^data scientists[ ]{1,}|[ ]{1,}data scientists[ ]{1,}|[ ]{1,}data scientists$</td>
-<td align="left">data-scientist</td>
-</tr>
-<tr class="even">
-<td align="left">^java[ ]{1,}|[ ]{1,}java[ ]{1,}|[ ]{1,}java$</td>
-<td align="left">java</td>
-</tr>
-<tr class="odd">
-<td align="left">^javascript[ ]{1,}|[ ]{1,}javascript[ ]{1,}|[ ]{1,}javascript$</td>
-<td align="left">java</td>
-</tr>
-<tr class="even">
-<td align="left">^java script[ ]{1,}|[ ]{1,}java script[ ]{1,}|[ ]{1,}java script$</td>
-<td align="left">java</td>
-</tr>
-<tr class="odd">
-<td align="left">^r[ ]{1,}|[ ]{1,}r[ ]{1,}|[ ]{1,}r$</td>
-<td align="left">r-programming</td>
-</tr>
-<tr class="even">
-<td align="left">^python[ ]{1,}|[ ]{1,}python[ ]{1,}|[ ]{1,}python$</td>
-<td align="left">python</td>
-</tr>
-<tr class="odd">
-<td align="left">^pythonbased[ ]{1,}|[ ]{1,}pythonbased[ ]{1,}|[ ]{1,}pythonbased$</td>
-<td align="left">python</td>
-</tr>
-<tr class="even">
-<td align="left">^pythonexperience[ ]{1,}|[ ]{1,}pythonexperience[ ]{1,}|[ ]{1,}pythonexperience$</td>
-<td align="left">python</td>
-</tr>
-<tr class="odd">
-<td align="left">^pythonexperienced[ ]{1,}|[ ]{1,}pythonexperienced[ ]{1,}|[ ]{1,}pythonexperienced$</td>
-<td align="left">python</td>
-</tr>
-<tr class="even">
-<td align="left">^pythonfamiliarity[ ]{1,}|[ ]{1,}pythonfamiliarity[ ]{1,}|[ ]{1,}pythonfamiliarity$</td>
-<td align="left">python</td>
-</tr>
-<tr class="odd">
-<td align="left">^pythonjavamatlab[ ]{1,}|[ ]{1,}pythonjavamatlab[ ]{1,}|[ ]{1,}pythonjavamatlab$</td>
-<td align="left">python</td>
-</tr>
-<tr class="even">
-<td align="left">^pythonminimum[ ]{1,}|[ ]{1,}pythonminimum[ ]{1,}|[ ]{1,}pythonminimum$</td>
-<td align="left">python</td>
-</tr>
-<tr class="odd">
-<td align="left">^pythonpreferred[ ]{1,}|[ ]{1,}pythonpreferred[ ]{1,}|[ ]{1,}pythonpreferred$</td>
-<td align="left">python</td>
-</tr>
-<tr class="even">
-<td align="left">^pythonsql[ ]{1,}|[ ]{1,}pythonsql[ ]{1,}|[ ]{1,}pythonsql$</td>
-<td align="left">python</td>
-</tr>
-<tr class="odd">
-<td align="left">^bioinformaticists[ ]{1,}|[ ]{1,}bioinformaticists[ ]{1,}|[ ]{1,}bioinformaticists$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="even">
-<td align="left">^bioinformatics[ ]{1,}|[ ]{1,}bioinformatics[ ]{1,}|[ ]{1,}bioinformatics$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="odd">
-<td align="left">^biologists[ ]{1,}|[ ]{1,}biologists[ ]{1,}|[ ]{1,}biologists$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="even">
-<td align="left">^biology[ ]{1,}|[ ]{1,}biology[ ]{1,}|[ ]{1,}biology$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="odd">
-<td align="left">^biomedical[ ]{1,}|[ ]{1,}biomedical[ ]{1,}|[ ]{1,}biomedical$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="even">
-<td align="left">^biometrics[ ]{1,}|[ ]{1,}biometrics[ ]{1,}|[ ]{1,}biometrics$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="odd">
-<td align="left">^biostatistics[ ]{1,}|[ ]{1,}biostatistics[ ]{1,}|[ ]{1,}biostatistics$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="even">
-<td align="left">^biostatisticsstatistics[ ]{1,}|[ ]{1,}biostatisticsstatistics[ ]{1,}|[ ]{1,}biostatisticsstatistics$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="odd">
-<td align="left">^biotech[ ]{1,}|[ ]{1,}biotech[ ]{1,}|[ ]{1,}biotech$</td>
-<td align="left">biology</td>
-</tr>
-<tr class="even">
-<td align="left">^big-dataadvanced[ ]{1,}|[ ]{1,}big-dataadvanced[ ]{1,}|[ ]{1,}big-dataadvanced$</td>
-<td align="left">big-data</td>
-</tr>
-<tr class="odd">
-<td align="left">^analytics[ ]{1,}|[ ]{1,}analytics[ ]{1,}|[ ]{1,}analytics$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="even">
-<td align="left">^analysis[ ]{1,}|[ ]{1,}analysis[ ]{1,}|[ ]{1,}analysis$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="odd">
-<td align="left">^mannerdata wrangling[ ]{1,}|[ ]{1,}mannerdata wrangling[ ]{1,}|[ ]{1,}mannerdata wrangling$</td>
-<td align="left">data-wrangling</td>
-</tr>
-<tr class="even">
-<td align="left">^visualisation[ ]{1,}|[ ]{1,}visualisation[ ]{1,}|[ ]{1,}visualisation$</td>
-<td align="left">data-visualization</td>
-</tr>
-<tr class="odd">
-<td align="left">^visualizationsdesigning[ ]{1,}|[ ]{1,}visualizationsdesigning[ ]{1,}|[ ]{1,}visualizationsdesigning$</td>
-<td align="left">data-visualization</td>
-</tr>
-<tr class="even">
-<td align="left">^visualizationsidentify[ ]{1,}|[ ]{1,}visualizationsidentify[ ]{1,}|[ ]{1,}visualizationsidentify$</td>
-<td align="left">data-visualization</td>
-</tr>
-<tr class="odd">
-<td align="left">^visual[ ]{1,}|[ ]{1,}visual[ ]{1,}|[ ]{1,}visual$</td>
-<td align="left">data-visualization</td>
-</tr>
-<tr class="even">
-<td align="left">^visualization[ ]{1,}|[ ]{1,}visualization[ ]{1,}|[ ]{1,}visualization$</td>
-<td align="left">data-visualization</td>
-</tr>
-<tr class="odd">
-<td align="left">^statisticians[ ]{1,}|[ ]{1,}statisticians[ ]{1,}|[ ]{1,}statisticians$</td>
-<td align="left">statistics</td>
-</tr>
-<tr class="even">
-<td align="left">^computer scienceinformation[ ]{1,}|[ ]{1,}computer scienceinformation[ ]{1,}|[ ]{1,}computer scienceinformation$</td>
-<td align="left">computer-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^computer sciencestatistics[ ]{1,}|[ ]{1,}computer sciencestatistics[ ]{1,}|[ ]{1,}computer sciencestatistics$</td>
-<td align="left">computer-science</td>
-</tr>
-<tr class="even">
-<td align="left">^statistical[ ]{1,}|[ ]{1,}statistical[ ]{1,}|[ ]{1,}statistical$</td>
-<td align="left">statistics</td>
-</tr>
-<tr class="odd">
-<td align="left">^mysql[ ]{1,}|[ ]{1,}mysql[ ]{1,}|[ ]{1,}mysql$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="even">
-<td align="left">^nosql[ ]{1,}|[ ]{1,}nosql[ ]{1,}|[ ]{1,}nosql$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="odd">
-<td align="left">^accesssql[ ]{1,}|[ ]{1,}accesssql[ ]{1,}|[ ]{1,}accesssql$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="even">
-<td align="left">^mysqlpostgresql[ ]{1,}|[ ]{1,}mysqlpostgresql[ ]{1,}|[ ]{1,}mysqlpostgresql$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="odd">
-<td align="left">^rsql[ ]{1,}|[ ]{1,}rsql[ ]{1,}|[ ]{1,}rsql$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="even">
-<td align="left">^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="odd">
-<td align="left">^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="even">
-<td align="left">^sqlhivespark[ ]{1,}|[ ]{1,}sqlhivespark[ ]{1,}|[ ]{1,}sqlhivespark$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="odd">
-<td align="left">^sqlmastery[ ]{1,}|[ ]{1,}sqlmastery[ ]{1,}|[ ]{1,}sqlmastery$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="even">
-<td align="left">^sqlpreferred[ ]{1,}|[ ]{1,}sqlpreferred[ ]{1,}|[ ]{1,}sqlpreferred$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="odd">
-<td align="left">^sqlstatistics[ ]{1,}|[ ]{1,}sqlstatistics[ ]{1,}|[ ]{1,}sqlstatistics$</td>
-<td align="left">sql</td>
-</tr>
-<tr class="even">
-<td align="left">^apache-spark[ ]{1,}|[ ]{1,}apache-spark[ ]{1,}|[ ]{1,}apache-spark$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="odd">
-<td align="left">^apache-sparklrs[ ]{1,}|[ ]{1,}apache-sparklrs[ ]{1,}|[ ]{1,}apache-sparklrs$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="even">
-<td align="left">^pyspark[ ]{1,}|[ ]{1,}pyspark[ ]{1,}|[ ]{1,}pyspark$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="odd">
-<td align="left">^hadoop[ ]{1,}|[ ]{1,}hadoop[ ]{1,}|[ ]{1,}hadoop$</td>
-<td align="left">hadoop</td>
-</tr>
-<tr class="even">
-<td align="left">^spark[ ]{1,}|[ ]{1,}spark[ ]{1,}|[ ]{1,}spark$</td>
-<td align="left">spark</td>
-</tr>
-<tr class="odd">
-<td align="left">^models[ ]{1,}|[ ]{1,}models[ ]{1,}|[ ]{1,}models$</td>
-<td align="left">modeling</td>
-</tr>
-<tr class="even">
-<td align="left">^model[ ]{1,}|[ ]{1,}model[ ]{1,}|[ ]{1,}model$</td>
-<td align="left">modeling</td>
-</tr>
-<tr class="odd">
-<td align="left">^predictive-modelingassess[ ]{1,}|[ ]{1,}predictive-modelingassess[ ]{1,}|[ ]{1,}predictive-modelingassess$</td>
-<td align="left">modeling</td>
-</tr>
-<tr class="even">
-<td align="left">^predictive-modelingwhat[ ]{1,}|[ ]{1,}predictive-modelingwhat[ ]{1,}|[ ]{1,}predictive-modelingwhat$</td>
-<td align="left">modeling</td>
-</tr>
-<tr class="odd">
-<td align="left">^machine[ ]{1,}|[ ]{1,}machine[ ]{1,}|[ ]{1,}machine$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="even">
-<td align="left">^machine-learningexperience[ ]{1,}|[ ]{1,}machine-learningexperience[ ]{1,}|[ ]{1,}machine-learningexperience$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="odd">
-<td align="left">^machinekeywords[ ]{1,}|[ ]{1,}machinekeywords[ ]{1,}|[ ]{1,}machinekeywords$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="even">
-<td align="left">^machinelearning[ ]{1,}|[ ]{1,}machinelearning[ ]{1,}|[ ]{1,}machinelearning$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="odd">
-<td align="left">^machine-learningbut[ ]{1,}|[ ]{1,}machine-learningbut[ ]{1,}|[ ]{1,}machine-learningbut$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="even">
-<td align="left">^machine-learningmachine[ ]{1,}|[ ]{1,}machine-learningmachine[ ]{1,}|[ ]{1,}machine-learningmachine$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="odd">
-<td align="left">^machine-learningmust[ ]{1,}|[ ]{1,}machine-learningmust[ ]{1,}|[ ]{1,}machine-learningmust$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="even">
-<td align="left">^machine-learningrecommending[ ]{1,}|[ ]{1,}machine-learningrecommending[ ]{1,}|[ ]{1,}machine-learningrecommending$</td>
-<td align="left">machine-learning</td>
-</tr>
-<tr class="odd">
-<td align="left">^analytical[ ]{1,}|[ ]{1,}analytical[ ]{1,}|[ ]{1,}analytical$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="even">
-<td align="left">^programmatically[ ]{1,}|[ ]{1,}programmatically[ ]{1,}|[ ]{1,}programmatically$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="odd">
-<td align="left">^programmable[ ]{1,}|[ ]{1,}programmable[ ]{1,}|[ ]{1,}programmable$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="even">
-<td align="left">^programmingbe[ ]{1,}|[ ]{1,}programmingbe[ ]{1,}|[ ]{1,}programmingbe$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="odd">
-<td align="left">^programmingexperience[ ]{1,}|[ ]{1,}programmingexperience[ ]{1,}|[ ]{1,}programmingexperience$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="even">
-<td align="left">^programmingminimum[ ]{1,}|[ ]{1,}programmingminimum[ ]{1,}|[ ]{1,}programmingminimum$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="odd">
-<td align="left">^programmingscripting[ ]{1,}|[ ]{1,}programmingscripting[ ]{1,}|[ ]{1,}programmingscripting$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="even">
-<td align="left">^programmingsolid[ ]{1,}|[ ]{1,}programmingsolid[ ]{1,}|[ ]{1,}programmingsolid$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="odd">
-<td align="left">^softwarealgorithm[ ]{1,}|[ ]{1,}softwarealgorithm[ ]{1,}|[ ]{1,}softwarealgorithm$</td>
-<td align="left">software</td>
-</tr>
-<tr class="even">
-<td align="left">^softwareexperience[ ]{1,}|[ ]{1,}softwareexperience[ ]{1,}|[ ]{1,}softwareexperience$</td>
-<td align="left">software</td>
-</tr>
-<tr class="odd">
-<td align="left">^softwares[ ]{1,}|[ ]{1,}softwares[ ]{1,}|[ ]{1,}softwares$</td>
-<td align="left">software</td>
-</tr>
-<tr class="even">
-<td align="left">^softwaretools[ ]{1,}|[ ]{1,}softwaretools[ ]{1,}|[ ]{1,}softwaretools$</td>
-<td align="left">software</td>
-</tr>
-<tr class="odd">
-<td align="left">^researchers[ ]{1,}|[ ]{1,}researchers[ ]{1,}|[ ]{1,}researchers$</td>
-<td align="left">research</td>
-</tr>
-<tr class="even">
-<td align="left">^researcher[ ]{1,}|[ ]{1,}researcher[ ]{1,}|[ ]{1,}researcher$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^researches[ ]{1,}|[ ]{1,}researches[ ]{1,}|[ ]{1,}researches$</td>
-<td align="left">research</td>
-</tr>
-<tr class="even">
-<td align="left">^researchfocused[ ]{1,}|[ ]{1,}researchfocused[ ]{1,}|[ ]{1,}researchfocused$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^academicresearch[ ]{1,}|[ ]{1,}academicresearch[ ]{1,}|[ ]{1,}academicresearch$</td>
-<td align="left">research</td>
-</tr>
-<tr class="even">
-<td align="left">^businessresearch[ ]{1,}|[ ]{1,}businessresearch[ ]{1,}|[ ]{1,}businessresearch$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^researchanalytical[ ]{1,}|[ ]{1,}researchanalytical[ ]{1,}|[ ]{1,}researchanalytical$</td>
-<td align="left">research</td>
-</tr>
-<tr class="even">
-<td align="left">^researched[ ]{1,}|[ ]{1,}researched[ ]{1,}|[ ]{1,}researched$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^researchersubject[ ]{1,}|[ ]{1,}researchersubject[ ]{1,}|[ ]{1,}researchersubject$</td>
-<td align="left">research</td>
-</tr>
-<tr class="even">
-<td align="left">^researching[ ]{1,}|[ ]{1,}researching[ ]{1,}|[ ]{1,}researching$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^researchresponsibilitiesexploratory[ ]{1,}|[ ]{1,}researchresponsibilitiesexploratory[ ]{1,}|[ ]{1,}researchresponsibilitiesexploratory$</td>
-<td align="left">research</td>
-</tr>
-<tr class="even">
-<td align="left">^researchscientific[ ]{1,}|[ ]{1,}researchscientific[ ]{1,}|[ ]{1,}researchscientific$</td>
-<td align="left">research</td>
-</tr>
-<tr class="odd">
-<td align="left">^algorithm[ ]{1,}|[ ]{1,}algorithm[ ]{1,}|[ ]{1,}algorithm$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="even">
-<td align="left">^algorithmic[ ]{1,}|[ ]{1,}algorithmic[ ]{1,}|[ ]{1,}algorithmic$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="odd">
-<td align="left">^algorithmsdesired[ ]{1,}|[ ]{1,}algorithmsdesired[ ]{1,}|[ ]{1,}algorithmsdesired$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="even">
-<td align="left">^algorithmsexperience[ ]{1,}|[ ]{1,}algorithmsexperience[ ]{1,}|[ ]{1,}algorithmsexperience$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="odd">
-<td align="left">^algorithmsim[ ]{1,}|[ ]{1,}algorithmsim[ ]{1,}|[ ]{1,}algorithmsim$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="even">
-<td align="left">^algorithmswhat[ ]{1,}|[ ]{1,}algorithmswhat[ ]{1,}|[ ]{1,}algorithmswhat$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="odd">
-<td align="left">^protocolalgorithms[ ]{1,}|[ ]{1,}protocolalgorithms[ ]{1,}|[ ]{1,}protocolalgorithms$</td>
-<td align="left">algorithms</td>
-</tr>
-<tr class="even">
-<td align="left">^mining[ ]{1,}|[ ]{1,}mining[ ]{1,}|[ ]{1,}mining$</td>
-<td align="left">data-mining</td>
-</tr>
-<tr class="odd">
-<td align="left">^data-miningstrong[ ]{1,}|[ ]{1,}data-miningstrong[ ]{1,}|[ ]{1,}data-miningstrong$</td>
-<td align="left">data-mining</td>
-</tr>
-<tr class="even">
-<td align="left">^data-miningunderstanding[ ]{1,}|[ ]{1,}data-miningunderstanding[ ]{1,}|[ ]{1,}data-miningunderstanding$</td>
-<td align="left">data-mining</td>
-</tr>
-<tr class="odd">
-<td align="left">^mathematicians[ ]{1,}|[ ]{1,}mathematicians[ ]{1,}|[ ]{1,}mathematicians$</td>
-<td align="left">mathematics</td>
-</tr>
-<tr class="even">
-<td align="left">^mathstatistics[ ]{1,}|[ ]{1,}mathstatistics[ ]{1,}|[ ]{1,}mathstatistics$</td>
-<td align="left">mathematics</td>
-</tr>
-<tr class="odd">
-<td align="left">^analytic[ ]{1,}|[ ]{1,}analytic[ ]{1,}|[ ]{1,}analytic$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="even">
-<td align="left">^predictive[ ]{1,}|[ ]{1,}predictive[ ]{1,}|[ ]{1,}predictive$</td>
-<td align="left">modeling</td>
-</tr>
-<tr class="odd">
-<td align="left">^program[ ]{1,}|[ ]{1,}program[ ]{1,}|[ ]{1,}program$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="even">
-<td align="left">^solve[ ]{1,}|[ ]{1,}solve[ ]{1,}|[ ]{1,}solve$</td>
-<td align="left">problem-solving</td>
-</tr>
-<tr class="odd">
-<td align="left">^problems[ ]{1,}|[ ]{1,}problems[ ]{1,}|[ ]{1,}problems$</td>
-<td align="left">problem-solving</td>
-</tr>
-<tr class="even">
-<td align="left">^problem[ ]{1,}|[ ]{1,}problem[ ]{1,}|[ ]{1,}problem$</td>
-<td align="left">problem-solving</td>
-</tr>
-<tr class="odd">
-<td align="left">^languages[ ]{1,}|[ ]{1,}languages[ ]{1,}|[ ]{1,}languages$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="even">
-<td align="left">^language[ ]{1,}|[ ]{1,}language[ ]{1,}|[ ]{1,}language$</td>
-<td align="left">programming</td>
-</tr>
-<tr class="odd">
-<td align="left">^processing[ ]{1,}|[ ]{1,}processing[ ]{1,}|[ ]{1,}processing$</td>
-<td align="left">data-processing</td>
-</tr>
-<tr class="even">
-<td align="left">^process[ ]{1,}|[ ]{1,}process[ ]{1,}|[ ]{1,}process$</td>
-<td align="left">data-processing</td>
-</tr>
-<tr class="odd">
-<td align="left">^intelligence[ ]{1,}|[ ]{1,}intelligence[ ]{1,}|[ ]{1,}intelligence$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="even">
-<td align="left">^business intelligenceanalysis[ ]{1,}|[ ]{1,}business intelligenceanalysis[ ]{1,}|[ ]{1,}business intelligenceanalysis$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="odd">
-<td align="left">^business intelligenceexpert[ ]{1,}|[ ]{1,}business intelligenceexpert[ ]{1,}|[ ]{1,}business intelligenceexpert$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="even">
-<td align="left">^defenseintelligence[ ]{1,}|[ ]{1,}defenseintelligence[ ]{1,}|[ ]{1,}defenseintelligence$</td>
-<td align="left">artificial-intelligence</td>
-</tr>
-<tr class="odd">
-<td align="left">^quantitative[ ]{1,}|[ ]{1,}quantitative[ ]{1,}|[ ]{1,}quantitative$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="even">
-<td align="left">^analyze[ ]{1,}|[ ]{1,}analyze[ ]{1,}|[ ]{1,}analyze$</td>
-<td align="left">analytics</td>
-</tr>
-<tr class="odd">
-<td align="left">^solving[ ]{1,}|[ ]{1,}solving[ ]{1,}|[ ]{1,}solving$</td>
-<td align="left">problem-solving</td>
-</tr>
-<tr class="even">
-<td align="left">^teams[ ]{1,}|[ ]{1,}teams[ ]{1,}|[ ]{1,}teams$</td>
-<td align="left">team</td>
-</tr>
-<tr class="odd">
-<td align="left">^databases[ ]{1,}|[ ]{1,}databases[ ]{1,}|[ ]{1,}databases$</td>
-<td align="left">database</td>
-</tr>
-<tr class="even">
-<td align="left">^databasesexperience[ ]{1,}|[ ]{1,}databasesexperience[ ]{1,}|[ ]{1,}databasesexperience$</td>
-<td align="left">database</td>
-</tr>
-<tr class="odd">
-<td align="left">^databaseskills[ ]{1,}|[ ]{1,}databaseskills[ ]{1,}|[ ]{1,}databaseskills$</td>
-<td align="left">database</td>
-</tr>
-<tr class="even">
-<td align="left">^decision[ ]{1,}|[ ]{1,}decision[ ]{1,}|[ ]{1,}decision$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^decisioning[ ]{1,}|[ ]{1,}decisioning[ ]{1,}|[ ]{1,}decisioning$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="even">
-<td align="left">^decisionstree[ ]{1,}|[ ]{1,}decisionstree[ ]{1,}|[ ]{1,}decisionstree$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^decisionsforest [ ]{1,}|[ ]{1,}decisionsforest [ ]{1,}|[ ]{1,}decisionsforest $</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="even">
-<td align="left">^decisionspoints[ ]{1,}|[ ]{1,}decisionspoints[ ]{1,}|[ ]{1,}decisionspoints$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^decisionsrules[ ]{1,}|[ ]{1,}decisionsrules[ ]{1,}|[ ]{1,}decisionsrules$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="even">
-<td align="left">^decisionsscience[ ]{1,}|[ ]{1,}decisionsscience[ ]{1,}|[ ]{1,}decisionsscience$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^decisionssupports[ ]{1,}|[ ]{1,}decisionssupports[ ]{1,}|[ ]{1,}decisionssupports$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="even">
-<td align="left">^decisionstools[ ]{1,}|[ ]{1,}decisionstools[ ]{1,}|[ ]{1,}decisionstools$</td>
-<td align="left">decisions-science</td>
-</tr>
-<tr class="odd">
-<td align="left">^communicate[ ]{1,}|[ ]{1,}communicate[ ]{1,}|[ ]{1,}communicate$</td>
-<td align="left">communication</td>
-</tr>
-<tr class="even">
-<td align="left">^tableauyou[ ]{1,}|[ ]{1,}tableauyou[ ]{1,}|[ ]{1,}tableauyou$</td>
-<td align="left">tableau</td>
-</tr>
-<tr class="odd">
-<td align="left">^tableu[ ]{1,}|[ ]{1,}tableu[ ]{1,}|[ ]{1,}tableu$</td>
-<td align="left">tableau</td>
-</tr>
-<tr class="even">
-<td align="left">^collaborates[ ]{1,}|[ ]{1,}collaborates[ ]{1,}|[ ]{1,}collaborates$</td>
-<td align="left">collaborate</td>
-</tr>
-<tr class="odd">
-<td align="left">^communicating[ ]{1,}|[ ]{1,}communicating[ ]{1,}|[ ]{1,}communicating$</td>
-<td align="left">communication</td>
-</tr>
-<tr class="even">
-<td align="left">^communications[ ]{1,}|[ ]{1,}communications[ ]{1,}|[ ]{1,}communications$</td>
-<td align="left">communication</td>
-</tr>
-<tr class="odd">
-<td align="left">^cloud[ ]{1,}|[ ]{1,}cloud[ ]{1,}|[ ]{1,}cloud$</td>
-<td align="left">cloud-computing</td>
-</tr>
-<tr class="even">
-<td align="left">^cloudbase[ ]{1,}|[ ]{1,}cloudbase[ ]{1,}|[ ]{1,}cloudbase$</td>
-<td align="left">cloud-computing</td>
-</tr>
 </tbody>
 </table>
+<pre class="r"><code>#kable(terms)</code></pre>
 </div>
 <div id="substitute-terms-from-list" class="section level4">
 <h4>Substitute terms from list</h4>
@@ -1199,11 +419,11 @@ docs &lt;- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])</code></pre>
 <pre><code>## &lt;&lt;PlainTextDocument&gt;&gt;
 ## Metadata:  7
-## Content:  chars: 4614
+## Content:  chars: 4608
 ## 
 ## 
 ## 
-## job descriptionjob title associate data scientistlocation portland or reports to manager data-science come join us comscore is a media measurement company providing multiscreen reporting and analytics with cutting edge technology to serve clients in the entertainment media retail and advertising industries comscore s data-science team helps design the intelligent engines that power the company s advanced movies tv everywhere measurement systems through our research comscore builds projections that make the massive amount of raw data we take in from screens across the world meaningful and useful for our clients we are currently seeking an associate data-scientist to add to our growing company of talented team members if you re hardworking and enjoy a cooperative work environment we re offering a place where you can work alongside talented peers on interesting dynamic and fun projects we re a small enough company that you can make a big difference here but we re big enough to reach a national audience essential duties include validate analytics and conduct statistics analytics on data using analytics software excel sql and sas analytics and define efficient workable solutions that support client business processes and functional requirements for research projects extract qualitative findings from large data sets write reports that include effective graphs tables summaries and narratives develop and execute test cases to ensure data requirements have been met research and resolve client reported issues interpret results present findings and recommend alternative solutions to research management and business decisions-science makers track daily industry news and disseminate relevant articles to management and teamqualifications and required skills bachelor degree in statistics decisions-science sciences economics physics mathematics engineering or similar field required experience with sql python or other programming programming highly competent in data manipulation and critical thinking intrinsic ability to look at data and identify patterns problem-solving or analytics opportunities knowledge of data-mining and software applications ability to distill large amounts of information into key findings the ability to clearly articulate research in written and verbal presentations with software developers clients management and sales staff data management experience with one or more data analytics packages e g spss sas stata r-programming required experience with excel including pivot tables formulae vlookup s and graphing strong organizational skills including the ability to multi task and prioritize efficiently to meet deadlines strong attention to detail and problem-solving problem-solving skills self motivated takes initiative loves to learn and continuously seeks new knowledge strong documentation skills from both a business and technology perspective effective troubleshooting and investigation skills to identify root cause of problem-solving proven ability to manage and perform multiple tasks under conditions of fluctuating workloads competing requirements and changing deadlines while maintaining accuracy working independently and completing assignments with minimal direction self starter who is self motivated efficient responsible and dependable additional consideration will be given to candidates with experience in the television media research industry is a plus about comscore comscore is a leading cross platform measurement company that measures audiences brands and consumer behavior everywhere comscore completed its merger with rentrak corporation in january to create the new modeling for a dynamic cross platform world built on precision and innovation comscore s data footprint combines proprietary digital tv and movie artificial-intelligence with vast demographic details to quantify consumers multiscreen behavior at massive scale this approach helps media companies monetize their complete audiences and allows marketers to reach these audiences more effectively with more than clients and a global footprint in more than countries comscore is delivering the future of measurement shares of comscore stock are currently traded on the otc market otc scor for more information on comscore please visit comscore com eeo statement we are an equal employment opportunity employer all qualified applicants will receive consideration for employment without regard to race color religion national origin sex disability status sexual orientation gender identity age protected veteran status or any other characteristic protected by law li jz msja</code></pre>
+## job descriptionjob title associate data scientistlocation portland or reports to manager data-science come join us comscore is a media measurement company providing multiscreen reporting and analytics with cutting edge technology to serve clients in the entertainment media retail and advertising industries comscore s data-science team helps design the intelligent engines that power the company s advanced movies tv everywhere measurement systems through our research comscore builds projections that make the massive amount of raw data we take in from screens across the world meaningful and useful for our clients we are currently seeking an associate data-scientist to add to our growing company of talented team members if you re hardworking and enjoy a cooperative work environment we re offering a place where you can work alongside talented peers on interesting dynamic and fun projects we re a small enough company that you can make a big difference here but we re big enough to reach a national audience essential duties include validate analyze and conduct statistics analysis on data using analytical software excel sql and sas analyze and define efficient workable solutions that support client business processes and functional requirements for research projects extract qualitative findings from large data sets write reports that include effective graphs tables summaries and narratives develop and execute test cases to ensure data requirements have been met research and resolve client reported issues interpret results present findings and recommend alternative solutions to research management and business decisions-science makers track daily industry news and disseminate relevant articles to management and teamqualifications and required skills bachelor degree in statistics decisions-science sciences economics physics mathematics engineering or similar field required experience with sql python or other programming programming highly competent in data manipulation and critical thinking intrinsic ability to look at data and identify patterns problem-solving or analysis opportunities knowledge of data-mining and software applications ability to distill large amounts of information into key findings the ability to clearly articulate research in written and verbal presentations with software developers clients management and sales staff data management experience with one or more data analysis packages e g spss sas stata r-programming required experience with excel including pivot tables formulae vlookup s and graphing strong organizational skills including the ability to multi task and prioritize efficiently to meet deadlines strong attention to detail and problem-solving problem-solving skills self motivated takes initiative loves to learn and continuously seeks new knowledge strong documentation skills from both a business and technology perspective effective troubleshooting and investigation skills to identify root cause of problem-solving proven ability to manage and perform multiple tasks under conditions of fluctuating workloads competing requirements and changing deadlines while maintaining accuracy working independently and completing assignments with minimal direction self starter who is self motivated efficient responsible and dependable additional consideration will be given to candidates with experience in the television media research industry is a plus about comscore comscore is a leading cross platform measurement company that measures audiences brands and consumer behavior everywhere comscore completed its merger with rentrak corporation in january to create the new modeling for a dynamic cross platform world built on precision and innovation comscore s data footprint combines proprietary digital tv and movie artificial-intelligence with vast demographic details to quantify consumers multiscreen behavior at massive scale this approach helps media companies monetize their complete audiences and allows marketers to reach these audiences more effectively with more than clients and a global footprint in more than countries comscore is delivering the future of measurement shares of comscore stock are currently traded on the otc market otc scor for more information on comscore please visit comscore com eeo statement we are an equal employment opportunity employer all qualified applicants will receive consideration for employment without regard to race color religion national origin sex disability status sexual orientation gender identity age protected veteran status or any other characteristic protected by law li jz msja</code></pre>
 </div>
 </div>
 <div id="remove-stop-words" class="section level3">
@@ -1296,11 +516,11 @@ docs &lt;- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])</code></pre>
 <pre><code>## &lt;&lt;PlainTextDocument&gt;&gt;
 ## Metadata:  7
-## Content:  chars: 2857
+## Content:  chars: 2851
 ## 
 ## 
 ## 
-##  descriptionjob title associate scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw take screens meaningful useful currently associate add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analytics conduct statistics analytics analytics software excel sql sas analytics define efficient workable functional research extract qualitative findings write effective graphs tables summaries narratives execute test cases ensure met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent manipulation critical thinking intrinsic look patterns problem-solving analytics data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff analytics packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s footprint combines proprietary digital tv movie artificial-intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja</code></pre>
+##  descriptionjob title associate scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw take screens meaningful useful currently associate add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analyze conduct statistics analysis analytical software excel sql sas analyze define efficient workable functional research extract qualitative findings write effective graphs tables summaries narratives execute test cases ensure met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent manipulation critical thinking intrinsic look patterns problem-solving analysis data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff analysis packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s footprint combines proprietary digital tv movie artificial-intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja</code></pre>
 <hr />
 </div>
 </div>
@@ -1309,8 +529,8 @@ inspect(docs[[1]])</code></pre>
 <p>There are 100 documents with 5,431 terms.</p>
 <pre class="r"><code>tdm &lt;- TermDocumentMatrix(docs) 
 tdm  </code></pre>
-<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4546, documents: 100)&gt;&gt;
-## Non-/sparse entries: 14392/440208
+<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4553, documents: 100)&gt;&gt;
+## Non-/sparse entries: 14531/440769
 ## Sparsity           : 97%
 ## Maximal term length: 43
 ## Weighting          : term frequency (tf)</code></pre>
@@ -1356,16 +576,16 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">analytics</td>
-<td align="right">88</td>
-</tr>
-<tr class="even">
 <td align="left">statistics</td>
 <td align="right">74</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">modeling</td>
-<td align="right">71</td>
+<td align="right">73</td>
+</tr>
+<tr class="odd">
+<td align="left">analytics</td>
+<td align="right">72</td>
 </tr>
 <tr class="even">
 <td align="left">team</td>
@@ -1380,32 +600,40 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 <td align="right">61</td>
 </tr>
 <tr class="odd">
-<td align="left">r-programming</td>
+<td align="left">analysis</td>
 <td align="right">58</td>
 </tr>
 <tr class="even">
+<td align="left">r-programming</td>
+<td align="right">58</td>
+</tr>
+<tr class="odd">
 <td align="left">python</td>
 <td align="right">57</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">machine-learning</td>
 <td align="right">55</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">problem-solving</td>
 <td align="right">55</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">design</td>
 <td align="right">45</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">sql</td>
 <td align="right">45</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">computer-science</td>
 <td align="right">44</td>
+</tr>
+<tr class="odd">
+<td align="left">analytical</td>
+<td align="right">43</td>
 </tr>
 <tr class="even">
 <td align="left">data-processing</td>
@@ -1464,7 +692,7 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 <td align="right">26</td>
 </tr>
 <tr class="even">
-<td align="left">artificial-intelligence</td>
+<td align="left">analyze</td>
 <td align="right">25</td>
 </tr>
 <tr class="odd">
@@ -1472,7 +700,15 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 <td align="right">25</td>
 </tr>
 <tr class="even">
+<td align="left">artificial-intelligence</td>
+<td align="right">24</td>
+</tr>
+<tr class="odd">
 <td align="left">java</td>
+<td align="right">24</td>
+</tr>
+<tr class="even">
+<td align="left">quantitative</td>
 <td align="right">24</td>
 </tr>
 <tr class="odd">
@@ -1507,7 +743,7 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 <pre class="r"><code>result &lt;- 
   termFreq %&gt;% dplyr::select(term, frequency) %&gt;% dplyr::arrange(desc(frequency))
 #write.csv(m, file=&quot;TermDocumentMatrix_adjusted.csv&quot;) 
-write.csv(result, file=&quot;TermFrequency_adjusted_9.csv&quot;)</code></pre>
+write.csv(result, file=&quot;TermFrequency_adjusted_10.csv&quot;)</code></pre>
 </div>
 </div>
 

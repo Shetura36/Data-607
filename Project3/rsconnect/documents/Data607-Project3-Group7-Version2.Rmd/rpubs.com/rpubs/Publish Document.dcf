@@ -4,7 +4,7 @@ username:
 account: rpubs
 server: rpubs.com
 hostUrl: rpubs.com
-appId: https://api.rpubs.com/api/v1/document/373180/8bca266342364c538685c48fd4dad8f8
-bundleId: https://api.rpubs.com/api/v1/document/373180/8bca266342364c538685c48fd4dad8f8
-url: http://rpubs.com/Shetura36/373180
-when: 1521949612.77736
+appId: https://api.rpubs.com/api/v1/document/373361/30e2c67d9d864abdb1fed8827933c2fd
+bundleId: https://api.rpubs.com/api/v1/document/373361/30e2c67d9d864abdb1fed8827933c2fd
+url: http://rpubs.com/publish/claim/373361/de92e372d81e42829834614bbb81c121
+when: 1521989174.05456
