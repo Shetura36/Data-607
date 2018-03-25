@@ -26,13 +26,13 @@ https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-S
 https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive
 
 * List of term substitution: <br/>
-https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version3.csv
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermsSubstitution_Shahparan-Version4.csv
 
 * List of words removed: <br/>
-https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher.csv
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher-Version3.csv
 
 * Term Frequency output: <br/>
-https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_8.csv
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_9.csv
 
 
 ---------------
@@ -220,8 +220,8 @@ file <-
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
 
-#kable(head(terms,10), format="markdown")
-kable(terms)
+kable(head(terms,10), format="markdown")
+#kable(terms)
 ```
 
 
@@ -361,6 +361,5 @@ result <-
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
 write.csv(result, file="TermFrequency_adjusted_9.csv")
 ```
-
 
 
