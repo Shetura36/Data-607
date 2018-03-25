@@ -363,23 +363,23 @@ kable(head(terms,10), format=&quot;markdown&quot;)</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">^descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics$</td>
-<td align="left">descriptive analytics</td>
+<td align="left">descriptive-analytics</td>
 </tr>
 <tr class="even">
 <td align="left">^predictive analytics[ ]{1,}|[ ]{1,}predictive analytics[ ]{1,}|[ ]{1,}predictive analytics$</td>
-<td align="left">predictive analytics</td>
+<td align="left">predictive-analytics</td>
 </tr>
 <tr class="odd">
 <td align="left">^prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics$</td>
-<td align="left">prescriptive analytics</td>
+<td align="left">prescriptive-analytics</td>
 </tr>
 <tr class="even">
 <td align="left">^behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics$</td>
-<td align="left">behavioral analytics</td>
+<td align="left">behavioral-analytics</td>
 </tr>
 <tr class="odd">
 <td align="left">^clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics$</td>
-<td align="left">clickstream analytics</td>
+<td align="left">clickstream-analytics</td>
 </tr>
 <tr class="even">
 <td align="left">^data mining[ ]{1,}|[ ]{1,}data mining[ ]{1,}|[ ]{1,}data mining$</td>
@@ -529,8 +529,8 @@ inspect(docs[[1]])</code></pre>
 <p>There are 100 documents with 5,431 terms.</p>
 <pre class="r"><code>tdm &lt;- TermDocumentMatrix(docs) 
 tdm  </code></pre>
-<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4553, documents: 100)&gt;&gt;
-## Non-/sparse entries: 14531/440769
+<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4554, documents: 100)&gt;&gt;
+## Non-/sparse entries: 14538/440862
 ## Sparsity           : 97%
 ## Maximal term length: 43
 ## Weighting          : term frequency (tf)</code></pre>
@@ -581,11 +581,11 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 </tr>
 <tr class="even">
 <td align="left">modeling</td>
-<td align="right">73</td>
+<td align="right">71</td>
 </tr>
 <tr class="odd">
 <td align="left">analytics</td>
-<td align="right">72</td>
+<td align="right">69</td>
 </tr>
 <tr class="even">
 <td align="left">team</td>

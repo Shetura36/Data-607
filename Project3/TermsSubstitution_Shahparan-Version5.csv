@@ -25,7 +25,7 @@ Terms,Replace
 "^data warehouse[ ]{1,}|[ ]{1,}data warehouse[ ]{1,}|[ ]{1,}data warehouse$",    data-warehouse    
 "^internet of things[ ]{1,}|[ ]{1,}internet of things[ ]{1,}|[ ]{1,}internet of things$",    internet-of-things    
 "^load balancing[ ]{1,}|[ ]{1,}load balancing[ ]{1,}|[ ]{1,}load balancing$",    load-balancing    
-"^pattern recognition[ ]{1,}|[ ]{1,}pattern recognition[ ]{1,}|[ ]{1,}pattern recognition$",    artificial-intelligence    
+"^pattern recognition[ ]{1,}|[ ]{1,}pattern recognition[ ]{1,}|[ ]{1,}pattern recognition$",    pattern-recognition          
 "^recommendation engine[ ]{1,}|[ ]{1,}recommendation engine[ ]{1,}|[ ]{1,}recommendation engine$",    recommendation-engine    
 "^root-cause analysis[ ]{1,}|[ ]{1,}root-cause analysis[ ]{1,}|[ ]{1,}root-cause analysis$",    root-cause-analysis    
 "^sentiment analysis[ ]{1,}|[ ]{1,}sentiment analysis[ ]{1,}|[ ]{1,}sentiment analysis$",    sentiment-analysis    
@@ -108,7 +108,7 @@ Terms,Replace
 "^accesssql[ ]{1,}|[ ]{1,}accesssql[ ]{1,}|[ ]{1,}accesssql$",    sql    
 "^mysqlpostgresql[ ]{1,}|[ ]{1,}mysqlpostgresql[ ]{1,}|[ ]{1,}mysqlpostgresql$",    sql    
 "^rsql[ ]{1,}|[ ]{1,}rsql[ ]{1,}|[ ]{1,}rsql$",    sql    
-"^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$",    sql    
+"^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$",    sqlhive            
 "^sqlhive[ ]{1,}|[ ]{1,}sqlhive[ ]{1,}|[ ]{1,}sqlhive$",    sqhive    
 "^sqlhivespark[ ]{1,}|[ ]{1,}sqlhivespark[ ]{1,}|[ ]{1,}sqlhivespark$",    sqlhive    
 "^sqlmastery[ ]{1,}|[ ]{1,}sqlmastery[ ]{1,}|[ ]{1,}sqlmastery$",    sql    
@@ -177,7 +177,7 @@ Terms,Replace
 "^language[ ]{1,}|[ ]{1,}language[ ]{1,}|[ ]{1,}language$",    programming    
 "^processing[ ]{1,}|[ ]{1,}processing[ ]{1,}|[ ]{1,}processing$",    data-processing    
 "^process[ ]{1,}|[ ]{1,}process[ ]{1,}|[ ]{1,}process$",    data-processing    
-"^intelligence[ ]{1,}|[ ]{1,}intelligence[ ]{1,}|[ ]{1,}intelligence$",    artificial-intelligence    
+"^intelligence[ ]{1,}|[ ]{1,}intelligence[ ]{1,}|[ ]{1,}intelligence$",    intelligence        
 "^business intelligenceanalysis[ ]{1,}|[ ]{1,}business intelligenceanalysis[ ]{1,}|[ ]{1,}business intelligenceanalysis$",    business-intelligence    
 "^business intelligenceexpert[ ]{1,}|[ ]{1,}business intelligenceexpert[ ]{1,}|[ ]{1,}business intelligenceexpert$",    business-intelligence    
 "^defenseintelligence[ ]{1,}|[ ]{1,}defenseintelligence[ ]{1,}|[ ]{1,}defenseintelligence$",    defense-intelligence    
