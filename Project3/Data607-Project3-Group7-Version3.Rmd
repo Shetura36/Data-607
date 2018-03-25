@@ -280,8 +280,10 @@ terms <-
 
 #### Preview list
 ```{r}
-#kable(head(terms,10), format="markdown")
-terms
+kable(head(terms,10), format="markdown")
+#terms$Terms[138]
+#terms$Replace[138]
+#nrow(terms)
 ```
 
 
