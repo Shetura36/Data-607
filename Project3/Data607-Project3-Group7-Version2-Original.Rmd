@@ -196,9 +196,15 @@ for (j in seq(docs)) {
     docs[[j]]$content <- gsub(notLetters[i], " ", docs[[j]])
   }
 }
+#inspect(docs[[1]])
+```
+
+### Remove Whitespace
+```{r}
 docs <- tm_map(docs, stripWhitespace)
 #inspect(docs[[1]])
 ```
+
 
 ```{r echo=FALSE}
 #for testing of regular expressions
@@ -215,13 +221,12 @@ This file serves two purpose: (1) to preserve multi-term keywords like "artifici
 #### Preview list of terms
 ```{r}
 file <-
-  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-Version4.csv"
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-Version3.csv"
 
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
 
-#kable(head(terms,10), format="markdown")
-kable(terms)
+kable(head(terms,5), format="markdown")
 ```
 
 
@@ -234,7 +239,6 @@ for (j in seq(docs))
     docs[[j]] <- gsub(terms$Terms[i], terms$Replace[i], docs[[j]], ignore.case = TRUE)
   }
 }
-docs <- tm_map(docs, stripWhitespace)
 docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
@@ -245,60 +249,30 @@ inspect(docs[[1]])
 # For a list of the stopwords, see:   
 # length(stopwords("english"))   
 #stopwords("english")   
-docs <- tm_map(docs, removeWords, stopwords("english"))  
-docs <- tm_map(docs, stripWhitespace)
+docs <- tm_map(docs, removeWords, stopwords("english"))   
 docs <- tm_map(docs, PlainTextDocument)
-#inspect(docs[[1]])
+inspect(docs[[1]])
 ```
 
 ### Removing irrelevant words
 
-```{r echo=FALSE}
-#file <-
- # "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher.csv"
-
-#terms <- 
- # read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
-
-#terms <- unlist(terms)
-
-#docs <- tm_map(docs, removeWords, terms)  
-#inspect(docs[[1]])
-```
-
-The intermediate term frequency output was analyzed by a team member.
-These are words that have a frequency of 20 or higher, but are related to skills. 
-The code below loads the list of words to remove. 
-
+The initial term frequency output was analyzed by a team member. 
 ```{r}
 file <-
-  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher-Version3.csv"
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher.csv"
 
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
+
+terms <- unlist(terms)
+
+docs <- tm_map(docs, removeWords, terms)  
+inspect(docs[[1]])
 ```
 
-#### Preview list
+### Remove whitespace
 ```{r}
-kable(head(terms,10), format="markdown")
-#terms$Terms[138]
-#terms$Replace[138]
-#nrow(terms)
-```
-
-
-#### Remove terms by substituting a white space
-```{r}
-for (j in seq(docs))
-{
-  #docs[[j]] <- gsub("fake news", "fake_news", docs[[j]])
-  for(i in 1:nrow(terms)){
-    docs[[j]] <- gsub(terms$Terms[i], terms$Replace[i], docs[[j]], ignore.case = TRUE)
-  }
-  docs[[j]] <- gsub("xyz", "  ", docs[[j]], ignore.case = TRUE)
-}
 docs <- tm_map(docs, stripWhitespace)
-docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
 
@@ -334,7 +308,7 @@ for(i in 1:nrow(m)){
 
 ### Create the term frequency list
 
-The code below sums the count across all 100 documents for each term. This will assign a frequency score for each term. 
+The code below sums the count across all 100 documents for reach term. This will assign a frequency score for each term. 
 If a term has a score of 50. This means that the term was mentioned on 50 different job postings. 
 
 ```{r}
@@ -359,7 +333,7 @@ kable(result,format="markdown")
 result <- 
   termFreq %>% dplyr::select(term, frequency) %>% dplyr::arrange(desc(frequency))
 #write.csv(m, file="TermDocumentMatrix_adjusted.csv") 
-write.csv(result, file="TermFrequency_adjusted_9.csv")
+write.csv(result, file="TermFrequency_adjusted_8.csv")
 ```
 
 

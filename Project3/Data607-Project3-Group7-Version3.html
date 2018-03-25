@@ -1296,11 +1296,11 @@ docs &lt;- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])</code></pre>
 <pre><code>## &lt;&lt;PlainTextDocument&gt;&gt;
 ## Metadata:  7
-## Content:  chars: 2872
+## Content:  chars: 2857
 ## 
 ## 
 ## 
-##  descriptionjob title associate scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw take screens meaningful useful currently associate data-scientist add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analytics conduct statistics analytics analytics software excel sql sas analytics define efficient workable functional research extract qualitative findings write effective graphs tables summaries narratives execute test cases ensure met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent manipulation critical thinking intrinsic look patterns problem-solving analytics data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff analytics packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s footprint combines proprietary digital tv movie artificial-intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja</code></pre>
+##  descriptionjob title associate scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw take screens meaningful useful currently associate add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analytics conduct statistics analytics analytics software excel sql sas analytics define efficient workable functional research extract qualitative findings write effective graphs tables summaries narratives execute test cases ensure met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent manipulation critical thinking intrinsic look patterns problem-solving analytics data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff analytics packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s footprint combines proprietary digital tv movie artificial-intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja</code></pre>
 <hr />
 </div>
 </div>
@@ -1309,8 +1309,8 @@ inspect(docs[[1]])</code></pre>
 <p>There are 100 documents with 5,431 terms.</p>
 <pre class="r"><code>tdm &lt;- TermDocumentMatrix(docs) 
 tdm  </code></pre>
-<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4547, documents: 100)&gt;&gt;
-## Non-/sparse entries: 14473/440227
+<pre><code>## &lt;&lt;TermDocumentMatrix (terms: 4546, documents: 100)&gt;&gt;
+## Non-/sparse entries: 14392/440208
 ## Sparsity           : 97%
 ## Maximal term length: 43
 ## Weighting          : term frequency (tf)</code></pre>
@@ -1360,146 +1360,142 @@ termFreq$frequency &lt;- as.numeric(termFreq$frequency)</code></pre>
 <td align="right">88</td>
 </tr>
 <tr class="even">
-<td align="left">data-scientist</td>
-<td align="right">81</td>
-</tr>
-<tr class="odd">
 <td align="left">statistics</td>
 <td align="right">74</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">modeling</td>
 <td align="right">71</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">team</td>
 <td align="right">69</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">programming</td>
 <td align="right">68</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">communication</td>
 <td align="right">61</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">r-programming</td>
 <td align="right">58</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">python</td>
 <td align="right">57</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">machine-learning</td>
 <td align="right">55</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">problem-solving</td>
 <td align="right">55</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">design</td>
 <td align="right">45</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sql</td>
 <td align="right">45</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">computer-science</td>
 <td align="right">44</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">data-processing</td>
 <td align="right">42</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">data-science</td>
 <td align="right">41</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">engineering</td>
 <td align="right">40</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">research</td>
 <td align="right">40</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">software</td>
 <td align="right">39</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">algorithms</td>
 <td align="right">38</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">database</td>
 <td align="right">38</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">data-mining</td>
 <td align="right">32</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">data-visualization</td>
 <td align="right">32</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">written</td>
 <td align="right">31</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">mathematics</td>
 <td align="right">30</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">decisions-science</td>
 <td align="right">28</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">sas</td>
 <td align="right">27</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">big-data</td>
 <td align="right">26</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">artificial-intelligence</td>
 <td align="right">25</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">collaborate</td>
 <td align="right">25</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">java</td>
 <td align="right">24</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">hadoop</td>
 <td align="right">23</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">professional</td>
 <td align="right">23</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">consulting</td>
 <td align="right">21</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">tableau</td>
 <td align="right">21</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">trends</td>
 <td align="right">21</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">innovative</td>
 <td align="right">20</td>
 </tr>
