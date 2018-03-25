@@ -34,7 +34,7 @@ https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3
 https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher-Version3.csv
 
 * Term Frequency output: <br/>
-https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_9.csv
+https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_10.csv
 
 
 ---------------
