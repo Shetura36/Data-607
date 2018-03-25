@@ -1,9 +1,9 @@
 Terms,Replace
-"^descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics$",    descriptive analytics    
-"^predictive analytics[ ]{1,}|[ ]{1,}predictive analytics[ ]{1,}|[ ]{1,}predictive analytics$",    predictive analytics    
-"^prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics$",    prescriptive analytics    
-"^behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics$",    behavioral analytics    
-"^clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics$",    clickstream analytics    
+"^descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics[ ]{1,}|[ ]{1,}descriptive analytics$",    descriptive-analytics    
+"^predictive analytics[ ]{1,}|[ ]{1,}predictive analytics[ ]{1,}|[ ]{1,}predictive analytics$",    predictive-analytics    
+"^prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics[ ]{1,}|[ ]{1,}prescriptive analytics$",    prescriptive-analytics    
+"^behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics[ ]{1,}|[ ]{1,}behavioral analytics$",    behavioral-analytics    
+"^clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics[ ]{1,}|[ ]{1,}clickstream analytics$",    clickstream-analytics    
 "^data mining[ ]{1,}|[ ]{1,}data mining[ ]{1,}|[ ]{1,}data mining$",    data-mining    
 "^dark data[ ]{1,}|[ ]{1,}dark data[ ]{1,}|[ ]{1,}dark data$",    dark-data    
 "^machine learning[ ]{1,}|[ ]{1,}machine learning[ ]{1,}|[ ]{1,}machine learning$",    machine-learning    

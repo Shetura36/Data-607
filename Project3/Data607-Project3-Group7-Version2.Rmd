@@ -26,7 +26,7 @@ https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/100Jobs-S
 https://github.com/Shetura36/Data-607-Assignments/tree/master/Project3/Jobposting-Archive
 
 * List of term substitution: <br/>
-https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-base.csv
+https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-Version5.csv
 
 * List of words removed: <br/>
 https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTerms-Score20andHigher-Version3.csv
@@ -215,7 +215,7 @@ This file serves two purpose: (1) to preserve multi-term keywords like "artifici
 #### Preview list of terms
 ```{r}
 file <-
-  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-base.csv"
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermsSubstitution_Shahparan-Version5.csv"
 
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
