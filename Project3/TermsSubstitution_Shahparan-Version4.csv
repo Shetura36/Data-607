@@ -32,7 +32,6 @@ Terms,Replace
 "^deep learning[ ]{1,}|[ ]{1,}deep learning[ ]{1,}|[ ]{1,}deep learning$",     deep-learning     
 "^quality assurance[ ]{1,}|[ ]{1,}quality assurance[ ]{1,}|[ ]{1,}quality assurance$",     quality-assurance     
 "^big data[ ]{1,}|[ ]{1,}big data[ ]{1,}|[ ]{1,}big data$",     big-data     
-"^hadoop ecosystem[ ]{1,}|[ ]{1,}hadoop ecosystem[ ]{1,}|[ ]{1,}hadoop ecosystem$",     hadoop     
 "^google cloud platform[ ]{1,}|[ ]{1,}google cloud platform[ ]{1,}|[ ]{1,}google cloud platform$",     cloud    
 "^microsoft azure[ ]{1,}|[ ]{1,}microsoft azure[ ]{1,}|[ ]{1,}microsoft azure$",     microsoft-azure     
 "^strategic analytics[ ]{1,}|[ ]{1,}strategic analytics[ ]{1,}|[ ]{1,}strategic analytics$",     analytics     
@@ -115,12 +114,10 @@ Terms,Replace
 "^sqlmastery[ ]{1,}|[ ]{1,}sqlmastery[ ]{1,}|[ ]{1,}sqlmastery$",     sql     
 "^sqlpreferred[ ]{1,}|[ ]{1,}sqlpreferred[ ]{1,}|[ ]{1,}sqlpreferred$",     sql     
 "^sqlstatistics[ ]{1,}|[ ]{1,}sqlstatistics[ ]{1,}|[ ]{1,}sqlstatistics$",     sql     
-"^hadoop-ecosystembachelor[ ]{1,}|[ ]{1,}hadoop-ecosystembachelor[ ]{1,}|[ ]{1,}hadoop-ecosystembachelor$",     hadoop    
-"^hadoopknowledge[ ]{1,}|[ ]{1,}hadoopknowledge[ ]{1,}|[ ]{1,}hadoopknowledge$",     hadoop     
 "^apache-spark[ ]{1,}|[ ]{1,}apache-spark[ ]{1,}|[ ]{1,}apache-spark$",     spark     
 "^apache-sparklrs[ ]{1,}|[ ]{1,}apache-sparklrs[ ]{1,}|[ ]{1,}apache-sparklrs$",     spark     
 "^pyspark[ ]{1,}|[ ]{1,}pyspark[ ]{1,}|[ ]{1,}pyspark$",     spark     
-"^hadoop[ ]{1,}|[ ]{1,}hadoop[ ]{1,}|[ ]{1,}hadoop$",     spark     
+"^hadoop[ ]{1,}|[ ]{1,}hadoop[ ]{1,}|[ ]{1,}hadoop$",     hadoop     
 "^spark[ ]{1,}|[ ]{1,}spark[ ]{1,}|[ ]{1,}spark$",     spark     
 "^models[ ]{1,}|[ ]{1,}models[ ]{1,}|[ ]{1,}models$",     modeling     
 "^model[ ]{1,}|[ ]{1,}model[ ]{1,}|[ ]{1,}model$",     modeling     
@@ -206,3 +203,10 @@ Terms,Replace
 "^decisionssupports[ ]{1,}|[ ]{1,}decisionssupports[ ]{1,}|[ ]{1,}decisionssupports$",     decisions-science  
 "^decisionstools[ ]{1,}|[ ]{1,}decisionstools[ ]{1,}|[ ]{1,}decisionstools$",     decisions-science  
 "^communicate[ ]{1,}|[ ]{1,}communicate[ ]{1,}|[ ]{1,}communicate$",     communication        
+"^tableauyou[ ]{1,}|[ ]{1,}tableauyou[ ]{1,}|[ ]{1,}tableauyou$",     tableau
+"^tableu[ ]{1,}|[ ]{1,}tableu[ ]{1,}|[ ]{1,}tableu$",     tableau
+"^collaborates[ ]{1,}|[ ]{1,}collaborates[ ]{1,}|[ ]{1,}collaborates$",     collaborate
+"^communicating[ ]{1,}|[ ]{1,}communicating[ ]{1,}|[ ]{1,}communicating$",     communication        
+"^communications[ ]{1,}|[ ]{1,}communications[ ]{1,}|[ ]{1,}communications$",     communication        
+"^cloud[ ]{1,}|[ ]{1,}cloud[ ]{1,}|[ ]{1,}cloud$",     cloud-computing     
+"^cloudbase[ ]{1,}|[ ]{1,}cloudbase[ ]{1,}|[ ]{1,}cloudbase$",     cloud-computing     

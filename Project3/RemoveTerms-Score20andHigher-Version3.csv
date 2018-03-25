@@ -131,3 +131,6 @@ Terms,Replace
 "^techniques[ ]{1,}|[ ]{1,}techniques[ ]{1,}|[ ]{1,}techniques$",   xyz
 "^world[ ]{1,}|[ ]{1,}world[ ]{1,}|[ ]{1,}world$",   xyz
 "^data[ ]{1,}|[ ]{1,}data[ ]{1,}|[ ]{1,}data$",   xyz
+"^working[ ]{1,}|[ ]{1,}working[ ]{1,}|[ ]{1,}working$",   xyz
+"^advanced[ ]{1,}|[ ]{1,}advanced[ ]{1,}|[ ]{1,}advanced$",   xyz
+"^degree[ ]{1,}|[ ]{1,}degree[ ]{1,}|[ ]{1,}degree$",   xyz
