@@ -134,3 +134,7 @@ Terms,Replace
 "^working[ ]{1,}|[ ]{1,}working[ ]{1,}|[ ]{1,}working$",   xyz
 "^advanced[ ]{1,}|[ ]{1,}advanced[ ]{1,}|[ ]{1,}advanced$",   xyz
 "^degree[ ]{1,}|[ ]{1,}degree[ ]{1,}|[ ]{1,}degree$",   xyz
+"^description[ ]{1,}|[ ]{1,}description[ ]{1,}|[ ]{1,}description$",   xyz
+"^phd[ ]{1,}|[ ]{1,}phd[ ]{1,}|[ ]{1,}phd$",   xyz
+"^bachelor[ ]{1,}|[ ]{1,}bachelor[ ]{1,}|[ ]{1,}bachelor$",   xyz
+"^master[ ]{1,}|[ ]{1,}master[ ]{1,}|[ ]{1,}master$",   xyz
