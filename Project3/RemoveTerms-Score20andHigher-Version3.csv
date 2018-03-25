@@ -1,133 +1,133 @@
 Terms,Replace
-"^experience[ ]{1,}|[ ]{1,}experience[ ]{1,}|[ ]{1,}experience$",    
-"^work[ ]{1,}|[ ]{1,}work[ ]{1,}|[ ]{1,}work$",    
-"^years[ ]{1,}|[ ]{1,}years[ ]{1,}|[ ]{1,}years$",    
-"^will[ ]{1,}|[ ]{1,}will[ ]{1,}|[ ]{1,}will$",    
-"^business[ ]{1,}|[ ]{1,}business[ ]{1,}|[ ]{1,}business$",    
-"^skills[ ]{1,}|[ ]{1,}skills[ ]{1,}|[ ]{1,}skills$",    
-"^tools[ ]{1,}|[ ]{1,}tools[ ]{1,}|[ ]{1,}tools$",    
-"^development[ ]{1,}|[ ]{1,}development[ ]{1,}|[ ]{1,}development$",    
-"^working[ ]{1,}|[ ]{1,}working[ ]{1,}|[ ]{1,}working$",    
-"^knowledge[ ]{1,}|[ ]{1,}knowledge[ ]{1,}|[ ]{1,}knowledge$",    
-"^information[ ]{1,}|[ ]{1,}information[ ]{1,}|[ ]{1,}information$",    
-"^management[ ]{1,}|[ ]{1,}management[ ]{1,}|[ ]{1,}management$",    
-"^ability[ ]{1,}|[ ]{1,}ability[ ]{1,}|[ ]{1,}ability$",    
-"^develop[ ]{1,}|[ ]{1,}develop[ ]{1,}|[ ]{1,}develop$",    
-"^solutions[ ]{1,}|[ ]{1,}solutions[ ]{1,}|[ ]{1,}solutions$",    
-"^strong[ ]{1,}|[ ]{1,}strong[ ]{1,}|[ ]{1,}strong$",    
-"^new[ ]{1,}|[ ]{1,}new[ ]{1,}|[ ]{1,}new$",    
-"^related[ ]{1,}|[ ]{1,}related[ ]{1,}|[ ]{1,}related$",    
-"^company[ ]{1,}|[ ]{1,}company[ ]{1,}|[ ]{1,}company$",    
-"^using[ ]{1,}|[ ]{1,}using[ ]{1,}|[ ]{1,}using$",    
-"^technical[ ]{1,}|[ ]{1,}technical[ ]{1,}|[ ]{1,}technical$",    
-"^services[ ]{1,}|[ ]{1,}services[ ]{1,}|[ ]{1,}services$",    
-"^field[ ]{1,}|[ ]{1,}field[ ]{1,}|[ ]{1,}field$",    
-"^job[ ]{1,}|[ ]{1,}job[ ]{1,}|[ ]{1,}job$",    
-"^projects[ ]{1,}|[ ]{1,}projects[ ]{1,}|[ ]{1,}projects$",    
-"^technology[ ]{1,}|[ ]{1,}technology[ ]{1,}|[ ]{1,}technology$",    
-"^required[ ]{1,}|[ ]{1,}required[ ]{1,}|[ ]{1,}required$",    
-"^andor[ ]{1,}|[ ]{1,}andor[ ]{1,}|[ ]{1,}andor$",    
-"^requirements[ ]{1,}|[ ]{1,}requirements[ ]{1,}|[ ]{1,}requirements$",    
-"^support[ ]{1,}|[ ]{1,}support[ ]{1,}|[ ]{1,}support$",    
-"^can[ ]{1,}|[ ]{1,}can[ ]{1,}|[ ]{1,}can$",    
-"^including[ ]{1,}|[ ]{1,}including[ ]{1,}|[ ]{1,}including$",    
-"^role[ ]{1,}|[ ]{1,}role[ ]{1,}|[ ]{1,}role$",    
-"^understanding[ ]{1,}|[ ]{1,}understanding[ ]{1,}|[ ]{1,}understanding$",    
-"^environment[ ]{1,}|[ ]{1,}environment[ ]{1,}|[ ]{1,}environment$",    
-"^opportunity[ ]{1,}|[ ]{1,}opportunity[ ]{1,}|[ ]{1,}opportunity$",    
-"^position[ ]{1,}|[ ]{1,}position[ ]{1,}|[ ]{1,}position$",    
-"^systems[ ]{1,}|[ ]{1,}systems[ ]{1,}|[ ]{1,}systems$",    
-"^project[ ]{1,}|[ ]{1,}project[ ]{1,}|[ ]{1,}project$",    
-"^results[ ]{1,}|[ ]{1,}results[ ]{1,}|[ ]{1,}results$",    
-"^client[ ]{1,}|[ ]{1,}client[ ]{1,}|[ ]{1,}client$",    
-"^preferred[ ]{1,}|[ ]{1,}preferred[ ]{1,}|[ ]{1,}preferred$",    
-"^provide[ ]{1,}|[ ]{1,}provide[ ]{1,}|[ ]{1,}provide$",    
-"^use[ ]{1,}|[ ]{1,}use[ ]{1,}|[ ]{1,}use$",    
-"^complex[ ]{1,}|[ ]{1,}complex[ ]{1,}|[ ]{1,}complex$",    
-"^relevant[ ]{1,}|[ ]{1,}relevant[ ]{1,}|[ ]{1,}relevant$",    
-"^build[ ]{1,}|[ ]{1,}build[ ]{1,}|[ ]{1,}build$",    
-"^industry[ ]{1,}|[ ]{1,}industry[ ]{1,}|[ ]{1,}industry$",    
-"^sources[ ]{1,}|[ ]{1,}sources[ ]{1,}|[ ]{1,}sources$",    
-"^help[ ]{1,}|[ ]{1,}help[ ]{1,}|[ ]{1,}help$",    
-"^make[ ]{1,}|[ ]{1,}make[ ]{1,}|[ ]{1,}make$",    
-"^opportunities[ ]{1,}|[ ]{1,}opportunities[ ]{1,}|[ ]{1,}opportunities$",    
-"^based[ ]{1,}|[ ]{1,}based[ ]{1,}|[ ]{1,}based$",    
-"^etc[ ]{1,}|[ ]{1,}etc[ ]{1,}|[ ]{1,}etc$",    
-"^looking[ ]{1,}|[ ]{1,}looking[ ]{1,}|[ ]{1,}looking$",    
-"^methods[ ]{1,}|[ ]{1,}methods[ ]{1,}|[ ]{1,}methods$",    
-"^sets[ ]{1,}|[ ]{1,}sets[ ]{1,}|[ ]{1,}sets$",    
-"^across[ ]{1,}|[ ]{1,}across[ ]{1,}|[ ]{1,}across$",    
-"^customer[ ]{1,}|[ ]{1,}customer[ ]{1,}|[ ]{1,}customer$",    
-"^responsibilities[ ]{1,}|[ ]{1,}responsibilities[ ]{1,}|[ ]{1,}responsibilities$",    
-"^one[ ]{1,}|[ ]{1,}one[ ]{1,}|[ ]{1,}one$",    
-"^performance[ ]{1,}|[ ]{1,}performance[ ]{1,}|[ ]{1,}performance$",    
-"^reports[ ]{1,}|[ ]{1,}reports[ ]{1,}|[ ]{1,}reports$",    
-"^various[ ]{1,}|[ ]{1,}various[ ]{1,}|[ ]{1,}various$",    
-"^expertise[ ]{1,}|[ ]{1,}expertise[ ]{1,}|[ ]{1,}expertise$",    
-"^must[ ]{1,}|[ ]{1,}must[ ]{1,}|[ ]{1,}must$",    
-"^needs[ ]{1,}|[ ]{1,}needs[ ]{1,}|[ ]{1,}needs$",    
-"^products[ ]{1,}|[ ]{1,}products[ ]{1,}|[ ]{1,}products$",    
-"^technologies[ ]{1,}|[ ]{1,}technologies[ ]{1,}|[ ]{1,}technologies$",    
-"^well[ ]{1,}|[ ]{1,}well[ ]{1,}|[ ]{1,}well$",    
-"^developing[ ]{1,}|[ ]{1,}developing[ ]{1,}|[ ]{1,}developing$",    
-"^employer[ ]{1,}|[ ]{1,}employer[ ]{1,}|[ ]{1,}employer$",    
-"^equal[ ]{1,}|[ ]{1,}equal[ ]{1,}|[ ]{1,}equal$",    
-"^identify[ ]{1,}|[ ]{1,}identify[ ]{1,}|[ ]{1,}identify$",    
-"^key[ ]{1,}|[ ]{1,}key[ ]{1,}|[ ]{1,}key$",    
-"^multiple[ ]{1,}|[ ]{1,}multiple[ ]{1,}|[ ]{1,}multiple$",    
-"^seeking[ ]{1,}|[ ]{1,}seeking[ ]{1,}|[ ]{1,}seeking$",    
-"^within[ ]{1,}|[ ]{1,}within[ ]{1,}|[ ]{1,}within$",    
-"^create[ ]{1,}|[ ]{1,}create[ ]{1,}|[ ]{1,}create$",    
-"^customers[ ]{1,}|[ ]{1,}customers[ ]{1,}|[ ]{1,}customers$",    
-"^large[ ]{1,}|[ ]{1,}large[ ]{1,}|[ ]{1,}large$",    
-"^please[ ]{1,}|[ ]{1,}please[ ]{1,}|[ ]{1,}please$",    
-"^processes[ ]{1,}|[ ]{1,}processes[ ]{1,}|[ ]{1,}processes$",    
-"^understand[ ]{1,}|[ ]{1,}understand[ ]{1,}|[ ]{1,}understand$",    
-"^without[ ]{1,}|[ ]{1,}without[ ]{1,}|[ ]{1,}without$",    
-"^also[ ]{1,}|[ ]{1,}also[ ]{1,}|[ ]{1,}also$",    
-"^areas[ ]{1,}|[ ]{1,}areas[ ]{1,}|[ ]{1,}areas$",    
-"^background[ ]{1,}|[ ]{1,}background[ ]{1,}|[ ]{1,}background$",    
-"^best[ ]{1,}|[ ]{1,}best[ ]{1,}|[ ]{1,}best$",    
-"^clients[ ]{1,}|[ ]{1,}clients[ ]{1,}|[ ]{1,}clients$",    
-"^insights[ ]{1,}|[ ]{1,}insights[ ]{1,}|[ ]{1,}insights$",    
-"^internal[ ]{1,}|[ ]{1,}internal[ ]{1,}|[ ]{1,}internal$",    
-"^national[ ]{1,}|[ ]{1,}national[ ]{1,}|[ ]{1,}national$",    
-"^qualifications[ ]{1,}|[ ]{1,}qualifications[ ]{1,}|[ ]{1,}qualifications$",    
-"^apply[ ]{1,}|[ ]{1,}apply[ ]{1,}|[ ]{1,}apply$",    
-"^concepts[ ]{1,}|[ ]{1,}concepts[ ]{1,}|[ ]{1,}concepts$",    
-"^highly[ ]{1,}|[ ]{1,}highly[ ]{1,}|[ ]{1,}highly$",    
-"^operations[ ]{1,}|[ ]{1,}operations[ ]{1,}|[ ]{1,}operations$",    
-"^perform[ ]{1,}|[ ]{1,}perform[ ]{1,}|[ ]{1,}perform$",    
-"^time[ ]{1,}|[ ]{1,}time[ ]{1,}|[ ]{1,}time$",    
-"^applications[ ]{1,}|[ ]{1,}applications[ ]{1,}|[ ]{1,}applications$",    
-"^candidate[ ]{1,}|[ ]{1,}candidate[ ]{1,}|[ ]{1,}candidate$",    
-"^deliver[ ]{1,}|[ ]{1,}deliver[ ]{1,}|[ ]{1,}deliver$",    
-"^description[ ]{1,}|[ ]{1,}description[ ]{1,}|[ ]{1,}description$",    
-"^diverse[ ]{1,}|[ ]{1,}diverse[ ]{1,}|[ ]{1,}diverse$",    
-"^drive[ ]{1,}|[ ]{1,}drive[ ]{1,}|[ ]{1,}drive$",    
-"^following[ ]{1,}|[ ]{1,}following[ ]{1,}|[ ]{1,}following$",    
-"^include[ ]{1,}|[ ]{1,}include[ ]{1,}|[ ]{1,}include$",    
-"^join[ ]{1,}|[ ]{1,}join[ ]{1,}|[ ]{1,}join$",    
-"^leading[ ]{1,}|[ ]{1,}leading[ ]{1,}|[ ]{1,}leading$",    
-"^level[ ]{1,}|[ ]{1,}level[ ]{1,}|[ ]{1,}level$",    
-"^employment[ ]{1,}|[ ]{1,}employment[ ]{1,}|[ ]{1,}employment$",    
-"^excellent[ ]{1,}|[ ]{1,}excellent[ ]{1,}|[ ]{1,}excellent$",    
-"^application[ ]{1,}|[ ]{1,}application[ ]{1,}|[ ]{1,}application$",    
-"^delivering[ ]{1,}|[ ]{1,}delivering[ ]{1,}|[ ]{1,}delivering$",    
-"^disability[ ]{1,}|[ ]{1,}disability[ ]{1,}|[ ]{1,}disability$",    
-"^financial[ ]{1,}|[ ]{1,}financial[ ]{1,}|[ ]{1,}financial$",    
-"^quality[ ]{1,}|[ ]{1,}quality[ ]{1,}|[ ]{1,}quality$",    
-"^non[ ]{1,}|[ ]{1,}non[ ]{1,}|[ ]{1,}non$",    
-"^plus[ ]{1,}|[ ]{1,}plus[ ]{1,}|[ ]{1,}plus$",    
-"^applied[ ]{1,}|[ ]{1,}applied[ ]{1,}|[ ]{1,}applied$",    
-"^market[ ]{1,}|[ ]{1,}market[ ]{1,}|[ ]{1,}market$",    
-"^minimum[ ]{1,}|[ ]{1,}minimum[ ]{1,}|[ ]{1,}minimum$",    
-"^full[ ]{1,}|[ ]{1,}full[ ]{1,}|[ ]{1,}full$",    
-"^high[ ]{1,}|[ ]{1,}high[ ]{1,}|[ ]{1,}high$",    
-"^protected[ ]{1,}|[ ]{1,}protected[ ]{1,}|[ ]{1,}protected$",    
-"^real[ ]{1,}|[ ]{1,}real[ ]{1,}|[ ]{1,}real$",    
-"^status[ ]{1,}|[ ]{1,}status[ ]{1,}|[ ]{1,}status$",    
-"^advanced[ ]{1,}|[ ]{1,}advanced[ ]{1,}|[ ]{1,}advanced$",    
-"^techniques[ ]{1,}|[ ]{1,}techniques[ ]{1,}|[ ]{1,}techniques$",    
-"^world[ ]{1,}|[ ]{1,}world[ ]{1,}|[ ]{1,}world$",    
-"^data[ ]{1,}|[ ]{1,}data[ ]{1,}|[ ]{1,}data$",    
+"^experience[ ]{1,}|[ ]{1,}experience[ ]{1,}|[ ]{1,}experience$",    *    
+"^work[ ]{1,}|[ ]{1,}work[ ]{1,}|[ ]{1,}work$",    *    
+"^years[ ]{1,}|[ ]{1,}years[ ]{1,}|[ ]{1,}years$",    *    
+"^will[ ]{1,}|[ ]{1,}will[ ]{1,}|[ ]{1,}will$",    *    
+"^business[ ]{1,}|[ ]{1,}business[ ]{1,}|[ ]{1,}business$",    *    
+"^skills[ ]{1,}|[ ]{1,}skills[ ]{1,}|[ ]{1,}skills$",    *    
+"^tools[ ]{1,}|[ ]{1,}tools[ ]{1,}|[ ]{1,}tools$",    *    
+"^development[ ]{1,}|[ ]{1,}development[ ]{1,}|[ ]{1,}development$",    *    
+"^working[ ]{1,}|[ ]{1,}working[ ]{1,}|[ ]{1,}working$",    *    
+"^knowledge[ ]{1,}|[ ]{1,}knowledge[ ]{1,}|[ ]{1,}knowledge$",    *    
+"^information[ ]{1,}|[ ]{1,}information[ ]{1,}|[ ]{1,}information$",    *    
+"^management[ ]{1,}|[ ]{1,}management[ ]{1,}|[ ]{1,}management$",    *    
+"^ability[ ]{1,}|[ ]{1,}ability[ ]{1,}|[ ]{1,}ability$",    *    
+"^develop[ ]{1,}|[ ]{1,}develop[ ]{1,}|[ ]{1,}develop$",    *    
+"^solutions[ ]{1,}|[ ]{1,}solutions[ ]{1,}|[ ]{1,}solutions$",    *    
+"^strong[ ]{1,}|[ ]{1,}strong[ ]{1,}|[ ]{1,}strong$",    *    
+"^new[ ]{1,}|[ ]{1,}new[ ]{1,}|[ ]{1,}new$",    *    
+"^related[ ]{1,}|[ ]{1,}related[ ]{1,}|[ ]{1,}related$",    *    
+"^company[ ]{1,}|[ ]{1,}company[ ]{1,}|[ ]{1,}company$",    *    
+"^using[ ]{1,}|[ ]{1,}using[ ]{1,}|[ ]{1,}using$",    *    
+"^technical[ ]{1,}|[ ]{1,}technical[ ]{1,}|[ ]{1,}technical$",    *    
+"^services[ ]{1,}|[ ]{1,}services[ ]{1,}|[ ]{1,}services$",    *    
+"^field[ ]{1,}|[ ]{1,}field[ ]{1,}|[ ]{1,}field$",    *    
+"^job[ ]{1,}|[ ]{1,}job[ ]{1,}|[ ]{1,}job$",    *    
+"^projects[ ]{1,}|[ ]{1,}projects[ ]{1,}|[ ]{1,}projects$",    *    
+"^technology[ ]{1,}|[ ]{1,}technology[ ]{1,}|[ ]{1,}technology$",    *    
+"^required[ ]{1,}|[ ]{1,}required[ ]{1,}|[ ]{1,}required$",    *    
+"^andor[ ]{1,}|[ ]{1,}andor[ ]{1,}|[ ]{1,}andor$",    *    
+"^requirements[ ]{1,}|[ ]{1,}requirements[ ]{1,}|[ ]{1,}requirements$",    *    
+"^support[ ]{1,}|[ ]{1,}support[ ]{1,}|[ ]{1,}support$",    *    
+"^can[ ]{1,}|[ ]{1,}can[ ]{1,}|[ ]{1,}can$",    *    
+"^including[ ]{1,}|[ ]{1,}including[ ]{1,}|[ ]{1,}including$",    *    
+"^role[ ]{1,}|[ ]{1,}role[ ]{1,}|[ ]{1,}role$",    *    
+"^understanding[ ]{1,}|[ ]{1,}understanding[ ]{1,}|[ ]{1,}understanding$",    *    
+"^environment[ ]{1,}|[ ]{1,}environment[ ]{1,}|[ ]{1,}environment$",    *    
+"^opportunity[ ]{1,}|[ ]{1,}opportunity[ ]{1,}|[ ]{1,}opportunity$",    *    
+"^position[ ]{1,}|[ ]{1,}position[ ]{1,}|[ ]{1,}position$",    *    
+"^systems[ ]{1,}|[ ]{1,}systems[ ]{1,}|[ ]{1,}systems$",    *    
+"^project[ ]{1,}|[ ]{1,}project[ ]{1,}|[ ]{1,}project$",    *    
+"^results[ ]{1,}|[ ]{1,}results[ ]{1,}|[ ]{1,}results$",    *    
+"^client[ ]{1,}|[ ]{1,}client[ ]{1,}|[ ]{1,}client$",    *    
+"^preferred[ ]{1,}|[ ]{1,}preferred[ ]{1,}|[ ]{1,}preferred$",    *    
+"^provide[ ]{1,}|[ ]{1,}provide[ ]{1,}|[ ]{1,}provide$",    *    
+"^use[ ]{1,}|[ ]{1,}use[ ]{1,}|[ ]{1,}use$",    *    
+"^complex[ ]{1,}|[ ]{1,}complex[ ]{1,}|[ ]{1,}complex$",    *    
+"^relevant[ ]{1,}|[ ]{1,}relevant[ ]{1,}|[ ]{1,}relevant$",    *    
+"^build[ ]{1,}|[ ]{1,}build[ ]{1,}|[ ]{1,}build$",    *    
+"^industry[ ]{1,}|[ ]{1,}industry[ ]{1,}|[ ]{1,}industry$",    *    
+"^sources[ ]{1,}|[ ]{1,}sources[ ]{1,}|[ ]{1,}sources$",    *    
+"^help[ ]{1,}|[ ]{1,}help[ ]{1,}|[ ]{1,}help$",    *    
+"^make[ ]{1,}|[ ]{1,}make[ ]{1,}|[ ]{1,}make$",    *    
+"^opportunities[ ]{1,}|[ ]{1,}opportunities[ ]{1,}|[ ]{1,}opportunities$",    *    
+"^based[ ]{1,}|[ ]{1,}based[ ]{1,}|[ ]{1,}based$",    *    
+"^etc[ ]{1,}|[ ]{1,}etc[ ]{1,}|[ ]{1,}etc$",    *    
+"^looking[ ]{1,}|[ ]{1,}looking[ ]{1,}|[ ]{1,}looking$",    *    
+"^methods[ ]{1,}|[ ]{1,}methods[ ]{1,}|[ ]{1,}methods$",    *    
+"^sets[ ]{1,}|[ ]{1,}sets[ ]{1,}|[ ]{1,}sets$",    *    
+"^across[ ]{1,}|[ ]{1,}across[ ]{1,}|[ ]{1,}across$",    *    
+"^customer[ ]{1,}|[ ]{1,}customer[ ]{1,}|[ ]{1,}customer$",    *    
+"^responsibilities[ ]{1,}|[ ]{1,}responsibilities[ ]{1,}|[ ]{1,}responsibilities$",    *    
+"^one[ ]{1,}|[ ]{1,}one[ ]{1,}|[ ]{1,}one$",    *    
+"^performance[ ]{1,}|[ ]{1,}performance[ ]{1,}|[ ]{1,}performance$",    *    
+"^reports[ ]{1,}|[ ]{1,}reports[ ]{1,}|[ ]{1,}reports$",    *    
+"^various[ ]{1,}|[ ]{1,}various[ ]{1,}|[ ]{1,}various$",    *    
+"^expertise[ ]{1,}|[ ]{1,}expertise[ ]{1,}|[ ]{1,}expertise$",    *    
+"^must[ ]{1,}|[ ]{1,}must[ ]{1,}|[ ]{1,}must$",    *    
+"^needs[ ]{1,}|[ ]{1,}needs[ ]{1,}|[ ]{1,}needs$",    *    
+"^products[ ]{1,}|[ ]{1,}products[ ]{1,}|[ ]{1,}products$",    *    
+"^technologies[ ]{1,}|[ ]{1,}technologies[ ]{1,}|[ ]{1,}technologies$",    *    
+"^well[ ]{1,}|[ ]{1,}well[ ]{1,}|[ ]{1,}well$",    *    
+"^developing[ ]{1,}|[ ]{1,}developing[ ]{1,}|[ ]{1,}developing$",    *    
+"^employer[ ]{1,}|[ ]{1,}employer[ ]{1,}|[ ]{1,}employer$",    *    
+"^equal[ ]{1,}|[ ]{1,}equal[ ]{1,}|[ ]{1,}equal$",    *    
+"^identify[ ]{1,}|[ ]{1,}identify[ ]{1,}|[ ]{1,}identify$",    *    
+"^key[ ]{1,}|[ ]{1,}key[ ]{1,}|[ ]{1,}key$",    *    
+"^multiple[ ]{1,}|[ ]{1,}multiple[ ]{1,}|[ ]{1,}multiple$",    *    
+"^seeking[ ]{1,}|[ ]{1,}seeking[ ]{1,}|[ ]{1,}seeking$",    *    
+"^within[ ]{1,}|[ ]{1,}within[ ]{1,}|[ ]{1,}within$",    *    
+"^create[ ]{1,}|[ ]{1,}create[ ]{1,}|[ ]{1,}create$",    *    
+"^customers[ ]{1,}|[ ]{1,}customers[ ]{1,}|[ ]{1,}customers$",    *    
+"^large[ ]{1,}|[ ]{1,}large[ ]{1,}|[ ]{1,}large$",    *    
+"^please[ ]{1,}|[ ]{1,}please[ ]{1,}|[ ]{1,}please$",    *    
+"^processes[ ]{1,}|[ ]{1,}processes[ ]{1,}|[ ]{1,}processes$",    *    
+"^understand[ ]{1,}|[ ]{1,}understand[ ]{1,}|[ ]{1,}understand$",    *    
+"^without[ ]{1,}|[ ]{1,}without[ ]{1,}|[ ]{1,}without$",    *    
+"^also[ ]{1,}|[ ]{1,}also[ ]{1,}|[ ]{1,}also$",    *    
+"^areas[ ]{1,}|[ ]{1,}areas[ ]{1,}|[ ]{1,}areas$",    *    
+"^background[ ]{1,}|[ ]{1,}background[ ]{1,}|[ ]{1,}background$",    *    
+"^best[ ]{1,}|[ ]{1,}best[ ]{1,}|[ ]{1,}best$",    *    
+"^clients[ ]{1,}|[ ]{1,}clients[ ]{1,}|[ ]{1,}clients$",    *    
+"^insights[ ]{1,}|[ ]{1,}insights[ ]{1,}|[ ]{1,}insights$",    *    
+"^internal[ ]{1,}|[ ]{1,}internal[ ]{1,}|[ ]{1,}internal$",    *    
+"^national[ ]{1,}|[ ]{1,}national[ ]{1,}|[ ]{1,}national$",    *    
+"^qualifications[ ]{1,}|[ ]{1,}qualifications[ ]{1,}|[ ]{1,}qualifications$",    *    
+"^apply[ ]{1,}|[ ]{1,}apply[ ]{1,}|[ ]{1,}apply$",    *    
+"^concepts[ ]{1,}|[ ]{1,}concepts[ ]{1,}|[ ]{1,}concepts$",    *    
+"^highly[ ]{1,}|[ ]{1,}highly[ ]{1,}|[ ]{1,}highly$",    *    
+"^operations[ ]{1,}|[ ]{1,}operations[ ]{1,}|[ ]{1,}operations$",    *    
+"^perform[ ]{1,}|[ ]{1,}perform[ ]{1,}|[ ]{1,}perform$",    *    
+"^time[ ]{1,}|[ ]{1,}time[ ]{1,}|[ ]{1,}time$",    *    
+"^applications[ ]{1,}|[ ]{1,}applications[ ]{1,}|[ ]{1,}applications$",    *    
+"^candidate[ ]{1,}|[ ]{1,}candidate[ ]{1,}|[ ]{1,}candidate$",    *    
+"^deliver[ ]{1,}|[ ]{1,}deliver[ ]{1,}|[ ]{1,}deliver$",    *    
+"^description[ ]{1,}|[ ]{1,}description[ ]{1,}|[ ]{1,}description$",    *    
+"^diverse[ ]{1,}|[ ]{1,}diverse[ ]{1,}|[ ]{1,}diverse$",    *    
+"^drive[ ]{1,}|[ ]{1,}drive[ ]{1,}|[ ]{1,}drive$",    *    
+"^following[ ]{1,}|[ ]{1,}following[ ]{1,}|[ ]{1,}following$",    *    
+"^include[ ]{1,}|[ ]{1,}include[ ]{1,}|[ ]{1,}include$",    *    
+"^join[ ]{1,}|[ ]{1,}join[ ]{1,}|[ ]{1,}join$",    *    
+"^leading[ ]{1,}|[ ]{1,}leading[ ]{1,}|[ ]{1,}leading$",    *    
+"^level[ ]{1,}|[ ]{1,}level[ ]{1,}|[ ]{1,}level$",    *    
+"^employment[ ]{1,}|[ ]{1,}employment[ ]{1,}|[ ]{1,}employment$",    *    
+"^excellent[ ]{1,}|[ ]{1,}excellent[ ]{1,}|[ ]{1,}excellent$",    *    
+"^application[ ]{1,}|[ ]{1,}application[ ]{1,}|[ ]{1,}application$",    *    
+"^delivering[ ]{1,}|[ ]{1,}delivering[ ]{1,}|[ ]{1,}delivering$",    *    
+"^disability[ ]{1,}|[ ]{1,}disability[ ]{1,}|[ ]{1,}disability$",    *    
+"^financial[ ]{1,}|[ ]{1,}financial[ ]{1,}|[ ]{1,}financial$",    *    
+"^quality[ ]{1,}|[ ]{1,}quality[ ]{1,}|[ ]{1,}quality$",    *    
+"^non[ ]{1,}|[ ]{1,}non[ ]{1,}|[ ]{1,}non$",    *    
+"^plus[ ]{1,}|[ ]{1,}plus[ ]{1,}|[ ]{1,}plus$",    *    
+"^applied[ ]{1,}|[ ]{1,}applied[ ]{1,}|[ ]{1,}applied$",    *    
+"^market[ ]{1,}|[ ]{1,}market[ ]{1,}|[ ]{1,}market$",    *    
+"^minimum[ ]{1,}|[ ]{1,}minimum[ ]{1,}|[ ]{1,}minimum$",    *    
+"^full[ ]{1,}|[ ]{1,}full[ ]{1,}|[ ]{1,}full$",    *    
+"^high[ ]{1,}|[ ]{1,}high[ ]{1,}|[ ]{1,}high$",    *    
+"^protected[ ]{1,}|[ ]{1,}protected[ ]{1,}|[ ]{1,}protected$",    *    
+"^real[ ]{1,}|[ ]{1,}real[ ]{1,}|[ ]{1,}real$",    *    
+"^status[ ]{1,}|[ ]{1,}status[ ]{1,}|[ ]{1,}status$",    *    
+"^advanced[ ]{1,}|[ ]{1,}advanced[ ]{1,}|[ ]{1,}advanced$",    *    
+"^techniques[ ]{1,}|[ ]{1,}techniques[ ]{1,}|[ ]{1,}techniques$",    *    
+"^world[ ]{1,}|[ ]{1,}world[ ]{1,}|[ ]{1,}world$",    *    
+"^data[ ]{1,}|[ ]{1,}data[ ]{1,}|[ ]{1,}data$",    *    

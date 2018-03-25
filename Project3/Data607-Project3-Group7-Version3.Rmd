@@ -226,7 +226,7 @@ file <-
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
 
-kable(head(terms,5), format="markdown")
+kable(head(terms,10), format="markdown")
 ```
 
 
@@ -256,19 +256,52 @@ inspect(docs[[1]])
 
 ### Removing irrelevant words
 
-The initial term frequency output was analyzed by a team member. 
+```{r echo=FALSE}
+#file <-
+ # "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher.csv"
+
+#terms <- 
+ # read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
+
+#terms <- unlist(terms)
+
+#docs <- tm_map(docs, removeWords, terms)  
+#inspect(docs[[1]])
+```
+
+The intermediate term frequency output was analyzed by a team member.
+These are words that have a frequency of 20 or higher, but are related to skills. 
+The code below loads the list of words to remove. 
+
 ```{r}
 file <-
-  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher.csv"
+  "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher-Version3.csv"
 
 terms <- 
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
+```
 
-terms <- unlist(terms)
+#### Preview list
+```{r}
+kable(head(terms,10), format="markdown")
+```
 
-docs <- tm_map(docs, removeWords, terms)  
+
+#### Remove terms by substituting a white space
+```{r}
+for (j in seq(docs))
+{
+  #docs[[j]] <- gsub("fake news", "fake_news", docs[[j]])
+  for(i in 1:nrow(terms)){
+    docs[[j]] <- gsub(terms$Terms[i], terms$Replace[i], docs[[j]], ignore.case = TRUE)
+  }
+}
+docs <- tm_map(docs, PlainTextDocument)
 inspect(docs[[1]])
 ```
+
+
+
 
 ### Remove whitespace
 ```{r}
@@ -308,7 +341,7 @@ for(i in 1:nrow(m)){
 
 ### Create the term frequency list
 
-The code below sums the count across all 100 documents for reach term. This will assign a frequency score for each term. 
+The code below sums the count across all 100 documents for each term. This will assign a frequency score for each term. 
 If a term has a score of 50. This means that the term was mentioned on 50 different job postings. 
 
 ```{r}
