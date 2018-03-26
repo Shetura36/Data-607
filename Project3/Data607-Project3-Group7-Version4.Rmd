@@ -1,0 +1,49 @@
+---
+title: 'Project 3 Data Visualization '
+author: "Alejandro D. Osborne"
+date: "March 24, 2018"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r warning=FALSE, message=FALSE}
+library(rvest)
+library(knitr)
+library(tm)
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(SnowballC)
+library(wordcloud)
+library(plotly)
+library(RCurl)
+library(bitops)
+library(knitr)
+```
+
+Import files to determine Which are relevant to our goal:
+
+```{r}
+TermFrequency <- read.csv(url("https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/TermFrequency_adjusted_10.csv"), header=FALSE, sep = ",")
+
+TermFrequency <- TermFrequency[-c(1), ]
+```
+
+#We need now to determine the relevant terms that encapsulate all the terms we might come across that can be grouped together
+```{r}
+Top13 <- head(TermFrequency, n = 13) 
+
+#Selected top 13 Terms used in Data Science jobs on Indeed. We selected these 13 because they appear the most and can be used as a link point for most of the top 100 other terms. 
+
+write.csv(Top13, file = "Top13RelevantDataScienceTerms.csv") 
+```
+
+#Visualization of Relavent Term Frequency
+```{r}
+dsterms<- ggplot(data=Top13, aes(x=V2, y=V3)) + geom_bar(stat = "identity") + labs(x="Terms",y="Frequency")
+dsterms + theme(axis.text.x = element_text(angle = 60, hjust = 1))
+```
+
+##This data is quite telling as it shows even though hard technical skills are crucial, soft skills are as important as the need for team work and communication are quite high on the list of competencies that are being searched for by recruiting teams.
