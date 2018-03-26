@@ -139,3 +139,4 @@ Terms,Replace
 "^bachelor[ ]{1,}|[ ]{1,}bachelor[ ]{1,}|[ ]{1,}bachelor$",   xyz   
 "^master[ ]{1,}|[ ]{1,}master[ ]{1,}|[ ]{1,}master$",   xyz   
 "^data-scientist[ ]{1,}|[ ]{1,}data-scientist[ ]{1,}|[ ]{1,}data-scientist$",   xyz     
+"^trends[ ]{1,}|[ ]{1,}trends[ ]{1,}|[ ]{1,}trends$",   xyz     
