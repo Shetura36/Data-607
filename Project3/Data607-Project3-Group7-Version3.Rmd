@@ -256,7 +256,7 @@ docs <- tm_map(docs, PlainTextDocument)
 
 ### Removing terms with no relevance
 
-Terms with scores of 20 or higher and were determined to have no relevance were added to a file. The code below retrieves the terms from this file and substitutes these terms with whitespaces. 
+Terms with scores of 20 or higher and were determined to have no relevance were added to a file. The code below retrieves the terms from this file and substitutes these terms with white spaces. 
 ```{r}
 file <-
   "https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/RemoveTerms-Score20andHigher-Version3.csv"
