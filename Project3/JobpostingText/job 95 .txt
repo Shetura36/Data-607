@@ -1,0 +1,3 @@
+
+
+Qualifications:Be proficient in Image Processing, Image Analysis, and/or Computer VisionBe proficient in programming skills to include: Java, Python, NodeJs and Object Oriented ProgrammingBe proficient in Machine Learning to include: feature extraction, statistical approaches, linear and non-linear classifiers, and deep learningBe proficient in Natural Language Processing (NLP)Work with Dynamic Learning by helping to improve learning based on outcomes to get smarter with each iterationDesign, develop, enhance, debug and implement software. Troubleshoot production problems related to software applications.            

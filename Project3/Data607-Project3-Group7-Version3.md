@@ -8,12 +8,19 @@ output:
 ---
 
 
+### Data 607: Project 3 
+
+> W. Edwards Deming said, "In God we trust, all others must bring data." Please use data to answer the question, "Which are the most valued data science skills?" Consider your work as an exploration; there is not necessarily a "right answer."
 
 ---------------
 
-### Project 3 
+### Active Members
 
-> W. Edwards Deming said, "In God we trust, all others must bring data." Please use data to answer the question, "Which are the most valued data science skills?" Consider your work as an exploration; there is not necessarily a "right answer."
+* AHM Shahparan
+* Alejandro Osborne 
+* Brian Liles
+* Harpeet Shoker
+* Sherranette Tinapunan
 
 ---------------
 
@@ -34,15 +41,9 @@ https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/RemoveTer
 * Term Frequency output: <br/>
 https://github.com/Shetura36/Data-607-Assignments/blob/master/Project3/TermFrequency_adjusted_10.csv
 
+* Term Selection file: <br/>
+https://raw.githubusercontent.com/Shetura36/Data-607-Assignments/master/Project3/Selected_Terms_version1.csv
 
----------------
-
-### Active group members
-
-* AHM Shahparan
-* Alejandro Osborne 
-* Brian Liles
-* Sherranette Tinapunan
 
 ---------------
 
@@ -55,6 +56,7 @@ library(knitr)
 library(tm)
 library(stringr)
 library(dplyr)
+library(ggplot2)
 ```
 
 ---------------
@@ -95,28 +97,45 @@ url_listing <- data.frame(read.csv(url_source, header=TRUE, sep=",", stringsAsFa
 
 While manually stepping through each URL to confirm that the selector grabs data from each page, I noticed that some of the URLs started to expire. In addition, there was a post in the class slack channel about being banned from a job site. So while going through the the step by step check, a line of code saved each extracted data to a text file just in case the posting expires or access gets denied. However, when an attempt was made to run the entire for loop to go through the 100 URLs to automatically build the dataset of job postings, Monster.com had already blocked access to the site. 
 
+Most of the job postings are from Monster.com and a few are from Indeed.com.  
+
 <img src="./images/Monster.com-Forbidden Access-3.23.2018-snippet.png" width="80%" />
 
-The code below will go through each URL, scrape the web page for the data specified by the selector, and save the output as a text file. This code will generate 100 text files in the specified directory. The code has been commented out for the reason mentioned above.
+A team member identified a fix to both issues mentioned above. 
+
+The try-catch block allows the loop to continue onto the next url when a page expires and returns a 404 error. 
+
+To prevent access from being denied, a delay of 10 seconds was added with every retrieval. The code below has been updated with these fixes, and it can slowly build the list of job postings by looping through each url. 
+
+This portion of the code has been commented out because this will take at least around 16 to 20 minutes to rebuild the job posting repository. We already have the job postings archived, and there is no need to re-run this code every time. 
+
 
 ```r
-setwd("./JobpostingText")
+#setwd("./JobpostingText")
 
 #for (i in 1:nrow(url_listing)){
-#  read_html(url_listing$job_url[i]) %>% 
-#      html_nodes(url_listing$selector[i]) %>% html_text() -> data
-  
-#  filename <- paste("job", i, ".txt")
-#  fileConn<-file(filename)
-#  writeLines(c(data), fileConn)
-#  close(fileConn)
+#  delayedAssign("do.next", {next})
+#  tryCatch(
+#    read_html(url_listing$job_url[i]) %>% 
+#      html_nodes(url_listing$selector[i]) %>% html_text() -> data ,
+#    error = function(e){do.next}
+#  )
+#    filename <- paste("job", i, ".txt")
+#    fileConn<-file(filename)
+#    writeLines(c(data), fileConn)
+#    close(fileConn)
+#    Sys.sleep(10)
+#
+
+#setwd("../")
 #}
 ```
-
+--------
 
 ## Text mining and data clean up
 
 The `tm` library is used to clean up the data and build a term document matrix. 
+
 The code below will grab all 100 job postings under the specified directory. 
 
 ```r
@@ -125,7 +144,7 @@ docs <- VCorpus(DirSource(cname))
 #summary(docs) 
 ```
 
-### Preview first document
+### Preview the first document
 
 
 ```
@@ -139,9 +158,7 @@ docs <- VCorpus(DirSource(cname))
 ```
 
 
-### Data clean up
-
-The clean up steps below, which is done by a mapper function called `tm_map` of the `tm` library is used to 
+## Data clean up
 
 * convert to lowercase
 * remove punctuation
@@ -151,9 +168,9 @@ The clean up steps below, which is done by a mapper function called `tm_map` of 
 * remove stop words
 * remove irrelevant words (list of terms from a file)
 
-For the removal of irrelevant words, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. A term frequency list is generated and reviewed by a team member. Only words with scores of 20 or higher were reviewed to determine if they are irrelevant. Examples of words removed are business, world, high, full, etc.
+For the removal of terms that have no relevance, a pre-processing of the term document matrix was done first so we can investigate the words that are present in the dataset. The term document matrix was adjusted so that if a term is present in a document, it is only counted once. Mentioning the term more than once in a single job posting does not increase its relevance. 
 
-About preserving the term "r" in the dataset. 
+A term frequency list is generated and reviewed by a team member. Only words with scores of 20 or higher were reviewed to determine their relevance. If a term has a score of 20 and we find that it isn't relevant, the term is included in a removal file, which will be used later on to remove words from the final output. 
 
 ### Convert to lowercase
 
@@ -163,6 +180,7 @@ docs <- tm_map(docs, PlainTextDocument)
 #inspect(docs[[1]])
 ```
 
+### Remove characters in regular expression 
 
 ```r
 clean.text <- function(text){
@@ -172,12 +190,10 @@ docs <- tm_map(docs, PlainTextDocument)
 #inspect(docs[[1]])
 ```
 
-
 ### Remove punctuation
 
 ```r
 for (j in seq(docs)) {
-
     docs[[j]]$content <- gsub("[[:punct:][:blank:]]+", " ", docs[[j]])
 }
 docs <- tm_map(docs, PlainTextDocument)
@@ -189,9 +205,7 @@ docs <- tm_map(docs, PlainTextDocument)
 ```r
 content <- ""
 for(i in 1:length(docs)){
- 
   content <- paste(content, paste(as.character(docs[[i]]), collapse = " "))
-  
 }
 notLetters <- unlist(str_extract_all(content, '[^A-Za-z ]'))
 notLetters <- unique(unlist(strsplit(notLetters, " ")))
@@ -206,10 +220,6 @@ notLetters <- unique(unlist(strsplit(notLetters, " ")))
 
 ### Remove characters that are not letters
 
-Characters that are not letters are going to be replaced by a white space. 
-We are not concerned with tracking strings that numbers.
-
-
 ```r
 for (j in seq(docs)) {
   for (i in 1:length(notLetters)){
@@ -219,15 +229,14 @@ for (j in seq(docs)) {
 docs <- tm_map(docs, stripWhitespace)
 #inspect(docs[[1]])
 ```
-
-
-
 ### Term substitution
 
-This takes a list of data science terms from a file. This file was prepared by a team member.
-This file serves two purpose: (1) to preserve multi-term keywords like "artificial-intelligence", and (2) to group similar terms into a single category. For example terms like decisions, decisions support, decisions tools are substituted with the term decision-science. 
+This term substitution file was prepared by several team members.
+This file serves two purpose: (1) to preserve multi-term keywords like "data-mining", and (2) to group similar terms into a more encompassing category. For example terms like decisions, decisions support, decisions tools are substituted with the term decisions-science. 
 
-#### Preview list of terms
+Building the terms substitution file is an iterative process that takes a good amount of effort. It requires close investigation of the top words in the term frequency output; manually going through intermediate outputs, searching for similar terms with lower scores, and making judgement calls if a term should be mapped to a more encompassing term. 
+
+#### Preview list of terms to be substituted
 
 ```r
 file <-
@@ -258,32 +267,21 @@ kable(head(terms,10), format="markdown")
 #kable(terms)
 ```
 
-
-#### Substitute terms from list
+#### Substitute terms from terms substitution file
 
 ```r
 for (j in seq(docs))
 {
   #docs[[j]] <- gsub("fake news", "fake_news", docs[[j]])
   for(i in 1:nrow(terms)){
-    docs[[j]] <- gsub(terms$Terms[i], terms$Replace[i], docs[[j]], ignore.case = TRUE)
+    docs[[j]] <- gsub(terms$Terms[i], 
+                      paste(" ",terms$Replace[i], " "), docs[[j]], ignore.case = TRUE)
   }
 }
 docs <- tm_map(docs, stripWhitespace)
 docs <- tm_map(docs, PlainTextDocument)
-inspect(docs[[1]])
+#inspect(docs[[1]])
 ```
-
-```
-## <<PlainTextDocument>>
-## Metadata:  7
-## Content:  chars: 4597
-## 
-## 
-## 
-## job descriptionjob title associate data scientistlocation portland or reports to manager data-science come join us comscore is a media measurement company providing multiscreen reporting and analytics with cutting edge technology to serve clients in the entertainment media retail and advertising industries comscore s data-science team helps design the intelligent engines that power the company s advanced movies tv everywhere measurement systems through our research comscore builds projections that make the massive amount of raw data we take in from screens across the world meaningful and useful for our clients we are currently seeking an associate data-scientist to add to our growing company of talented team members if you re hardworking and enjoy a cooperative work environment we re offering a place where you can work alongside talented peers on interesting dynamic and fun projects we re a small enough company that you can make a big difference here but we re big enough to reach a national audience essential duties include validate analyze and conduct statistics analysis on data using analytical software excel sql and sas analyze and define efficient workable solutions that support client business processes and functional requirements for research projects extract qualitative findings from large data sets write reports that include effective graphs tables summaries and narratives develop and execute test cases to ensure data requirements have been met research and resolve client reported issues interpret results present findings and recommend alternative solutions to research management and business decisions-science makers track daily industry news and disseminate relevant articles to management and teamqualifications and required skills bachelor degree in statistics decisions-science sciences economics physics mathematics engineering or similar field required experience with sql python or other programming programming highly competent in data manipulation and critical thinking intrinsic ability to look at data and identify patterns problem-solving or analysis opportunities knowledge of data-mining and software applications ability to distill large amounts of information into key findings the ability to clearly articulate research in written and verbal presentations with software developers clients management and sales staff data management experience with one or more data analysis packages e g spss sas stata r-programming required experience with excel including pivot tables formulae vlookup s and graphing strong organizational skills including the ability to multi task and prioritize efficiently to meet deadlines strong attention to detail and problem-solving problem-solving skills self motivated takes initiative loves to learn and continuously seeks new knowledge strong documentation skills from both a business and technology perspective effective troubleshooting and investigation skills to identify root cause of problem-solving proven ability to manage and perform multiple tasks under conditions of fluctuating workloads competing requirements and changing deadlines while maintaining accuracy working independently and completing assignments with minimal direction self starter who is self motivated efficient responsible and dependable additional consideration will be given to candidates with experience in the television media research industry is a plus about comscore comscore is a leading cross platform measurement company that measures audiences brands and consumer behavior everywhere comscore completed its merger with rentrak corporation in january to create the new modeling for a dynamic cross platform world built on precision and innovation comscore s data footprint combines proprietary digital tv and movie intelligence with vast demographic details to quantify consumers multiscreen behavior at massive scale this approach helps media companies monetize their complete audiences and allows marketers to reach these audiences more effectively with more than clients and a global footprint in more than countries comscore is delivering the future of measurement shares of comscore stock are currently traded on the otc market otc scor for more information on comscore please visit comscore com eeo statement we are an equal employment opportunity employer all qualified applicants will receive consideration for employment without regard to race color religion national origin sex disability status sexual orientation gender identity age protected veteran status or any other characteristic protected by law li jz msja
-```
-
 
 ### Remove stop words
 
@@ -297,14 +295,9 @@ docs <- tm_map(docs, PlainTextDocument)
 #inspect(docs[[1]])
 ```
 
-### Removing irrelevant words
+### Removing terms with no relevance
 
-
-
-The intermediate term frequency output was analyzed by a team member.
-These are words that have a frequency of 20 or higher, but are related to skills. 
-The code below loads the list of words to remove. 
-
+Terms with scores of 20 or higher and were determined to have no relevance were added to a file. The code below retrieves the terms from this file and substitutes these terms with whitespaces. 
 
 ```r
 file <-
@@ -314,7 +307,7 @@ terms <-
   read.csv(file, header=TRUE, sep=",", stringsAsFactors = FALSE, row.names = NULL)
 ```
 
-#### Preview list
+#### Preview list of terms to be removed
 
 ```r
 kable(head(terms,10), format="markdown")
@@ -335,44 +328,42 @@ kable(head(terms,10), format="markdown")
 |^working[ ]{1,}&#124;[ ]{1,}working[ ]{1,}&#124;[ ]{1,}working$             |xyz     |
 |^knowledge[ ]{1,}&#124;[ ]{1,}knowledge[ ]{1,}&#124;[ ]{1,}knowledge$       |xyz     |
 
-```r
-#terms$Terms[138]
-#terms$Replace[138]
-#nrow(terms)
-```
-
-
-#### Remove terms by substituting a white space
+#### Remove terms by substituting whitespace
 
 ```r
 for (j in seq(docs))
 {
   #docs[[j]] <- gsub("fake news", "fake_news", docs[[j]])
   for(i in 1:nrow(terms)){
-    docs[[j]] <- gsub(terms$Terms[i], terms$Replace[i], docs[[j]], ignore.case = TRUE)
+    docs[[j]] <- gsub(terms$Terms[i], "  ", docs[[j]], ignore.case = TRUE)
   }
-  docs[[j]] <- gsub("xyz", "  ", docs[[j]], ignore.case = TRUE)
 }
 docs <- tm_map(docs, stripWhitespace)
 docs <- tm_map(docs, PlainTextDocument)
+#inspect(docs[[1]])
+```
+
+### Preview final output of first document
+
+```r
 inspect(docs[[1]])
 ```
 
 ```
 ## <<PlainTextDocument>>
 ## Metadata:  7
-## Content:  chars: 2840
+## Content:  chars: 2845
 ## 
 ## 
 ## 
-##  descriptionjob title associate scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw take screens meaningful useful currently associate add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analyze conduct statistics analysis analytical software excel sql sas analyze define efficient workable functional research extract qualitative findings write effective graphs tables summaries narratives execute test cases ensure met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent manipulation critical thinking intrinsic look patterns problem-solving analysis data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff analysis packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s footprint combines proprietary digital tv movie intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja
+##  descriptionjob title associate scientistlocation portland manager data-science come us comscore media measurement providing multiscreen reporting analytics cutting edge serve entertainment media retail advertising industries comscore s data-science team helps design intelligent engines power s movies tv everywhere measurement research comscore builds projections massive amount raw take screens meaningful useful currently associate add growing talented team members re hardworking enjoy cooperative re offering place alongside talented peers interesting dynamic fun re small enough big difference re big enough reach audience essential duties validate analyze conduct statistics analysis analytical software excel sql sas analyze define efficient workable functional research extract qualitative findings write effective graphs tables summaries narratives execute test cases ensure met research resolve reported issues interpret present findings recommend alternative research decisions-science makers track daily news disseminate articles teamqualifications statistics decisions-science sciences economics physics mathematics engineering similar sql python programming programming competent manipulation critical thinking intrinsic look patterns problem-solving analysis data-mining software distill amounts findings clearly articulate research written verbal presentations software developers sales staff data analysis packages e g spss sas stata r-programming excel pivot tables formulae vlookup s graphing organizational multi task prioritize efficiently meet deadlines attention detail problem-solving problem-solving self motivated takes initiative loves learn continuously seeks documentation perspective effective troubleshooting investigation root cause problem-solving proven manage tasks conditions fluctuating workloads competing changing deadlines maintaining accuracy independently completing assignments minimal direction self starter self motivated efficient responsible dependable additional consideration given candidates television media research comscore comscore cross platform measurement measures audiences brands consumer behavior everywhere comscore completed merger rentrak corporation january modeling dynamic cross platform built precision innovation comscore s footprint combines proprietary digital tv movie intelligence vast demographic details quantify consumers multiscreen behavior massive scale approach helps media companies monetize complete audiences allows marketers reach audiences effectively global footprint countries comscore future measurement shares comscore stock currently traded otc otc scor comscore visit comscore com eeo statement qualified applicants receive consideration regard race color religion origin sex sexual orientation gender identity age veteran characteristic law li jz msja
 ```
 
 -------------------
 
-### Create a term document matrix
+## Create a term document matrix
 
-There are 100 documents with 5,431 terms.
+After doing the data clean up above, below are the number of terms that remained across 100 documents. 
 
 ```r
 tdm <- TermDocumentMatrix(docs) 
@@ -380,18 +371,18 @@ tdm
 ```
 
 ```
-## <<TermDocumentMatrix (terms: 4556, documents: 100)>>
-## Non-/sparse entries: 14539/441061
+## <<TermDocumentMatrix (terms: 4562, documents: 100)>>
+## Non-/sparse entries: 14532/441668
 ## Sparsity           : 97%
 ## Maximal term length: 43
 ## Weighting          : term frequency (tf)
 ```
 
-
 ### Adjust term document matrix count
 
-The code below will update the count to 1 if the count is greater than 1. A term is mentioned at least once in a document, it is only counted once.  Mentioning the term more than once in a single job posting does not increase its relevance.
+If a term is mentioned at least once in a document, it is only counted once.  Mentioning the term more than once in a single job posting does not increase its relevance.
 
+The code below will update the count to 1 if the count is greater than 1. 
 
 ```r
 #m <- as.matrix(tdms)
@@ -399,7 +390,6 @@ m <- as.matrix(tdm)
 
 #adjust the term count so that when a term appears in a document, it is only counted once
 for(i in 1:nrow(m)){
-  
   for(j in 1:ncol(m)){
     if(m[i,j]>1){
       m[i,j] <- 1
@@ -410,8 +400,10 @@ for(i in 1:nrow(m)){
 
 ### Create the term frequency list
 
-The code below sums the count across all 100 documents for each term. This will assign a frequency score for each term. 
-If a term has a score of 50. This means that the term was mentioned on 50 different job postings. 
+The code below sums the count across all 100 documents for each term. 
+This will assign a frequency score for each term. 
+
+If a term has a score of 20, it means that the term was mentioned at least once in 20 different documents.
 
 
 ```r
@@ -424,21 +416,6 @@ termFreq$frequency <- as.numeric(termFreq$frequency)
 ```
 
 ### Terms with frequency scores of 20 and higher
-
-```r
-result <- 
-  termFreq %>% dplyr::select(term, frequency) %>% dplyr::filter(frequency > 19) %>% dplyr::arrange(desc(frequency))
-```
-
-```
-## Warning: package 'bindrcpp' was built under R version 3.4.3
-```
-
-```r
-kable(result,format="markdown")
-```
-
-
 
 |term               | frequency|
 |:------------------|---------:|
@@ -479,10 +456,8 @@ kable(result,format="markdown")
 |professional       |        23|
 |consulting         |        21|
 |tableau            |        21|
-|trends             |        21|
 |innovative         |        20|
 |intelligence       |        20|
-
 
 ### Write the term frequency to a file
 
@@ -493,4 +468,29 @@ result <-
 write.csv(result, file="TermFrequency_adjusted_10.csv")
 ```
 
+--------------
+
+### Visual Presentation
+
+A team member analyzed the terms with scores of 20 or higher, and assigned the terms into four different categories: technical skills, technology specific skills, general technical areas, and nontechnical skills. 
+
+This data is quite telling as it shows even though hard technical skills are crucial, soft skills are as important. The need for team work and communication are quite high on the list of competencies that are being searched for by recruiting teams.
+
+
+
+------
+
+![](Data607-Project3-Group7-Version3_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
+
+
+![](Data607-Project3-Group7-Version3_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
+
+
+![](Data607-Project3-Group7-Version3_files/figure-html/unnamed-chunk-29-1.png)<!-- -->
+
+![](Data607-Project3-Group7-Version3_files/figure-html/unnamed-chunk-30-1.png)<!-- -->
+
+
+        
+--------
 
