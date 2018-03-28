@@ -20,6 +20,7 @@ output:
 * Alejandro Osborne 
 * Brian Liles
 * Harpeet Shoker
+* Krishna Rajan
 * Sherranette Tinapunan
 
 ---------------
