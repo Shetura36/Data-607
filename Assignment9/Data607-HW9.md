@@ -38,7 +38,7 @@ movie_reviews
 
 ```
 ## Response [https://api.nytimes.com/svc/movies/v2/reviews/all.json?api-key=375b94ee380a4da8b23bf46b26ee274b]
-##   Date: 2018-03-31 19:41
+##   Date: 2018-03-31 19:47
 ##   Status: 200
 ##   Content-Type: application/json; charset=UTF-8
 ##   Size: 16.6 kB
@@ -57,7 +57,7 @@ results <- as.data.frame(movie_data$results)
 
 ### Column names on data frame
 
-There are 11 column names in the data frame. 
+There are 11 column names in the `results` data frame. 
 
 Columns `link` and `multimedia` are lists. The `link` list contains the link information to the movie review article. The `multimedia` list contains graphics data for the movie. 
 
@@ -111,7 +111,7 @@ kable(names(results$multimedia), format="markdown")
 
 ### Number of movie reviews returned by API data request
 
-There are 20 movie review articles returned from the movie review API data request. 
+There are 20 movie review articles returned by the API data request. 
 
 ```r
 nrow(results)
@@ -170,17 +170,6 @@ Some of the movies do not have an opening date. There is one movie that has an o
 
 
 ```r
-names(results)
-```
-
-```
-##  [1] "display_title"     "mpaa_rating"       "critics_pick"     
-##  [4] "byline"            "headline"          "summary_short"    
-##  [7] "publication_date"  "opening_date"      "date_updated"     
-## [10] "link"              "multimedia"        "picked_by_critics"
-```
-
-```r
 friendly_display <- cbind(results[c(1,2,8,12)], results$link$url)
 kable(friendly_display, format="markdown")
 ```
@@ -218,30 +207,30 @@ I decided to display this in a separate table because the summary content is len
 
 
 ```r
-kable(results[c(1,8,6)])
+kable(results[c(1,8,6)], format="markdown")
 ```
 
 
 
-display_title            opening_date   summary_short                                                                                                                                                        
------------------------  -------------  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Tyler Perry's Acrimony   2018-03-30     The Tyler Perry melodrama follows a woman who undergoes trials brought on by a cheating husband (Lyriq Bent).                                                        
-Wilde Salomé             2017-04-01     A story of obsession plays out in “Wilde Salomé” and “Salomé,” as Mr. Pacino veers into Camp.                                                                        
-Salomé                   NA             A story of obsession plays out in “Wilde Salomé” and “Salomé,” as Mr. Pacino veers into Camp.                                                                        
-Personal Problems        NA             The brainchild of the writer Ishmael Reed and the director Bill Gunn, this film is an uncategorizable work of art — and an engrossing one.                           
-Love After Love          2018-03-30     Russ Harbaugh’s debut feature delivers something rarely seen in American movies: a warts-and-all examination of extended grief.                                      
-Outside In               2018-04-03     Edie Falco and Jay Duplass connect romantically in this life-after-prison drama that prioritizes patience and pragmatism over passion.                               
-Gemini                   2018-03-30     The director Aaron Katz plays with film noir conventions in this pleasurably drifty, low-wattage mystery.                                                            
-The Gardener             2018-03-30     Frank Cabot’s garden in Quebec is in part an amalgamation of others that inspired him in his travels.                                                                
-After Louie              2018-03-30     The film, starring Alan Cumming, centers on a 50-something man who lived through the worst years of the AIDS epidemic.                                               
-All I Wish               2018-03-30     A fine performance by Ms. Stone is up against a generic screenplay.                                                                                                  
-The Last Movie Star      2018-03-30     The film effectively allows the ever-assured actor to score a touchdown on an empty field.                                                                           
-The China Hustle         2018-03-23     A documentary may be the wrong delivery mechanism for the byzantine exposé that cries out for detailed news reporting.                                               
-Finding Your Feet        NA             Led by a charming pairing of Imelda Staunton and Celia Imrie, this British retiree rom-com delivers exactly what it promises.                                        
-Ready Player One         2018-03-29     The movie, based on Ernest Cline’s best-selling novel, is set in a dystopian future where a virtual video-game reality reigns, and pop-culture callbacks are legion. 
-The Great Silence        1969-00-00     Klaus Kinski and Jean-Louis Trintignant face off in the snows of Utah in a bloody genre exercise that is only now receiving a proper U.S. release.                   
-Midnight Sun             2018-03-23     Bella Thorne stars as a teenager with a rare disease who must avoid ultraviolet light — but she isn’t avoiding love. One night, she meets a boy.                     
-Ismael's Ghosts          2018-03-23     In Arnaud Desplechin’s remarkable sprawl of a film, a wife comes back after a 20-year disappearance, adding to an already convoluted situation.                      
-Beauty and the Dogs      NA             In this film inspired by a true story, the director Kaouther Ben Hania leans hard on official corruption and a bureaucracy dominated by male power.                  
-The Workshop             NA             This new film from the French director Laurent Cantet follows a diverse group of students enrolled in a summer writing class taught by a famous novelist.            
-I Kill Giants            2018-03-23     This magical movie marries adult themes and childlike wonder as a troubled girl embarks on a fantastical quest.                                                      
+|display_title          |opening_date |summary_short                                                                                                                                                        |
+|:----------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Tyler Perry's Acrimony |2018-03-30   |The Tyler Perry melodrama follows a woman who undergoes trials brought on by a cheating husband (Lyriq Bent).                                                        |
+|Wilde Salomé           |2017-04-01   |A story of obsession plays out in “Wilde Salomé” and “Salomé,” as Mr. Pacino veers into Camp.                                                                        |
+|Salomé                 |NA           |A story of obsession plays out in “Wilde Salomé” and “Salomé,” as Mr. Pacino veers into Camp.                                                                        |
+|Personal Problems      |NA           |The brainchild of the writer Ishmael Reed and the director Bill Gunn, this film is an uncategorizable work of art — and an engrossing one.                           |
+|Love After Love        |2018-03-30   |Russ Harbaugh’s debut feature delivers something rarely seen in American movies: a warts-and-all examination of extended grief.                                      |
+|Outside In             |2018-04-03   |Edie Falco and Jay Duplass connect romantically in this life-after-prison drama that prioritizes patience and pragmatism over passion.                               |
+|Gemini                 |2018-03-30   |The director Aaron Katz plays with film noir conventions in this pleasurably drifty, low-wattage mystery.                                                            |
+|The Gardener           |2018-03-30   |Frank Cabot’s garden in Quebec is in part an amalgamation of others that inspired him in his travels.                                                                |
+|After Louie            |2018-03-30   |The film, starring Alan Cumming, centers on a 50-something man who lived through the worst years of the AIDS epidemic.                                               |
+|All I Wish             |2018-03-30   |A fine performance by Ms. Stone is up against a generic screenplay.                                                                                                  |
+|The Last Movie Star    |2018-03-30   |The film effectively allows the ever-assured actor to score a touchdown on an empty field.                                                                           |
+|The China Hustle       |2018-03-23   |A documentary may be the wrong delivery mechanism for the byzantine exposé that cries out for detailed news reporting.                                               |
+|Finding Your Feet      |NA           |Led by a charming pairing of Imelda Staunton and Celia Imrie, this British retiree rom-com delivers exactly what it promises.                                        |
+|Ready Player One       |2018-03-29   |The movie, based on Ernest Cline’s best-selling novel, is set in a dystopian future where a virtual video-game reality reigns, and pop-culture callbacks are legion. |
+|The Great Silence      |1969-00-00   |Klaus Kinski and Jean-Louis Trintignant face off in the snows of Utah in a bloody genre exercise that is only now receiving a proper U.S. release.                   |
+|Midnight Sun           |2018-03-23   |Bella Thorne stars as a teenager with a rare disease who must avoid ultraviolet light — but she isn’t avoiding love. One night, she meets a boy.                     |
+|Ismael's Ghosts        |2018-03-23   |In Arnaud Desplechin’s remarkable sprawl of a film, a wife comes back after a 20-year disappearance, adding to an already convoluted situation.                      |
+|Beauty and the Dogs    |NA           |In this film inspired by a true story, the director Kaouther Ben Hania leans hard on official corruption and a bureaucracy dominated by male power.                  |
+|The Workshop           |NA           |This new film from the French director Laurent Cantet follows a diverse group of students enrolled in a summer writing class taught by a famous novelist.            |
+|I Kill Giants          |2018-03-23   |This magical movie marries adult themes and childlike wonder as a troubled girl embarks on a fantastical quest.                                                      |
