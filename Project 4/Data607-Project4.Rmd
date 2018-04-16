@@ -108,7 +108,7 @@ c("Testing Set: Spam", length(spam_testing)),
 c("Testing Set: Hard Ham", length(hard_ham_testing))
 )
 colnames(size.info) <- c("File", "No. of Emails")
-kable(size.info)
+kable(size.info, format="markdown")
 ```
 
 -----
@@ -310,7 +310,7 @@ spam.UNKNOWN <- (0 + k)/(spam_N + k*spamham_vocabulary)
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 x <- dplyr::arrange(ham_termFreq, desc(frequency))
-datatable(x[1:100,])
+kable(x[1:10,], format="markdown")
 ```
 
 -----
@@ -319,7 +319,7 @@ datatable(x[1:100,])
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 x <- dplyr::arrange(spam_termFreq, desc(frequency))
-datatable(x[1:100,])
+kable(x[1:10,], format="markdown")
 ```
 
 ```{r echo=FALSE}
@@ -441,9 +441,9 @@ testing_hard_ham_classification <- dtm.classify(hard_ham_testing_dtm)
 
 ### Preview `ham.score` and `spam.score`
 
-This is a preview of the first 100 emails in the `ham` `hold off` set. 
+This is a preview of the first 10 emails in the `ham` `hold off` set. 
 ```{r}
-datatable(holdoff_ham_classification[1:100,])
+kable(holdoff_ham_classification[1:10,], format="markdown")
 ```
 
 -----
