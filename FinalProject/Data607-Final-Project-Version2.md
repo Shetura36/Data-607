@@ -404,29 +404,9 @@ The batch calls are commented out below because I already have these files, and 
 data_pickup <- pickup_sept2014
 #create new column and initialize
 data_pickup$location_index[1] <- -100 
-```
-
-```
-## Warning: Unknown or uninitialised column: 'location_index'.
-```
-
-```r
 data_pickup$distance[1] <- 999999
-```
-
-```
-## Warning: Unknown or uninitialised column: 'distance'.
-```
-
-```r
 data_pickup$zip[1] <- "zip"
-```
 
-```
-## Warning: Unknown or uninitialised column: 'zip'.
-```
-
-```r
 #processZipEstimate(data_pickup, 1, 100000, "batch-01.csv")
 #processZipEstimate(data_pickup, 100001, 200000, "batch-02.csv")
 #processZipEstimate(data_pickup, 200001, 300000, "batch-03.csv")
@@ -588,13 +568,6 @@ Below is a list of the top 10 locations that are furthest from the zip code loca
 
 ```r
 pickup_info_far_top  <- dplyr::arrange(pickup_info_far, desc(distance))
-```
-
-```
-## Warning: package 'bindrcpp' was built under R version 3.4.4
-```
-
-```r
 pickup_info_far_bottom <- dplyr::arrange(pickup_info_far, distance)
 
 kable(head(pickup_info_far_top,10), format="markdown")
