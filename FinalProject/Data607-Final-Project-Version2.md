@@ -35,7 +35,7 @@ This final project is an analysis of the September 2014 Uber pickup locations. T
 
 ## Reverse Geocoding 
 
-One of the most challenging aspect of this project is the conversion of longitude and latitude geolocation points to zip codes. A reverse geocoding package called `revgeo` was first used; however, it was very slow. In addition there were other issues that made the use of this package not practical such as losing access to the service while and R crashing. 
+One of the most challenging aspect of this project is the conversion of longitude and latitude geolocation points to zip codes. A reverse geocoding package called `revgeo` was first used; however, it was very slow. In addition there were other issues that made the use of this package not practical such as losing access to the service and R crashing. 
 
 As a result, a workaround was developed to perform the conversion through the use of the `zipcode` package. This package has a data set of over 400,000 zip codes in the United States with mappings to longitude and latitude geolocation points. Because the pickup geolocations are arbitrary, a simple matching of geolocation points between these two data sets will not suffice. The zip code estimate is performed by calculating the distance between a list of known New York City zip codes and an arbitrary pickup location. The zip code with the minimum distance is then selected. The `geosphere` package was used to perform the geolocation distance calculations. 
 
