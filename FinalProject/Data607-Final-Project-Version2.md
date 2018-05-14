@@ -35,23 +35,23 @@ This final project is an analysis of the September 2014 Uber pickup locations. T
 
 ## Reverse Geocoding 
 
-One of the most challenging aspect of this project is the conversion of longitude and latitude geolocation points to zip codes. A reverse geocoding package called `revgeo` was first used; however, it was very slow. In addition there were other hurdles that made the use of this package not practical simply because of the number of rows that need to be processed. Some of the other issues encountered were losing access to the service and R crashing. 
+One of the most challenging aspect of this project is the conversion of longitude and latitude geolocation points to zip codes. A reverse geocoding package called `revgeo` was first used; however, it was very slow. In addition there were other issues that made the use of this package not practical such as losing access to the service while and R crashing. 
 
-As a result, a workaround was developed to do this conversion through the use of the `zipcode` package, which contains over 400,000 zip codes that are mapped to longitude and latitude geolocation points. Because the pickup geolocations are arbitrary, a simple matching of geolocation points between these two data sets will not suffice. The zip code estimate is performed by calculating the distance between a list of known New York City zip codes and an arbitrary pickup location. The zip code with the minimum distance is then selected. The `geosphere` package is used to perform the geolocation point distance calculations. 
+As a result, a workaround was developed to perform the conversion through the use of the `zipcode` package. This package has a data set of over 400,000 zip codes in the United States with mappings to longitude and latitude geolocation points. Because the pickup geolocations are arbitrary, a simple matching of geolocation points between these two data sets will not suffice. The zip code estimate is performed by calculating the distance between a list of known New York City zip codes and an arbitrary pickup location. The zip code with the minimum distance is then selected. The `geosphere` package was used to perform the geolocation distance calculations. 
 
-This workaround was slow and depends on the computing power of the local computer running the code; however, it didn't crash R and it doesn't run the risk of losing access to the service. With my low-end Dell home laptop, it took me about 10 hours to process a little over a million rows. Because of this limitation, it was not realistic to process all 4.5 million rows of the entire 2014 Uber data set. 
+Although reliable, this workaround is slow and depends on the computing power of the local computer running the code. With my low-end Dell home laptop, it took me about 10 hours to process a little over a million rows. Because of this limitation, it was not realistic to process all 4.5 million rows of the entire 2014 Uber data set. I decided to limit the analysis to the September 2014 data only.
 
-Upon investigating the minimum distance result set, there are some distances that are too far and seemed suspicious. The `revgeo` package was used to confirmed this suspicion. There are a few pickup locations included in the data set that are not in New York City. To filter these out, a reasonable minimum distance from the zip code geolocation point was selected. Only pickup locations that fall within 2000 meters or 1.24 miles within the zip code locations are included in the analysis. Out of the 1,028,136 rows processed, there are 50,636 rows excluded. 
+Upon investigating the minimum distance result set, there are some distances that are too far and seemed suspicious. The `revgeo` package was used to confirmed this suspicion. There are a few pickup locations included in the data set that are not in New York City. To filter these out, a reasonable minimum distance from the zip code geolocation was selected. Only pickup locations that fall within 2000 meters or 1.24 miles within the zip code locations are included in the analysis. Out of the 1,028,136 rows processed, there are 50,636 rows excluded. 
 
-Each pickup location was compared to 178 New York City zip codes listed by the New York State Department of Health on the web page below. This is also the source of the borough and neighborhood names. 
+Each pickup location was compared to 178 New York City zip codes listed by the New York State Department of Health on the web page below. This is also the source of the borough and neighborhood mapping of each zip code. 
 
 https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm
 
-Examples of pickup locations that are not in New York City. 
+#### Examples of pickup locations that are not in New York City. 
 
-The pickup locations shown below that are exclude show areas that are outside of New York City area (furthest) and areas that are close to the 2000 meter mark. As you can see, some are in New Jersey, which are areas in NJ that are very close to NYC. 
+The pickup locations shown below that are excluded show areas that are outside of New York City area (furthest) and areas that are close to the 2000 meter mark. As you can see, some pickup locations are in New Jersey that are close to NYC. 
 
-The estimated zip code method isn't perfect, but it is reasonable. The 2000 meter limit only excluded a very small fraction of the total pickup locations (about 50,000 out of over 1 million locations). 
+The estimated zip code method isn't perfect, but it is reasonable. The 2000 meter limit only excluded a small fraction of the total pickup locations (about 50,000 out of over 1 million locations). 
 
 #### Distance furthest from zip code location. 
 
@@ -120,7 +120,7 @@ The estimated zip code method isn't perfect, but it is reasonable. The 2000 mete
 
 ![image](graph_NYCNeighborhood.png){width=110%}
 
-The pickups accounted for each neighborhood are the total number of pickups in the neighborhood for the month of September 2014. As you can see, the top five neighborhoods are in Manhattan. Bronx and Staten Island neighborhoods are towards the bottom. 
+This shows the total number of pickups for each neighborhoods during the month of September 2014. As you can see, the top five neighborhoods are in Manhattan. Bronx and Staten Island neighborhoods are towards the bottom. 
 
 ----
 
