@@ -172,7 +172,7 @@ The test was performed at the 95% significance level.
 |Queens        |   90.562500|   75.696056| 288| 431|  48.1478152|  43.4299538| 14.866444|  3.5249952|  4.2174368| 0.0000627|Reject null         |
 |Staten Island |    1.361446|    1.237624|  83| 101|   0.6910281|   0.5319495|  0.123822|  0.0924929|  1.3387192| 0.1843174|Fail to reject null |
 
-As you can see, for <b>Bronx</b>, <b>Brooklyn</b>, and <b>Queens</b> the p-values are below .05. For these boroughs, there is a statistically significant difference in the average number of pickups per hour between weekdays and non-weekend days. 
+As you can see, for <b>Bronx</b>, <b>Brooklyn</b>, and <b>Queens</b> the p-values are below .05. For these boroughs, there is a statistically significant difference in the average number of pickups per hour between weekend and non-weekend days. 
 
 |Borough  |   p_value|result      |
 |:--------|---------:|:-----------|
@@ -180,7 +180,7 @@ As you can see, for <b>Bronx</b>, <b>Brooklyn</b>, and <b>Queens</b> the p-value
 |Brooklyn | 0.0000000|Reject null |
 |Queens   | 0.0000627|Reject null |
 
-For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For these boroughs, there is no statistically significant difference in the average number of pickups per hour between weekdays and non-weekend days. 
+For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For these boroughs, there is no statistically significant difference in the average number of pickups per hour between weekend and non-weekend days. 
 
 |Borough       |   p_value|result              |
 |:-------------|---------:|:-------------------|
@@ -891,7 +891,7 @@ Below is the result of the hypothesis test.
 |Queens        |   90.562500|   75.696056| 288| 431|  48.1478152|  43.4299538| 14.866444|  3.5249952|  4.2174368| 0.0000627|Reject null         |
 |Staten Island |    1.361446|    1.237624|  83| 101|   0.6910281|   0.5319495|  0.123822|  0.0924929|  1.3387192| 0.1843174|Fail to reject null |
 
-As you can see, for <b>Bronx</b>, <b>Brooklyn</b>, and <b>Queens</b> the p-values are below .05. For these boroughs, there is a statistically significant difference in the average number of pickups per hour between weekdays and non-weekend days. 
+As you can see, for <b>Bronx</b>, <b>Brooklyn</b>, and <b>Queens</b> the p-values are below .05. For these boroughs, there is a statistically significant difference in the average number of pickups per hour between weekend and non-weekend days. 
 
 
 |Borough  |   p_value|result      |
@@ -900,7 +900,7 @@ As you can see, for <b>Bronx</b>, <b>Brooklyn</b>, and <b>Queens</b> the p-value
 |Brooklyn | 0.0000000|Reject null |
 |Queens   | 0.0000627|Reject null |
 
-For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For these boroughs, there is no statistically significant difference in the average number of pickups per hour between weekdays and non-weekend days. 
+For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For these boroughs, there is no statistically significant difference in the average number of pickups per hour between weekend and non-weekend days. 
 
 
 |Borough       |   p_value|result              |
