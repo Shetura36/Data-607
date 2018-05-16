@@ -20,7 +20,7 @@ This final project is an analysis of the September 2014 Uber pickup locations. T
 - What is the distribution of pickups by neighborhoods in New York City?  
 - What is the distribution of pickups by boroughs in New York City? 
 - How does the average number of pickups per day change throughout the month? 
-- Is there a difference in the average number of pickups per hour between weekday and non-weekend days? 
+- Is there a difference in the average number of pickups per hour between weekend and non-weekend days? 
 
 ----
 
@@ -878,7 +878,7 @@ getresult <- function(p_value){
 hypothesis_data$result <- sapply(hypothesis_data$p_value, getresult)
 ```
 
-#### Hypothsis testing results
+#### Hypothesis testing results
 
 Below is the result of the hypothesis test. 
 
