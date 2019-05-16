@@ -1,0 +1,179 @@
+"","Borough","Neighborhood","zip"
+"1","Bronx","Central Bronx",10453
+"2","Bronx","Bronx Park and Fordham",10458
+"3","Bronx","High Bridge and Morrisania",10451
+"4","Bronx","Hunts Point and Mott Haven",10454
+"5","Bronx","Kingsbridge and Riverdale",10463
+"6","Bronx","Northeast Bronx",10466
+"7","Bronx","Southeast Bronx",10461
+"8","Brooklyn","Central Brooklyn",11212
+"9","Brooklyn","Southwest Brooklyn",11209
+"10","Brooklyn","Borough Park",11204
+"11","Brooklyn","Canarsie and Flatlands",11234
+"12","Brooklyn","Southern Brooklyn",11223
+"13","Brooklyn","Northwest Brooklyn",11201
+"14","Brooklyn","Flatbush",11203
+"15","Brooklyn","East New York and New Lots",11207
+"16","Brooklyn","Greenpoint",11211
+"17","Brooklyn","Sunset Park",11220
+"18","Brooklyn","Bushwick and Williamsburg",11206
+"19","Manhattan","Central Harlem",10026
+"20","Manhattan","Chelsea and Clinton",10001
+"21","Manhattan","East Harlem",10029
+"22","Manhattan","Gramercy Park and Murray Hill",10010
+"23","Manhattan","Greenwich Village and Soho",10012
+"24","Manhattan","Lower Manhattan",10004
+"25","Manhattan","Lower East Side",10002
+"26","Manhattan","Upper East Side",10021
+"27","Manhattan","Upper West Side",10023
+"28","Manhattan","Inwood and Washington Heights",10031
+"29","Queens","Northeast Queens",11361
+"30","Queens","North Queens",11354
+"31","Queens","Central Queens",11365
+"32","Queens","Jamaica",11412
+"33","Queens","Northwest Queens",11101
+"34","Queens","West Central Queens",11374
+"35","Queens","Rockaways",11691
+"36","Queens","Southeast Queens",11004
+"37","Queens","Southwest Queens",11414
+"38","Queens","West Queens",11368
+"39","Staten Island","Port Richmond",10302
+"40","Staten Island","South Shore",10306
+"41","Staten Island","Stapleton and St. George",10301
+"42","Staten Island","Mid-Island",10314
+"43","Bronx","Central Bronx",10457
+"44","Bronx","Bronx Park and Fordham",10467
+"45","Bronx","High Bridge and Morrisania",10452
+"46","Bronx","Hunts Point and Mott Haven",10455
+"47","Bronx","Kingsbridge and Riverdale",10471
+"48","Bronx","Northeast Bronx",10469
+"49","Bronx","Southeast Bronx",10462
+"50","Brooklyn","Central Brooklyn",11213
+"51","Brooklyn","Southwest Brooklyn",11214
+"52","Brooklyn","Borough Park",11218
+"53","Brooklyn","Canarsie and Flatlands",11236
+"54","Brooklyn","Southern Brooklyn",11224
+"55","Brooklyn","Northwest Brooklyn",11205
+"56","Brooklyn","Flatbush",11210
+"57","Brooklyn","East New York and New Lots",11208
+"58","Brooklyn","Greenpoint",11222
+"59","Brooklyn","Sunset Park",11232
+"60","Brooklyn","Bushwick and Williamsburg",11221
+"61","Manhattan","Central Harlem",10027
+"62","Manhattan","Chelsea and Clinton",10011
+"63","Manhattan","East Harlem",10035
+"64","Manhattan","Gramercy Park and Murray Hill",10016
+"65","Manhattan","Greenwich Village and Soho",10013
+"66","Manhattan","Lower Manhattan",10005
+"67","Manhattan","Lower East Side",10003
+"68","Manhattan","Upper East Side",10028
+"69","Manhattan","Upper West Side",10024
+"70","Manhattan","Inwood and Washington Heights",10032
+"71","Queens","Northeast Queens",11362
+"72","Queens","North Queens",11355
+"73","Queens","Central Queens",11366
+"74","Queens","Jamaica",11423
+"75","Queens","Northwest Queens",11102
+"76","Queens","West Central Queens",11375
+"77","Queens","Rockaways",11692
+"78","Queens","Southeast Queens",11005
+"79","Queens","Southwest Queens",11415
+"80","Queens","West Queens",11369
+"81","Staten Island","Port Richmond",10303
+"82","Staten Island","South Shore",10307
+"83","Staten Island","Stapleton and St. George",10304
+"84","Bronx","Central Bronx",10460
+"85","Bronx","Bronx Park and Fordham",10468
+"86","Bronx","High Bridge and Morrisania",10456
+"87","Bronx","Hunts Point and Mott Haven",10459
+"88","Bronx","Northeast Bronx",10470
+"89","Bronx","Southeast Bronx",10464
+"90","Brooklyn","Central Brooklyn",11216
+"91","Brooklyn","Southwest Brooklyn",11228
+"92","Brooklyn","Borough Park",11219
+"93","Brooklyn","Canarsie and Flatlands",11239
+"94","Brooklyn","Southern Brooklyn",11229
+"95","Brooklyn","Northwest Brooklyn",11215
+"96","Brooklyn","Flatbush",11225
+"97","Brooklyn","Bushwick and Williamsburg",11237
+"98","Manhattan","Central Harlem",10030
+"99","Manhattan","Chelsea and Clinton",10018
+"100","Manhattan","Gramercy Park and Murray Hill",10017
+"101","Manhattan","Greenwich Village and Soho",10014
+"102","Manhattan","Lower Manhattan",10006
+"103","Manhattan","Lower East Side",10009
+"104","Manhattan","Upper East Side",10044
+"105","Manhattan","Upper West Side",10025
+"106","Manhattan","Inwood and Washington Heights",10033
+"107","Queens","Northeast Queens",11363
+"108","Queens","North Queens",11356
+"109","Queens","Central Queens",11367
+"110","Queens","Jamaica",11432
+"111","Queens","Northwest Queens",11103
+"112","Queens","West Central Queens",11379
+"113","Queens","Rockaways",11693
+"114","Queens","Southeast Queens",11411
+"115","Queens","Southwest Queens",11416
+"116","Queens","West Queens",11370
+"117","Staten Island","Port Richmond",10310
+"118","Staten Island","South Shore",10308
+"119","Staten Island","Stapleton and St. George",10305
+"120","Bronx","Hunts Point and Mott Haven",10474
+"121","Bronx","Northeast Bronx",10475
+"122","Bronx","Southeast Bronx",10465
+"123","Brooklyn","Central Brooklyn",11233
+"124","Brooklyn","Borough Park",11230
+"125","Brooklyn","Southern Brooklyn",11235
+"126","Brooklyn","Northwest Brooklyn",11217
+"127","Brooklyn","Flatbush",11226
+"128","Manhattan","Central Harlem",10037
+"129","Manhattan","Chelsea and Clinton",10019
+"130","Manhattan","Gramercy Park and Murray Hill",10022
+"131","Manhattan","Lower Manhattan",10007
+"132","Manhattan","Upper East Side",10065
+"133","Manhattan","Inwood and Washington Heights",10034
+"134","Queens","Northeast Queens",11364
+"135","Queens","North Queens",11357
+"136","Queens","Jamaica",11433
+"137","Queens","Northwest Queens",11104
+"138","Queens","West Central Queens",11385
+"139","Queens","Rockaways",11694
+"140","Queens","Southeast Queens",11413
+"141","Queens","Southwest Queens",11417
+"142","Queens","West Queens",11372
+"143","Staten Island","South Shore",10309
+"144","Bronx","Southeast Bronx",10472
+"145","Brooklyn","Central Brooklyn",11238
+"146","Brooklyn","Northwest Brooklyn",11231
+"147","Manhattan","Central Harlem",10039
+"148","Manhattan","Chelsea and Clinton",10020
+"149","Manhattan","Lower Manhattan",10038
+"150","Manhattan","Upper East Side",10075
+"151","Manhattan","Inwood and Washington Heights",10040
+"152","Queens","North Queens",11358
+"153","Queens","Jamaica",11434
+"154","Queens","Northwest Queens",11105
+"155","Queens","Rockaways",11695
+"156","Queens","Southeast Queens",11422
+"157","Queens","Southwest Queens",11418
+"158","Queens","West Queens",11373
+"159","Staten Island","South Shore",10312
+"160","Bronx","Southeast Bronx",10473
+"161","Manhattan","Chelsea and Clinton",10036
+"162","Manhattan","Lower Manhattan",10280
+"163","Manhattan","Upper East Side",10128
+"164","Queens","North Queens",11359
+"165","Queens","Jamaica",11435
+"166","Queens","Northwest Queens",11106
+"167","Queens","Rockaways",11697
+"168","Queens","Southeast Queens",11426
+"169","Queens","Southwest Queens",11419
+"170","Queens","West Queens",11377
+"171","Queens","North Queens",11360
+"172","Queens","Jamaica",11436
+"173","Queens","Southeast Queens",11427
+"174","Queens","Southwest Queens",11420
+"175","Queens","West Queens",11378
+"176","Queens","Southeast Queens",11428
+"177","Queens","Southwest Queens",11421
+"178","Queens","Southeast Queens",11429
