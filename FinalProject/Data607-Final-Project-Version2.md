@@ -10,7 +10,7 @@ output:
 
 ## Uber Pickups in New York City
 
-This project analyzes Uber pickup locations from September 2014, using a dataset containing over 1 million records. The dataset includes pickup date and time, along with corresponding latitude and longitude coordinates. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes and neighborhood locations. The analysis also seeks to answer the questions listed below.
+This project analyzes Uber pickup locations from September 2014, using a dataset containing over 1 million records. The dataset includes pickup date and time, along with corresponding latitude and longitude coordinates. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes, borough, and neighborhood locations. The analysis also seeks to answer the questions listed below.
 
 #### Questions 
 
