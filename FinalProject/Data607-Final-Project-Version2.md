@@ -12,7 +12,7 @@ output:
 
 This project analyzes Uber pickup locations from September 2014, using a dataset containing over 1 million records. The dataset includes pickup date and time, along with corresponding latitude and longitude coordinates. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes, borough, and neighborhood locations. The analysis also seeks to answer the questions listed below.
 
-In addition, this project presents a Shiny app visualization for the September 2014 Uber pickup locations in New York City using Leaflet OpenStreetMap.
+In addition, this project presents an interactive Shiny app visualization for the September 2014 Uber pickup locations in New York City through Leaflet OpenStreetMap.
 
 #### Questions 
 
@@ -911,7 +911,7 @@ For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For th
 
 ## September 2014 NYC Uber Pickup Leaflet OpenStreetMap Visualization in Shiny App
 
-![image](graph_NYCNeighborhood.png){width=130%}
+![image](Uber_shinyapp_screenshot.png){width=80%}
 
 
 
