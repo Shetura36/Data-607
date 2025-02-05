@@ -1,7 +1,6 @@
 ---
-title: "Data 607 Final Project"
-author: "S. Tinapunan"
-date: "May 11, 2018"
+title: "September 2014 Uber Pickups in New York City"
+author: "Sherranette Tinapunan"
 output: 
   html_document: 
     keep_md: yes
@@ -13,9 +12,9 @@ output:
 
 ## Uber Pickups in New York City
 
-This final project is an analysis of the September 2014 Uber pickup locations. This data set has over 1 million rows of data. This file contains pickup date and time and longitude and latitude geolocation points. 
+This project analyzes Uber pickup locations from September 2014, using a dataset containing over 1 million records. The dataset includes pickup date and time, along with corresponding latitude and longitude coordinates. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes and neighborhood locations. The analysis also seeks to answer the questions listed below.
 
-#### The questions that this analysis attempts to answer are: 
+#### Questions 
 
 - What is the distribution of pickups by neighborhoods in New York City?  
 - What is the distribution of pickups by boroughs in New York City? 
