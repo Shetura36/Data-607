@@ -492,7 +492,6 @@ kable(head(pickup_info), format="markdown")
 ```
 
 
-
 |pickup_datetime  | latitude| longitude|base   | location_index|   distance|   zip|
 |:----------------|--------:|---------:|:------|--------------:|----------:|-----:|
 |9/1/2014 0:01:00 |  40.2201|  -74.0021|B02512 |             50| 38021.8724| 10307|
@@ -910,7 +909,9 @@ For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For th
 
 ----
 
-## Shiny App
+## September 2014 NYC Uber Pickup Leaflet OpenStreetMap Visualization in Shiny App
+
+![image](graph_NYCNeighborhood.png){width=130%}
 
 
 
