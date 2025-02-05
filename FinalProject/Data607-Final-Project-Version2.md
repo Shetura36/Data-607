@@ -911,6 +911,13 @@ For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For th
 
 ## September 2014 NYC Uber Pickup Leaflet OpenStreetMap Visualization in Shiny App
 
+To view the interactive Shiny app, please visit https://shetura36.shinyapps.io/Data608_Uber_Final_Project/
+Click on the "Update" button to start displaying the pickup locations. 
+
+[This](https://rpubs.com/Shetura36/Data608-FinalProject-PrepareData) describes the data preparation of the file that's used by the app. 
+
+Below is a preview of the Shiny app. 
+
 ![image](Uber_shinyapp_screenshot.png){width=80%}
 
 
