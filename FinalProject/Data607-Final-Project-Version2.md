@@ -10,7 +10,7 @@ output:
 
 ## September 2014 Uber Pickups in New York City
 
-This project analyzes Uber pickup locations from September 2014, using a dataset containing over 1 million records. The dataset includes pickup date and time, along with corresponding latitude and longitude coordinates. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes, borough, and neighborhood locations. The analysis also seeks to answer the questions listed below.
+This project analyzes Uber pickup locations from September 2014, using a dataset containing over 1 million records. The dataset includes pickup date and time, along with corresponding latitude and longitude coordinates. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes, borough, and neighborhood locations. The analysis also seeks to answer the questions listed below. The source of this data set was taken from https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city/version/2.
 
 In addition, this project presents an interactive Shiny app visualization for the September 2014 Uber pickup locations in New York City through Leaflet OpenStreetMap.
 
