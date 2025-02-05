@@ -14,14 +14,14 @@ This project analyzes Uber pickup locations from September 2014, using a dataset
 
 In addition, this project presents an interactive Shiny app visualization for the September 2014 Uber pickup locations in New York City through Leaflet OpenStreetMap.
 
-### Questions 
+#### Questions 
 
 - What is the distribution of pickups by neighborhoods in New York City?  
 - What is the distribution of pickups by boroughs in New York City? 
 - How does the average number of pickups per day change throughout the month? 
 - Is there a difference in the average number of pickups per hour between weekend and non-weekend days? 
 
-### Source of Uber Dataset 
+#### Source of Uber Dataset 
 
 https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city/version/2.
 
