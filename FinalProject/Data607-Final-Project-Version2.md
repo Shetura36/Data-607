@@ -21,8 +21,9 @@ In addition, this project presents an interactive Shiny app visualization for th
 - How does the average number of pickups per day change throughout the month? 
 - Is there a difference in the average number of pickups per hour between weekend and non-weekend days? 
 
-### Source of Dataset 
-The Uber pickup in New York City data set was taken from  https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city/version/2.
+### Source of Uber Dataset 
+
+https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city/version/2.
 
 ----
 
