@@ -6,8 +6,6 @@ output:
     keep_md: yes
 ---
 
-
-
 ----
 
 ## Uber Pickups in New York City
