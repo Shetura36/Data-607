@@ -14,7 +14,7 @@ This project analyzes Uber pickup locations from September 2014, using a dataset
 
 In addition, this project presents an interactive Shiny app visualization for the September 2014 Uber pickup locations in New York City through Leaflet OpenStreetMap.
 
-#### Questions 
+### Questions 
 
 - What is the distribution of pickups by neighborhoods in New York City?  
 - What is the distribution of pickups by boroughs in New York City? 
@@ -35,23 +35,24 @@ In addition, this project presents an interactive Shiny app visualization for th
 
 ## Reverse Geocoding 
 
-One of the most challenging aspect of this project is the conversion of longitude and latitude geolocation points to zip codes. A reverse geocoding package called `revgeo` was first used; however, it was very slow. In addition there were other issues that made the use of this package not practical such as losing access to the service and R crashing. 
+The conversion of longitude and latitude geolocation points to zip codes presented several challenges when processing the Uber data. Initially, the `revgeo` package was used for reverse geocoding, but it proved to be slow and unreliable, with issues such as service access loss and R crashing.
 
-As a result, a workaround was developed to perform the conversion through the use of the `zipcode` package. This package has a data set of over 400,000 zip codes in the United States with mappings to longitude and latitude geolocation points. Because the pickup geolocations are arbitrary, a simple matching of geolocation points between these two data sets will not suffice. The zip code estimate is performed by calculating the distance between a list of known New York City zip codes and an arbitrary pickup location. The zip code with the minimum distance is then selected. The `geosphere` package was used to perform the geolocation distance calculations. 
+To address these issues, a workaround was developed using the `zipcode` package, which contains a dataset of over 400,000 U.S. zip codes with corresponding longitude and latitude points. Because the pickup locations were arbitrary, a direct match between the geolocation points in the data and those in the zipcode package was not possible. To estimate the zip code, the distance between each pickup location and a list of known New York City zip codes was calculated, and the zip code with the minimum distance was selected. The `geosphere` package was used to calculate these distances.
 
-Although reliable, this workaround is slow and depends on the computing power of the local computer running the code. With my low-end Dell home laptop, it took me about 10 hours to process a little over a million rows. Because of this limitation, it was not realistic to process all 4.5 million rows of the entire 2014 Uber data set. I decided to limit the analysis to the September 2014 data only.
+Although this method was reliable, it was slow and limited by the computing power of the local computer. Processing one million rows took about 10 hours on a low-end laptop, making it impractical to process all 4.5 million rows of the 2014 Uber data set. Thus, the analysis was limited to the September 2014 data.
 
-Upon investigating the minimum distance result set, there are some distances that are too far and seemed suspicious. The `revgeo` package was used to confirmed this suspicion. There are a few pickup locations included in the data set that are not in New York City. To filter these out, a reasonable minimum distance from the zip code geolocation was selected. Only pickup locations that fall within 2000 meters or 1.24 miles within the zip code locations are included in the analysis. Out of the 1,028,136 rows processed, there are 50,636 rows excluded. 
+Upon investigation, some minimum distance results were suspicious, suggesting that some pickup locations were not in New York City. The revgeo package was used to confirm this.
+To filter out these outliers, a maximum distance from the zip code geolocation was selected. Only pickup locations within 2000 meters (1.24 miles) of a zip code were included in the analysis. This resulted in the exclusion of 50,636 rows out of 1,028,136 rows processed.
 
-Each pickup location was compared to 178 New York City zip codes listed by the New York State Department of Health on the web page below. This is also the source of the borough and neighborhood mapping of each zip code. 
+The New York City zip codes used for comparison, along with their borough and neighborhood mappings, were sourced from the New York State Department of Health website, which listed 178 New York City zip codes.
 
 https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm
 
 #### Examples of pickup locations that are not in New York City. 
 
-The pickup locations shown below that are excluded show areas that are outside of New York City area (furthest) and areas that are close to the 2000 meter mark. As you can see, some pickup locations are in New Jersey that are close to NYC. 
+The pickup locations shown below that were excluded show areas that are outside of New York City area (furthest) and areas that are close to the 2000 meter mark. As you can see, some pickup locations are in New Jersey that are close to NYC. 
 
-The estimated zip code method isn't perfect, but it is reasonable. The 2000 meter limit only excluded a small fraction of the total pickup locations (about 50,000 out of over 1 million locations). 
+The estimated zip code method isn't perfect, but it should be a reasonable estimate. The 2000 meter limit only excluded a small fraction of the total pickup locations (about 50,000 out of over 1 million locations). 
 
 #### Distance furthest from zip code location. 
 
