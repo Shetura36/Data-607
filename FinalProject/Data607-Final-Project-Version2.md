@@ -155,7 +155,7 @@ As you can see, there is a general pattern that shows the average number of pick
 
 ----
 
-## Hypothesis test
+## Hypothesis Test
 
 A null hypothesis test was done to determine if the average number of pickups per hour between weekend and non-weekend days are different for each of the five boroughs in New York City. 
 
