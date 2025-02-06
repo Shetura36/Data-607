@@ -12,7 +12,7 @@ output:
 
 This project analyzes Uber pickup locations from September 2014, using a dataset from [Kaggle](https://www.kaggle.com/fivethirtyeight/uber-pickups-in-new-york-city/version/2). The analyzed dataset includes pickup date and time, along with corresponding latitude and longitude coordinates with more than one million rows. To gain deeper insights into ride activity and geographic trends, reverse geocoding was performed to map these coordinates to zip codes, borough, and neighborhood locations. The analysis also seeks to answer the questions listed below. 
 
-In addition, this project presents an [interactive Shiny app visualization](#shinyapp) for the September 2014 Uber pickup locations in New York City through `Leaflet OpenStreetMap`.
+In addition, this project presents an [interactive Shiny app visualization](#September 2014 NYC Uber Pickup Leaflet OpenStreetMap Visualization in Shiny App) for the September 2014 Uber pickup locations in New York City through `Leaflet OpenStreetMap`.
 
 #### Questions 
 
@@ -910,7 +910,7 @@ For <b>Manhattan</b> and <b>Staten Island</b> the p-values are above .05. For th
 
 ----
 
-## September 2014 NYC Uber Pickup Leaflet OpenStreetMap Visualization in Shiny App {#shinyapp}
+## September 2014 NYC Uber Pickup Leaflet OpenStreetMap Visualization in Shiny App
 
 To view the interactive Shiny app, please visit https://shetura36.shinyapps.io/Data608_Uber_Final_Project/
 <br/> Click on the "Update" button to start displaying the pickup locations. 
